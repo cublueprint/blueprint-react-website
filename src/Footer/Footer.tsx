@@ -113,4 +113,4 @@ const MadeWithLove = styled.div`
   padding: 5px 0;
 `;
 
-export default Footer;
+export { Footer };
