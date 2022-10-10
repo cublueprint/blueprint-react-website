@@ -22,16 +22,31 @@ const teams_content = {
       members: [
         {
           name: 'Name',
+          position: 'club position',
           linkedin: 'linkedin',
           picture: 'picture of you',
         },
         {
           name: 'Name',
+          position: 'club position',
           linkedin: 'linkedin',
           picture: 'picture of you',
         },
         {
           name: 'Name',
+          position: 'club position',
+          linkedin: 'linkedin',
+          picture: 'picture of you',
+        },
+        {
+          name: 'Name',
+          position: 'club position',
+          linkedin: 'linkedin',
+          picture: 'picture of you',
+        },
+        {
+          name: 'Name',
+          position: 'club position',
           linkedin: 'linkedin',
           picture: 'picture of you',
         },
@@ -39,15 +54,36 @@ const teams_content = {
     },
     {
       name: 'Urban Minds',
-      members: [],
+      members: [
+        {
+          name: 'Name',
+          position: 'club position',
+          linkedin: 'linkedin',
+          picture: 'picture of you',
+        },
+      ],
     },
     {
       name: 'Beneficient',
-      members: [],
+      members: [
+        {
+          name: 'Name',
+          position: 'club position',
+          linkedin: 'linkedin',
+          picture: 'picture of you',
+        },
+      ],
     },
     {
       name: 'Website Team',
-      members: [],
+      members: [
+        {
+          name: 'Name',
+          position: 'club position',
+          linkedin: 'linkedin',
+          picture: 'picture of you',
+        },
+      ],
     },
   ],
 };

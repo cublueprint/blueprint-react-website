@@ -32,7 +32,6 @@ const App = () => {
       <Fonts />
       <Router>
         <Header links={routes.map(({ name }) => name)} />
-        <div>Hey! I'm going to be the new cuBlueprint website 🤠</div>
         <Switch>
           {routes.map((route) => (
             <Route key={`r-${route.name}`} exact path={`/${route.name}`}>

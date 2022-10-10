@@ -1,43 +1,24 @@
 import styled from 'styled-components';
 import TitleBlock from '../content/universal_components/TitleBlock';
-import ContentBlock from './ContentBlock';
+import ContentBlock from '../content/universal_components/ContentBlock';
+import Team from './Team';
 
 import content from '../content/json/teams';
 
-interface TeamsProps {
-  links: string[];
-}
-
-const Teams = (props: TeamsProps) => (
+const Teams = () => (
   <PageBody>
     <TitleBlock content={content.TitleBlock}></TitleBlock>
-    {/* {content.TeamsList.map((team, index) => (
-      <ContentBlock
-        key={`t-${team.name}`}
-        title={team.name}
-        children={'2', '3'}
-      >
-        <Team content={team} />
+
+    {content.TeamsList.map((team, index) => (
+      <ContentBlock title={team.name}>
+        <Team members={team.members} />
       </ContentBlock>
-    ))} */}
+    ))}
   </PageBody>
 );
 
 const PageBody = styled.div`
   background-color: ${(props) => props.theme.colors.skyBlue};
 `;
-
-interface TeamProps {
-  content: {
-    name: string;
-    members: {
-      name: string;
-      linkedin: string;
-      picture: string;
-    }[];
-  };
-}
-
-const Team = ({ content }: TeamProps) => <div>{content.name}</div>;
 
 export default Teams;

@@ -32,7 +32,6 @@ const TitleBlock = (props: TitleBlockProps) => (
 );
 
 const TitleBlockDiv = styled.div`
-  border: blue solid 1px;
   padding: 50px;
   display: grid;
   grid-gap: 10px;
@@ -49,7 +48,6 @@ const TitleBlockDiv = styled.div`
       'Title Image'
       'Description Image'
       'Button Image';
-    grid-gap: 10px;
   }
 `;
 
@@ -77,10 +75,6 @@ const Button = styled.button`
   border-radius: 5px;
   padding: 10px 30px;
   font-family: ${(props) => props.theme.fonts.content};
-
-  @media ${(props) => `${props.theme.viewport.tablet}`} {
-    justify-self: center;
-  }
 `;
 
 export default TitleBlock;
