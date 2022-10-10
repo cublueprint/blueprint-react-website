@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 import { ReactNode } from 'react';
+import { PersonCard } from './PersonCard';
 
 interface ContentBlockProps {
   title: string;
-  children: ReactNode;
+  children: string[];
 }
 
 const ContentBlock = ({ title, children }: ContentBlockProps) => (
   <ContentBody>
     <ContentTitle>{title}</ContentTitle>
-    {children}
+    {children.map((person, index) => (
+      <div>hello</div>
+    ))}
   </ContentBody>
 );
 

@@ -10,9 +10,9 @@ import About from './About';
 import Projects from './Projects';
 import Apply from './Apply';
 import Contact from './Contact';
-import Footer from './Footer';
+// import Footer from './Footer';
 
-import { Teams } from './Teams'; 
+import { Teams } from './Teams';
 
 const routes = [Home, About, Projects, Apply, Contact, Teams];
 
@@ -22,7 +22,7 @@ const links = [
   { projects: Projects },
   { apply: Apply },
   { contact: Contact },
-  { Teams: Teams }
+  { Teams: Teams },
 ];
 
 const App = () => {
@@ -41,7 +41,7 @@ const App = () => {
           ))}
         </Switch>
       </Router>
-      <Footer />
+      {/* <Footer /> */}
     </Theme>
   );
 };

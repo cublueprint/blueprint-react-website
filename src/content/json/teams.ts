@@ -1,11 +1,13 @@
+import TeamsTitleImage from '../images/teams_title_block.png';
+
 const teams_content = {
   TitleBlock: {
     title: 'Meet the Team!',
     subtitle:
       'Take a glimpse at the individuals who have made the team what it is today.',
     image: {
-      picture: 'ADD THIS IN LATER LEL',
-      alt: 'alt',
+      picture: TeamsTitleImage,
+      alt: 'title picture',
     },
     buttons: [
       {
