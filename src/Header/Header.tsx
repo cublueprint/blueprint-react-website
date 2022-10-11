@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import blueprintIcon from '../content/images/blueprint_banner_negative.webp';
+import MobileMenu from './MobileMenu';
 
 interface HeaderProps {
   links: string[];
@@ -16,6 +17,9 @@ const Header = ({ links }: HeaderProps) => (
         </StyledHeaderLink>
       ))}
     </StyledHeaderList>
+    <StyledMobileMenu>
+      <MobileMenu links={links} />
+    </StyledMobileMenu>
   </StyledHeader>
 );
 
@@ -36,18 +40,22 @@ const StyledHeader = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   z-index: 1;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 8vh;
+  height: 50px;
+
+  @media ${(props) => props.theme.viewport.laptop} {
+    align-items: center;
+  }
 `;
 
 const StyledHeaderList = styled.div`
-  @media ${(props) => `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
-    display: none
+  @media ${(props) =>
+      `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
+    display: none;
   }
 
   @media ${(props) => props.theme.viewport.laptop} {
@@ -56,6 +64,17 @@ const StyledHeaderList = styled.div`
     justify-content: space-evenly;
     gap: 3vw;
     margin-right: 50px;
+  }
+`;
+
+const StyledMobileMenu = styled.div`
+  @media ${(props) =>
+      `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
+    display: flex;
+  }
+
+  @media ${(props) => props.theme.viewport.laptop} {
+    display: none;
   }
 `;
 
@@ -70,7 +89,7 @@ const StyledHeaderLink = styled.div`
 `;
 
 const StyledBlueprintImage = styled.img`
-  padding-top: 5px;
+  margin-top: 10px;
   max-width: 150px;
   margin-left: 4vw;
 `;

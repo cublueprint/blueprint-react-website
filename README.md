@@ -1,18 +1,44 @@
-# Getting Started with Create React App
+# CUBluePrint's New Website 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Our new and updated website for CUBluePrint!
 
-## Available Scripts
+You can find our live website available at: [link](enter link here thanks)
 
-In the project directory, you can run:
+
+
+## Motivation for Project
+
+In 2021, we decided to build our club a brand new website with an improved UI and a more modern tech stack. The reason for this change was that our old website was built with Pug and had outdated design decisions.
+
+To meet these challenges, our team designed a [new UI using Figma](https://www.figma.com/file/Qt7bGynNItu0hUvPu0EPGa/Draft-Website-Design?node-id=0%3A1) and is currently working on developing it using React, Typescript and styled components. 
+
+
+
+## Site Map
+
+Our site contains information about CUBlueprint's mission statement, our current projects, our team, how to get involved and sign up forms for volunteers and non-profit organizations. 
+
+The following is a visual map of how to navigate our website:
+
+### `INCLUDE SAMEE'S SITE MAP`
+
+
+
+## Tools
+
+* TypeScript
+* React
+* Yarn
+* Styled Components 💅 
+
+
+## How to run the website in Development
+
+To run the project in development mode on a local server, run the following command inside the project directory:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This command will run the app on default [http://localhost:3000](http://localhost:3000). It can be accessed via a web browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
 ### `yarn test`
 
@@ -29,18 +55,11 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Credits
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Credits for the website go to:
+* [Deen](https://www.linkedin.com/in/deenhaque)
+* [Meera](https://www.linkedin.com/in/meera-balsara/)
+* [Seneli](https://www.linkedin.com/in/seneliseneviratne/)
+* [Samee](https://www.linkedin.com/in/samee-shahood/)
