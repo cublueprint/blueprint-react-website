@@ -10,7 +10,7 @@ import About from './pages/about/About';
 import Projects from './Projects';
 import Apply from './Apply';
 import Contact from './Contact';
-// import Footer from './Footer';
+import { Footer } from './Footer';
 
 import { Teams } from './pages/team';
 
@@ -40,7 +40,7 @@ const App = () => {
           ))}
         </Switch>
       </Router>
-      {/* <Footer /> */}
+      <Footer />
     </Theme>
   );
 };
