@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import PersonCard from './PersonCard';
+import PersonCard from '../../components/PersonCard';
 
 interface TeamProps {
   members: {

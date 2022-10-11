@@ -30,28 +30,32 @@ const PersonCard = ({ props }: PersonProps) => {
 };
 
 const CardDiv = styled.div`
-  background-color: darkblue;
+  border: ${(props) => props.theme.colors.primaryBlue} solid 2px;
+  border-radius: 10px;
   padding: 10px;
   width: 250px;
-  height: 250px;
+  height: 270px;
   display: grid;
-  grid-template-columns: ;
-  grid-template: 'Picture';
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 5fr 1fr 1fr;
+  grid-template: 'Picture' 'Picture' 'Picture';
 `;
 
 const ProfilePicture = styled.img`
   background-color: red;
   width: 100%;
-  height: 100%;
+  height: 200px;
   border-radius: 10px;
 `;
 
 const MemberName = styled.h2`
   background-color: darkgray;
+  margin: 0;
 `;
 
 const MemberPosition = styled.h2`
   background-color: lightgray;
+  margin: 0;
 `;
 
 const LinkedinIcon = styled.img`

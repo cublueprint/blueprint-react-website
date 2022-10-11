@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import TitleBlock from '../content/universal_components/TitleBlock';
-import ContentBlock from '../content/universal_components/ContentBlock';
+import TitleBlock from '../../components/TitleBlock';
+import ContentBlock from '../../components/ContentBlock';
 import Team from './Team';
 
-import content from '../content/json/teams';
+import content from '../../content/json/teams';
 
 const Teams = () => (
   <PageBody>

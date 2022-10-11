@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface ContentBlockProps {
   title: string;
+  background_color?: string;
   children: ReactNode;
 }
 
@@ -14,7 +15,6 @@ const ContentBlock = ({ title, children }: ContentBlockProps) => (
 );
 
 const ContentTitle = styled.h3`
-  color: blue;
   font-size: ${(props) => props.theme.fontSizes.small};
   font-family: ${(props) => props.theme.fonts.heading};
   margin: auto;
@@ -25,7 +25,8 @@ const ContentTitle = styled.h3`
 `;
 
 const ContentBody = styled.div`
-  background-color: ${(props) => props.theme.colors.cloudBlue};
+  background-color: ${(props) =>
+    props.theme.colors.cloudBlue};
   padding-top: 20px;
 `;
 
