@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import blueprintIcon from '../content/images/blueprint_banner_negative.webp';
+import blueprintIcon from '../../content/images/blueprint_banner_negative.webp';
 import MobileMenu from './MobileMenu';
 
 interface HeaderProps {

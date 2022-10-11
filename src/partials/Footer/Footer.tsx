@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import footerImages from '../content/json/footer';
+import footerImages from '../../content/json/footer';
 
 const Footer = () => (
   <FooterContainer>

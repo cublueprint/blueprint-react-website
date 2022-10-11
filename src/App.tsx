@@ -4,13 +4,13 @@ import { createGlobalStyle } from 'styled-components';
 import Theme from './Theme';
 import { Fonts } from './content';
 
-import { Header } from './Header';
-import Home from './Home';
+import { Header } from './partials/Header';
+import Home from './pages/home/Home';
 import About from './pages/about/About';
-import Projects from './Projects';
-import Apply from './Apply';
-import Contact from './Contact';
-import { Footer } from './Footer';
+import Projects from './pages/projects/Projects';
+import Apply from './pages/apply/Apply';
+import Contact from './pages/contact/Contact';
+import { Footer } from './partials/Footer';
 
 import { Teams } from './pages/team';
 
