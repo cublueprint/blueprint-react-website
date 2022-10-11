@@ -18,7 +18,7 @@ const ContentTitle = styled.h3`
   font-size: ${(props) => props.theme.fontSizes.small};
   font-family: ${(props) => props.theme.fonts.heading};
   margin: auto;
-  padding: 10px 70px;
+  padding: 10px;
   border-radius: 15px;
   width: 80%;
   background-color: ${(props) => props.theme.colors.skyBlue};
