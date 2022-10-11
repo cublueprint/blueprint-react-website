@@ -10,7 +10,7 @@ import About from './About';
 import Projects from './Projects';
 import Apply from './Apply';
 import Contact from './Contact';
-import Footer from './Footer';
+import { Footer } from './Footer';
 
 const routes = [Home, About, Projects, Apply, Contact];
 
