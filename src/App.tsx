@@ -2,17 +2,10 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 import Theme from './Theme';
-import { Fonts } from './content';
+import { Fonts } from './static';
 
-import { Header } from './partials/Header';
-import Home from './pages/home/Home';
-import About from './pages/about/About';
-import Projects from './pages/projects/Projects';
-import Apply from './pages/apply/Apply';
-import Contact from './pages/contact/Contact';
-import { Footer } from './partials/Footer';
-
-import { Teams } from './pages/team';
+import { Header, Footer } from './partials';
+import { Home, About, Projects, Apply, Contact, Teams } from './pages';
 
 const routes = [Home, About, Projects, Apply, Contact, Teams];
 

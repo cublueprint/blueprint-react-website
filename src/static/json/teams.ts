@@ -1,7 +1,7 @@
 import TeamsTitleImage from '../images/teams_title_block.png';
 
-const teams_content = {
-  TitleBlock: {
+const teamsContent = {
+  titleBlock: {
     title: 'Meet the Team!',
     subtitle:
       'Take a glimpse at the individuals who have made the team what it is today.',
@@ -16,7 +16,7 @@ const teams_content = {
       },
     ],
   },
-  TeamsList: [
+  teamsList: [
     {
       name: 'Execs',
       members: [
@@ -88,4 +88,4 @@ const teams_content = {
   ],
 };
 
-export default teams_content;
+export default teamsContent;

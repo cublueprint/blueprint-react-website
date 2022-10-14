@@ -3,13 +3,13 @@ import TitleBlock from '../../components/TitleBlock';
 import ContentBlock from '../../components/ContentBlock';
 import Team from './Team';
 
-import content from '../../content/json/teams';
+import content from '../../static/json/teams';
 
 const Teams = () => (
   <PageBody>
-    <TitleBlock content={content.TitleBlock}></TitleBlock>
+    <TitleBlock content={content.titleBlock}></TitleBlock>
 
-    {content.TeamsList.map((team, index) => (
+    {content.teamsList.map((team, index) => (
       <ContentBlock title={team.name}>
         <Team members={team.members} />
       </ContentBlock>
