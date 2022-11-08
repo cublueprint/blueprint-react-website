@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import LinkedinLogo from '../content/images/linkedin-icon.webp';
+import LinkedinLogo from '../static/images/linkedin-icon.webp';
 
 interface PersonProps {
   props: {
