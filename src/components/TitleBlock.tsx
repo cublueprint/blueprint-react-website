@@ -39,7 +39,7 @@ const TitleBlockDiv = styled.div`
     'Image'
     'Button';
 
-  @media ${(props) => `${props.theme.viewport.mobile}`} {
+  @media ${(props) => `${props.theme.viewport.tablet}`} {
     grid-template-columns: 3fr 2fr;
     grid-template-areas:
       'Title Image'
