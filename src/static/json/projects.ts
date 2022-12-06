@@ -30,6 +30,51 @@ const teamsContent = {
           description: 'description',
           picture: 'project logo',
         },
+        {
+          name: 'Allo Canada',
+          description: 'description',
+          picture: 'project logo',
+        },
+        {
+          name: 'Allo Canada',
+          description: 'description',
+          picture: 'project logo',
+        },
+      ],
+    },
+    {
+      title: 'Current Projects',
+      projects: [
+        {
+          name: 'Urban Minds',
+          description: 'description',
+          picture: 'project logo',
+        },
+        {
+          name: 'Allo Canada',
+          description: 'description',
+          picture: 'project logo',
+        },
+        {
+          name: 'Allo Canada',
+          description: 'description',
+          picture: 'project logo',
+        },
+      ],
+    },
+    {
+      title: 'Past Projects',
+      projects: [
+        {
+          name: 'Beneficient',
+          description: 'description',
+          picture: 'project logo',
+        },
+        {
+          name: 'Beneficient',
+          description: 'description',
+          picture: 'project logo',
+        },
       ],
     },
     {
