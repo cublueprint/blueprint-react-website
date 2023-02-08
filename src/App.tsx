@@ -2,17 +2,12 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 import Theme from './Theme';
-import { Fonts } from './content';
+import { Fonts } from './static';
 
-import { Header } from './Header';
-import Home from './Home';
-import About from './About';
-import Projects from './Projects';
-import Apply from './Apply';
-import Contact from './Contact';
-import { Footer } from './Footer';
+import { Header, Footer } from './partials';
+import { Home, About, Projects, Apply, Contact, Teams } from './pages';
 
-const routes = [Home, About, Projects, Apply, Contact];
+const routes = [Home, About, Projects, Apply, Contact, Teams];
 
 const links = [
   { home: Home },
@@ -20,6 +15,7 @@ const links = [
   { projects: Projects },
   { apply: Apply },
   { contact: Contact },
+  { Teams: Teams },
 ];
 
 const App = () => {
@@ -29,7 +25,6 @@ const App = () => {
       <Fonts />
       <Router>
         <Header links={routes.map(({ name }) => name)} />
-        <div>Hey! I'm going to be the new cuBlueprint website 🤠</div>
         <Switch>
           {routes.map((route) => (
             <Route key={`r-${route.name}`} exact path={`/${route.name}`}>
