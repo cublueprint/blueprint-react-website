@@ -19,7 +19,7 @@ const Apply = () => {
             body={
               'Looking for a group of slick, volunteer student developers to help with my software needs'
             }
-            url={'#'}
+            url={'apply/non-profit'}
             linkText={'Learn more!'}
           />
           <ApplicationText
@@ -27,7 +27,7 @@ const Apply = () => {
             body={
               'Looking to develop my skills and contribute to my community with like-minded nerds lmao'
             }
-            url={'#'}
+            url={'apply/student'}
             linkText={'Learn more!'}
           />
         </ApplicationTextContainer>
