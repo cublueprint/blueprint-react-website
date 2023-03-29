@@ -46,7 +46,6 @@ const Name = styled.h2`
 const Description = styled.h4`
   height: 100px;
   margin: 0;
-  overflow: scroll;
 `;
 
 const ReadMore = styled.a`
