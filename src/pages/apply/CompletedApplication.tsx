@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
-interface ApplicationTextProps {
+interface CompletedApplicationProps {
   title: string;
   body: string;
   url: string;
   linkText: string;
 }
 
-const ApplicationText = ({
+const CompletedApplication = ({
   title,
   body,
   url,
   linkText,
-}: ApplicationTextProps) => (
+}: CompletedApplicationProps) => (
   <Container>
     <Title>{title}</Title>
     <Body>{body}</Body>
@@ -22,22 +22,28 @@ const ApplicationText = ({
 
 const Container = styled.div`
   width: 40vw;
-  margin: 20px;
+  background: ${(props) => props.theme.colors.primaryBlue};
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  & > * {
+    /* margin: 0; */
+  }
 `;
 
 const Title = styled.h2`
-  color: ${(props) => props.theme.colors.primaryBlue};
+  margin: 0;
+  color: white;
   font-family: ${(props) => props.theme.fonts.heading};
   font-style: bold;
-  margin: 0;
 `;
 
 const Body = styled.p``;
 
 const Link = styled.a`
-  color: ${(props) => props.theme.colors.primaryBlue};
+  color: white;
   font-style: bold;
   text-decoration: none;
 `;
 
-export default ApplicationText;
+export default CompletedApplication;
