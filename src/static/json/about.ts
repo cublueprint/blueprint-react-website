@@ -15,6 +15,13 @@ const aboutContent = {
       },
     ]
     },
+    mission: { 
+        image: { 
+            picture: TeamsTitleImage,
+            alt: 'mission statement content block picture'
+        },
+        description: "To make beautiful engineering accessible and useful for those who create communities and promote public welfare."
+    }
 }
 
 export default aboutContent
