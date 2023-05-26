@@ -1,5 +1,7 @@
 import TitleBlock from '../../components/TitleBlock';
 import ContentBlock from '../../components/ContentBlock';
+import MissionBlock from './MissionBlock';
+import ValuesBlock from './ValuesBlock';
 
 import styled from 'styled-components';
 
@@ -11,17 +13,10 @@ const About = () => {
     <>
       <TitleBlock content={content.titleBlock}></TitleBlock>
       <ContentBlock title='Mission Statement'>
-        <Image src={content.mission.image.picture} alt={content.mission.image.alt}></Image>
-        <Description>{content.mission.description}</Description>
+        <MissionBlock content={content.mission}></MissionBlock>
       </ContentBlock>
       <ContentBlock title="Our Values">
-        {content.values.map((value, index) => (
-          <div>
-          <ValueTitle>{value.title}</ValueTitle>
-          <p>{value.description}</p>
-          <Image src={value.image.picture} alt={value.image.alt}></Image>
-          </div>
-        ))}
+        <ValuesBlock content={content.values}></ValuesBlock>
       </ContentBlock>
     </>
   );
@@ -40,10 +35,7 @@ const Image = styled.img`
   top: 25%;
 `;
 
-const Description = styled.p`
-  grid-area: Description;
-  margin: 0;
-`;
+
 
 const ValueTitle = styled.p`
   color: blue;

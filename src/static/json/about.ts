@@ -7,13 +7,13 @@ const aboutContent = {
         image: {
             picture: TeamsTitleImage,
             alt: 'about title block picture',
-    },
-    buttons: [
-      {
-        content: 'OUR TEAM >',
-        link: '/teams',
-      },
-    ]
+        },
+        buttons: [
+        {
+            content: 'OUR TEAM >',
+            link: '/teams',
+        },
+        ]
     },
     mission: { 
         image: { 
