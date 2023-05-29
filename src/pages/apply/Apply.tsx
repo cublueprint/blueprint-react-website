@@ -25,7 +25,7 @@ const Apply = () => {
           <ApplicationText
             title={'Student'}
             body={
-              'Looking to develop my skills and contribute to my community with like-minded nerds lmao'
+              'Looking to develop my skills and contribute to my community with like-minded peers'
             }
             url={'apply/student'}
             linkText={'Learn more!'}
@@ -47,13 +47,24 @@ const TitleContainer = styled.div`
   grid-template-areas:
     'Logo Title'
     'Logo Subtitle';
+  grid-gap: 0 2vw;
+  grid-template-columns: 20vw 58vw;
+  grid-template-rows: 80% 20%;
+  @media ${(props) => props.theme.viewport.mobile} {
+  }
+
+  @media ${(props) => props.theme.viewport.tablet} {
+  }
+
+  @media ${(props) => props.theme.viewport.laptop} {
+  }
 `;
 
 const StyledBlueprintImage = styled.img`
   grid-area: Logo;
-  max-width: 150px;
-  margin-left: 4vw;
-  height: 100%;
+  padding-top: 10%;
+  height: auto;
+  width: 100%;
 `;
 
 const Title = styled.h1`
@@ -62,12 +73,13 @@ const Title = styled.h1`
   color: ${(props) => props.theme.colors.primaryBlue};
   font-family: ${(props) => props.theme.fonts.heading};
   font-style: bold;
-  font-size: 10vw;
+  font-size: 13vw;
 `;
 
 const Subtitle = styled.p`
   grid-area: Subtitle;
   margin: 0;
+  font-size: 3vw;
 `;
 
 const BodyContainer = styled.div`
@@ -77,6 +89,7 @@ const BodyContainer = styled.div`
 const ApplicationTextContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 `;
 
 export default Apply;

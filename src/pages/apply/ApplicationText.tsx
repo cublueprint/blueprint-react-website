@@ -22,7 +22,7 @@ const ApplicationText = ({
 
 const Container = styled.div`
   width: 40vw;
-  margin: 20px;
+  margin: 20px 50px 20px 0;
 `;
 
 const Title = styled.h2`
