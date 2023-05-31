@@ -12,14 +12,14 @@ const Apply = () => {
       </TitleContainer>
 
       <BodyContainer>
-        <h2>I am a:</h2>
+        <SectionHeader>I am a:</SectionHeader>
         <ApplicationTextContainer>
           <ApplicationText
             title={'Non Profit'}
             body={
-              'Looking for a group of slick, volunteer student developers to help with my software needs'
+              'Looking for a group of volunteer student developers to help with my software needs'
             }
-            url={'apply/non-profit'}
+            url={'apply/non-profit'} // SHOULD WE REPLACE DIRECTLY WITH A TYPEFORM/GOOGLE FORM LINK?
             linkText={'Learn more!'}
           />
           <ApplicationText
@@ -40,6 +40,10 @@ const Container = styled.div`
   margin: auto;
   width: 80vw;
   padding: 50px 0;
+
+  @media ${(props) => props.theme.viewport.laptop} {
+    width: 820px;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -48,15 +52,16 @@ const TitleContainer = styled.div`
     'Logo Title'
     'Logo Subtitle';
   grid-gap: 0 2vw;
-  grid-template-columns: 20vw 58vw;
-  grid-template-rows: 80% 20%;
+
   @media ${(props) => props.theme.viewport.mobile} {
+    grid-template-rows: 80% 20%;
   }
 
   @media ${(props) => props.theme.viewport.tablet} {
   }
 
   @media ${(props) => props.theme.viewport.laptop} {
+    grid-gap: 0 20px;
   }
 `;
 
@@ -65,6 +70,10 @@ const StyledBlueprintImage = styled.img`
   padding-top: 10%;
   height: auto;
   width: 100%;
+
+  @media ${(props) => props.theme.viewport.laptop} {
+    width: 205px;
+  }
 `;
 
 const Title = styled.h1`
@@ -74,16 +83,47 @@ const Title = styled.h1`
   font-family: ${(props) => props.theme.fonts.heading};
   font-style: bold;
   font-size: 13vw;
+
+  @media ${(props) => props.theme.viewport.laptop} {
+    font-size: 133px;
+  }
 `;
 
 const Subtitle = styled.p`
   grid-area: Subtitle;
   margin: 0;
   font-size: 3vw;
+
+  @media ${(props) => props.theme.viewport.laptop} {
+    font-size: 31px;
+  }
 `;
 
 const BodyContainer = styled.div`
-  padding: 5vh 0;
+  padding: 40px 0;
+  @media ${(props) => props.theme.viewport.mobile} {
+    grid-gap: 0 2vw;
+    grid-template-columns: 20vw 58vw;
+    grid-template-rows: 80% 20%;
+  }
+
+  @media ${(props) => props.theme.viewport.tablet} {
+  }
+
+  @media ${(props) => props.theme.viewport.laptop} {
+  }
+`;
+
+const SectionHeader = styled.h2`
+  margin: 0;
+
+  @media ${(props) => props.theme.viewport.tablet} {
+    font-size: 3vw;
+  }
+
+  @media ${(props) => props.theme.viewport.laptop} {
+    font-size: 31px;
+  }
 `;
 
 const ApplicationTextContainer = styled.div`

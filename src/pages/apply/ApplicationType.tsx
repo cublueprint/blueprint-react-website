@@ -24,18 +24,19 @@ const ApplicationType = () => {
 
   useEffect(() => {
     const applicationType: string | undefined = params.type;
-    if (applicationType === 'non-profit')
-      setContent(ApplicationContent['non-profit']);
+    if (applicationType === 'Non-Profit')
+      setContent(ApplicationContent['Non-Profit']);
     else {
-      setContent(ApplicationContent['student']);
+      setContent(ApplicationContent['Student']);
     }
   }, [params]);
 
   return (
     <Container>
-      <Title>Our {params.type} Openings</Title>
+      <Title>Our Openings</Title>
       <Subtitle>
-        Here are our openings. Select whatever you want to apply to!
+        Here are our openings for {params.type}s. Select whatever you want to
+        apply to!
       </Subtitle>
 
       <ApplicationLists>
@@ -58,7 +59,7 @@ const ApplicationType = () => {
             title={'A jawb'}
             body={'A job you once wanted :")'}
             url={'#'}
-            linkText={"I'm not intereste anymore!"}
+            linkText={"I'm not interested anymore"}
           />
         </ApplicationList>
       </ApplicationLists>
