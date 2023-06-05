@@ -63,7 +63,14 @@ const aboutContent = {
                 alt: 'values 5 image'
             }
         }
-    ]
+    ],
+    banner: {
+        text: 'Know more about the people behind the scenes!',
+        button: {
+            content: 'Our Team >',
+            link: '/teams'
+        }
+    }
 }
 
 export default aboutContent

@@ -2,6 +2,7 @@ import TitleBlock from '../../components/TitleBlock';
 import ContentBlock from '../../components/ContentBlock';
 import MissionBlock from './MissionBlock';
 import ValuesBlock from './ValuesBlock';
+import BannerBlock from '../../components/BannerBlock';
 
 import styled from 'styled-components';
 
@@ -18,6 +19,7 @@ const About = () => {
       <ContentBlock title="Our Values">
         <ValuesBlock content={content.values}></ValuesBlock>
       </ContentBlock>
+      <BannerBlock content={content.banner}></BannerBlock>
     </>
   );
 };

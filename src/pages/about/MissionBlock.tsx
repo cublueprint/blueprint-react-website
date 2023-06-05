@@ -18,20 +18,20 @@ const MissionBlock = (props: MissionBlockProps) => (
 );
 
 const MissionBlockDiv = styled.div`
-    display: grid;
-    grid-template-columns: auto 1fr; /* Adjust the column sizes as needed */
-    grid-gap: 20px; /* Adjust the gap between the columns as needed */
+    display: flex;
+    margin: 0px 220px;
     align-items: center;
 `
 
 const Image = styled.img`
     margin: 50px;
-    width: 75%;
+    width: 25%;
     height: auto;
 `;
 
 const Description = styled.p`
     margin: 50px;
+    width: 75%;
 `;
 
 export default MissionBlock;

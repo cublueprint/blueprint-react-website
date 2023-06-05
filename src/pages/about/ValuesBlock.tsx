@@ -28,7 +28,7 @@ const ValuesBlock = (props: ValuesBlockProps) => (
 const ValuesBlockDiv = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 30px 220px;
+    margin: 30px 220px 0px 220px;
     & > div:nth-child(even) {
         > p:first-child {
             margin-left: auto;
