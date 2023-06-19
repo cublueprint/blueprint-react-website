@@ -31,7 +31,7 @@ const ApplicationType = () => {
   }, [params]);
 
   return (
-    <Container> 
+    <Container>
       <Title>Our Openings</Title>
       <Subtitle>
         Here are our openings for {params.type}s. Select whatever you want to
@@ -73,10 +73,10 @@ const Container = styled.div`
   width: 80vw;
   padding: 50px 0;
 
-  @media (min-width: 1600px) {
+  @media ${(props) => props.theme.viewport.monitor} {
     width: 1280px;
   }
-  @media (min-width: 2150px) {
+  @media ${(props) => props.theme.viewport.xlmonitor} {
     width: 1720px;
   }
 `;
@@ -102,7 +102,6 @@ const ApplicationLists = styled.div`
   flex-wrap: wrap;
   gap: 50px 40px;
   justify-content: space-between;
-
 `;
 
 export default ApplicationType;

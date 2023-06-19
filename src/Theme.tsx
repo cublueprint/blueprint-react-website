@@ -21,6 +21,8 @@ const theme = {
     mobile: '(min-width: 320px)',
     tablet: '(min-width: 768px)',
     laptop: '(min-width: 1024px)',
+    monitor: '(min-width: 1600px)',
+    xlmonitor: '(min-width: 2150px)',
   },
 };
 
