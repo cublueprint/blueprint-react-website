@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 
 import ApplicationContent from '../../static/json/application';
 import ApplicationText from './ApplicationText';
-import CompletedApplication from './CompletedApplication';
 
 interface Application {
   title: string;
@@ -32,7 +31,7 @@ const ApplicationType = () => {
   }, [params]);
 
   return (
-    <Container>
+    <Container> 
       <Title>Our Openings</Title>
       <Subtitle>
         Here are our openings for {params.type}s. Select whatever you want to
@@ -40,8 +39,8 @@ const ApplicationType = () => {
       </Subtitle>
 
       <ApplicationLists>
-        <ApplicationList>
-          {content?.openRoles?.map((role, index) => {
+        {content?.openRoles?.map((role, index) => {
+          if (index + 1 === content.openRoles.length) {
             return (
               <ApplicationText
                 key={index}
@@ -51,17 +50,19 @@ const ApplicationType = () => {
                 linkText={role.linkText}
               />
             );
-          })}
-        </ApplicationList>
-
-        <ApplicationList>
-          <CompletedApplication
-            title={'A jawb'}
-            body={'A job you once wanted :")'}
-            url={'#'}
-            linkText={"I'm not interested anymore"}
-          />
-        </ApplicationList>
+          } else {
+            return (
+              <ApplicationText
+                key={index}
+                title={role.title}
+                body={role.body}
+                url={role.url}
+                linkText={role.linkText}
+                last={true}
+              />
+            );
+          }
+        })}
       </ApplicationLists>
     </Container>
   );
@@ -71,6 +72,13 @@ const Container = styled.div`
   margin: auto;
   width: 80vw;
   padding: 50px 0;
+
+  @media (min-width: 1600px) {
+    width: 1280px;
+  }
+  @media (min-width: 2150px) {
+    width: 1720px;
+  }
 `;
 
 const Title = styled.h1`
@@ -87,15 +95,14 @@ const Subtitle = styled.p`
   margin: 0;
 `;
 const ApplicationLists = styled.div`
+  width: 100%;
+  padding-top: 40px;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  padding-top: 5vh;
-`;
+  flex-wrap: wrap;
+  gap: 50px 40px;
+  justify-content: space-between;
 
-const ApplicationList = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 export default ApplicationType;

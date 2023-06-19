@@ -16,11 +16,65 @@ const applicationContent = {
     ],
     applications: [],
   },
-  'Student': {
+  Student: {
     openRoles: [
       {
         title: 'Web Designer',
         body: 'Sen hates designing. Do it for her',
+        url: '#',
+        linkText: "I'm interested!",
+      },
+      {
+        title: 'Web Developer',
+        body: 'Sen hates coding. Do it for her',
+        url: '#',
+        linkText: "I'm interested!",
+      },
+      {
+        title: 'Web Developer',
+        body: 'Sen hates coding. Do it for her',
+        url: '#',
+        linkText: "I'm interested!",
+      },
+      {
+        title: 'Web Developer',
+        body: 'Sen hates coding. Do it for her',
+        url: '#',
+        linkText: "I'm interested!",
+      },
+      {
+        title: 'Web Developer',
+        body: 'Sen hates coding. Do it for her',
+        url: '#',
+        linkText: "I'm interested!",
+      },
+      {
+        title: 'Web Developer',
+        body: 'Sen hates coding. Do it for her',
+        url: '#',
+        linkText: "I'm interested!",
+      },
+      {
+        title: 'Web Developer',
+        body: 'Sen hates coding. Do it for her',
+        url: '#',
+        linkText: "I'm interested!",
+      },
+      {
+        title: 'Web Developer',
+        body: 'Sen hates coding. Do it for her',
+        url: '#',
+        linkText: "I'm interested!",
+      },
+      {
+        title: 'Web Developer',
+        body: 'Sen hates coding. Do it for her',
+        url: '#',
+        linkText: "I'm interested!",
+      },
+      {
+        title: 'Web Developer',
+        body: 'Sen hates coding. Do it for her',
         url: '#',
         linkText: "I'm interested!",
       },

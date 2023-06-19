@@ -57,9 +57,6 @@ const TitleContainer = styled.div`
     grid-template-rows: 80% 20%;
   }
 
-  @media ${(props) => props.theme.viewport.tablet} {
-  }
-
   @media ${(props) => props.theme.viewport.laptop} {
     grid-gap: 0 20px;
   }
@@ -101,16 +98,11 @@ const Subtitle = styled.p`
 
 const BodyContainer = styled.div`
   padding: 40px 0;
+  // add some default styling for views smaller than mobile
   @media ${(props) => props.theme.viewport.mobile} {
     grid-gap: 0 2vw;
     grid-template-columns: 20vw 58vw;
     grid-template-rows: 80% 20%;
-  }
-
-  @media ${(props) => props.theme.viewport.tablet} {
-  }
-
-  @media ${(props) => props.theme.viewport.laptop} {
   }
 `;
 

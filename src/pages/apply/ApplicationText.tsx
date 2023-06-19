@@ -5,6 +5,7 @@ interface ApplicationTextProps {
   body: string;
   url: string;
   linkText: string;
+  last?: boolean;
 }
 
 const ApplicationText = ({
@@ -12,17 +13,18 @@ const ApplicationText = ({
   body,
   url,
   linkText,
+  last,
 }: ApplicationTextProps) => (
-  <Container>
+  <Container last={last}>
     <Title>{title}</Title>
     <Body>{body}</Body>
     <Link href={url}>{linkText}</Link>
   </Container>
 );
 
-const Container = styled.div`
-  width: 40vw;
-  margin: 20px 50px 20px 0;
+const Container = styled.div<{ last?: boolean }>`
+  width: 400px;
+  flex-grow: ${(props) => (props.last ? '0' : '1')};
 `;
 
 const Title = styled.h2`
