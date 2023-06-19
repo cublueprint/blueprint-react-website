@@ -1,91 +1,76 @@
 const applicationContent = {
   'Non-Profit': {
-    openRoles: [
-      {
-        title: 'Web Designer',
-        body: 'Sen hates designing. Do it for her',
-        url: '#', // some typeform or google forms link
-        linkText: "I'm interested!",
-      },
-      {
-        title: 'Web Developer',
-        body: 'Sen hates coding. Do it for her=',
-        url: '#',
-        linkText: "I'm interested!",
-      },
-    ],
-    applications: [],
+    id: 'xtekIgKF', //replace with real typeform ID later
   },
   Student: {
     openRoles: [
       {
         title: 'Web Designer',
         body: 'Sen hates designing. Do it for her',
-        url: '#',
+        id: 'moe6aa', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'moe6aa', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'kph2zbHj', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'kph2zbHj', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'kph2zbHj', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'kph2zbHj', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'kph2zbHj', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'kph2zbHj', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'kph2zbHj', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'kph2zbHj', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
       {
         title: 'Web Developer',
         body: 'Sen hates coding. Do it for her',
-        url: '#',
+        id: 'kph2zbHj', //replace with real typeform ID later
         linkText: "I'm interested!",
       },
     ],
-    applications: [],
   },
 };
 

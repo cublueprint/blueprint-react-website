@@ -108,6 +108,7 @@ const BodyContainer = styled.div`
 
 const SectionHeader = styled.h2`
   margin: 0;
+  margin-bottom: 50px;
 
   @media ${(props) => props.theme.viewport.tablet} {
     font-size: 3vw;
@@ -122,6 +123,14 @@ const ApplicationTextContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  gap: 50px 40px;
+
+  @media ${(props) => props.theme.viewport.mobile} {
+    flex-wrap: wrap;
+  }
+  @media ${(props) => props.theme.viewport.tablet} {
+    flex-wrap: nowrap;
+  }
 `;
 
 export default Apply;

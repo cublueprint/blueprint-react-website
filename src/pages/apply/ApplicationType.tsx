@@ -1,67 +1,41 @@
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-
-import ApplicationContent from '../../static/json/application';
 import ApplicationText from './ApplicationText';
+import ApplicationContent from '../../static/json/application';
 
 interface Application {
   title: string;
   body: string;
-  url: string;
+  id: string;
   linkText: string;
 }
 
 interface ContentSchema {
   openRoles: Application[];
-  applications: Application[];
 }
 
 const ApplicationType = () => {
-  const params = useParams();
-  const [content, setContent] = useState<ContentSchema>();
-
-  useEffect(() => {
-    const applicationType: string | undefined = params.type;
-    if (applicationType === 'Non-Profit')
-      setContent(ApplicationContent['Non-Profit']);
-    else {
-      setContent(ApplicationContent['Student']);
-    }
-  }, [params]);
+  const content: ContentSchema = ApplicationContent['Student'];
 
   return (
     <Container>
       <Title>Our Openings</Title>
       <Subtitle>
-        Here are our openings for {params.type}s. Select whatever you want to
-        apply to!
+        Here are our openings for students. Select whatever you want to apply
+        to!
       </Subtitle>
 
       <ApplicationLists>
         {content?.openRoles?.map((role, index) => {
-          if (index + 1 === content.openRoles.length) {
-            return (
-              <ApplicationText
-                key={index}
-                title={role.title}
-                body={role.body}
-                url={role.url}
-                linkText={role.linkText}
-              />
-            );
-          } else {
-            return (
-              <ApplicationText
-                key={index}
-                title={role.title}
-                body={role.body}
-                url={role.url}
-                linkText={role.linkText}
-                last={true}
-              />
-            );
-          }
+          return (
+            <ApplicationText
+              key={index}
+              title={role.title}
+              body={role.body}
+              id={role.id}
+              linkText={role.linkText}
+              last={index + 1 !== content.openRoles.length}
+            />
+          );
         })}
       </ApplicationLists>
     </Container>
