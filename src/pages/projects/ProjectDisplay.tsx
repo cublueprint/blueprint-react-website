@@ -14,7 +14,7 @@ interface Breakpoint {
 }
 
 interface ProjectList {
-  props: {
+  projects: {
     name: string;
     picture: any;
     description: string;
@@ -26,7 +26,7 @@ function create_breakpoints_list(carousel_length: number): Array<Breakpoint> {
    * Returns a different breakpoint list depending on the number of items in the carousel
    *
    * @param carousel_length - number of items in the carousel
-  */
+   */
   var breakpoints: Array<Breakpoint> = [
     {
       size: 400,
@@ -59,14 +59,14 @@ function create_breakpoints_list(carousel_length: number): Array<Breakpoint> {
   return breakpoints;
 }
 
-const ProjectDisplay = ({ props }: ProjectList) => (
+const ProjectDisplay = ({ projects }: ProjectList) => (
   <CarouselWrapper>
-    {props.length < 1 && <div>Coming soon...</div>}
-    {props.length === 1 &&
-      props.map((project) => <ProjectCard props={project} />)}
-    {props.length > 1 && (
-      <Carousel breakpoints={create_breakpoints_list(props.length)}>
-        {props.map((project) => (
+    {projects.length < 1 && <div>Coming soon...</div>}
+    {projects.length === 1 &&
+      projects.map((project) => <ProjectCard props={project} />)}
+    {projects.length > 1 && (
+      <Carousel breakpoints={create_breakpoints_list(projects.length)}>
+        {projects.map((project) => (
           <ProjectCard props={project} />
         ))}
       </Carousel>

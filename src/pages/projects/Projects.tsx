@@ -4,14 +4,14 @@ import TitleBlock from '../../components/TitleBlock';
 import ContentBlock from '../../components/ContentBlock';
 
 import content from '../../static/json/projects';
-import ProjectDisplay from './ProjectDisplay';
+import ProjectDisplay from './ProjectDisplay - custom arrow';
 
 const Projects = () => (
   <PageBody>
     <TitleBlock content={content.titleBlock}></TitleBlock>
     {content.contentBlocks.map((block, index) => (
-      <ContentBlock title={block.title}>
-        <ProjectDisplay props={block.projects} />
+      <ContentBlock key={index} title={block.title}>
+        <ProjectDisplay projects={block.projects} />
       </ContentBlock>
     ))}
     <ApplicationDiv>
