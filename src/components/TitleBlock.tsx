@@ -31,6 +31,8 @@ const TitleBlock = (props: TitleBlockProps) => (
 );
 
 const TitleBlockDiv = styled.div`
+  width: 80%;
+  margin: auto;
   padding: 50px;
   display: grid;
   grid-gap: 10px;
