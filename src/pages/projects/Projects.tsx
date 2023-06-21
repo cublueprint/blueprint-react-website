@@ -4,7 +4,7 @@ import TitleBlock from '../../components/TitleBlock';
 import ContentBlock from '../../components/ContentBlock';
 
 import content from '../../static/json/projects';
-import ProjectDisplay from './ProjectDisplay - custom arrow';
+import ProjectDisplay from './ProjectDisplay';
 
 const Projects = () => (
   <PageBody>

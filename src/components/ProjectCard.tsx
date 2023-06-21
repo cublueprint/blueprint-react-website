@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface ProjectProps {
@@ -5,16 +6,21 @@ interface ProjectProps {
     name: string;
     description: string;
     picture: any;
+    problem: string;
+    solution: string;
   };
 }
 
 const ProjectCard = ({ props }: ProjectProps) => {
+  const projectName = props.name.replace(/\s/g, '');
   return (
     <CardDiv>
       <Picture src={props.name} alt={`${props.name} project logo`} />
       <Name>{props.name}</Name>
       <Description>{props.description}</Description>
-      <ReadMore href={`project\${props.name}`}>Read More</ReadMore>
+      <ReadMore to={`${projectName}`} state={{ projectDetails: props }}>
+        Read More
+      </ReadMore>
     </CardDiv>
   );
 };
@@ -48,7 +54,7 @@ const Description = styled.h4`
   margin: 0;
 `;
 
-const ReadMore = styled.a`
+const ReadMore = styled(Link)`
   color: ${(props) => props.theme.colors.primaryBlue};
   text-decoration: none;
   font-weight: 700;

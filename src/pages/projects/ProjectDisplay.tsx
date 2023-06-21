@@ -18,6 +18,8 @@ interface ProjectList {
     name: string;
     picture: any;
     description: string;
+    problem: string;
+    solution: string;
   }[];
 }
 

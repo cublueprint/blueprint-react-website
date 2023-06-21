@@ -9,6 +9,7 @@ import {
   Home,
   About,
   Projects,
+  ProjectPage,
   Apply,
   ApplicationType,
   TypeformPage,
@@ -29,6 +30,7 @@ const App = () => {
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/projects' element={<Projects />} />
+          <Route path='/projects/:name' element={<ProjectPage />} />
           <Route path='/apply' element={<Apply />} />
           <Route path='/apply/student' element={<ApplicationType />} />
           <Route path='/apply/non-profit' element={<TypeformPage />} />

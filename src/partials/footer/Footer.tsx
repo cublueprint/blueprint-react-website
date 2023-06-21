@@ -46,7 +46,6 @@ const FooterContainer = styled.div`
 `;
 
 const FooterGrid = styled.div`
-  margin: 20px;
   padding: 25px;
   display: block;
 
