@@ -24,19 +24,19 @@ const BannerBlock = (props: BannerBlockProps) => (
 const ApplicationDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 10vw;
   background-color: ${(props) => props.theme.colors.offWhite};
 `;
 
 const FlexContainer = styled.div`
-  width: 25vw;
+  display: flex;
+  align-items: center;
   height: 100px;
 `;
 
 const Text = styled.h3`
-  margin-top: 35px;
-  text-align: right;
+  text-align: center;
   color: ${(props) => props.theme.colors.primaryBlue};
 `;
 
@@ -45,10 +45,10 @@ const Button = styled.button`
   background: ${(props) => props.theme.colors.cloudBlue};
   border: 3px solid ${(props) => props.theme.colors.primaryBlue};
   border-radius: 5px;
-  margin-top: 25px;
   height: 50px;
   width: 150px;
   font-family: ${(props) => props.theme.fonts.content};
+  cursor: pointer;
 `;
 
 export default BannerBlock;

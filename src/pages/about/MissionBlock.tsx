@@ -3,7 +3,7 @@ import styled from 'styled-components';
 interface MissionBlockProps {
     content: {
         image: {
-            picture: any;
+            src: string;
             alt: string;
         };
         description: string;
@@ -12,10 +12,12 @@ interface MissionBlockProps {
 
 const MissionBlock = (props: MissionBlockProps) => (
     <MissionBlockDiv>
-        <Image src={props.content.image.picture} alt={props.content.image.alt}></Image>
+        <Image src={props.content.image.src} alt={props.content.image.alt}></Image>
         <Description>{props.content.description}</Description>
     </MissionBlockDiv>
 );
+
+//fine for now but need to be made responsive
 
 const MissionBlockDiv = styled.div`
     display: flex;
