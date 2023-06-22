@@ -77,7 +77,8 @@ const ValueContent = styled.div`
 `
 
 const ValueTitle = styled.p`
-  color: blue;
+  color: #0078E8;
+  font-weight: bold;
   margin-bottom: 0;
 `
 

@@ -35,6 +35,7 @@ const FlexContainer = styled.div`
 `;
 
 const Text = styled.h3`
+  margin-top: 35px;
   text-align: right;
   color: ${(props) => props.theme.colors.primaryBlue};
 `;
@@ -42,7 +43,7 @@ const Text = styled.h3`
 const Button = styled.button`
   color: ${(props) => props.theme.colors.primaryBlue};
   background: ${(props) => props.theme.colors.cloudBlue};
-  border: 3px solid ${(props) => props.theme.colors.skyBlue};
+  border: 3px solid ${(props) => props.theme.colors.primaryBlue};
   border-radius: 5px;
   margin-top: 25px;
   height: 50px;

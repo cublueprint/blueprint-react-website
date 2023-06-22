@@ -7,8 +7,8 @@ interface ContentBlockProps {
   children: ReactNode;
 }
 
-const ContentBlock = ({ title, children }: ContentBlockProps) => (
-  <ContentBody>
+const ContentBlock = ({ title, children, background_color }: ContentBlockProps) => (
+  <ContentBody background_color={background_color}>
     <ContentTitle>{title}</ContentTitle>
     {children}
   </ContentBody>
@@ -24,9 +24,16 @@ const ContentTitle = styled.h3`
   background-color: ${(props) => props.theme.colors.skyBlue};
 `;
 
-const ContentBody = styled.div`
+interface ContentBodyProps {
+  background_color?: string;
+}
+
+const ContentBody = styled.div<ContentBodyProps>`
   background-color: ${(props) =>
-    props.theme.colors.cloudBlue};
+
+    props.background_color !== undefined
+      ? props.background_color
+      : props.theme.colors.cloudBlue};
   padding-top: 20px;
 `;
 

@@ -16,7 +16,7 @@ const About = () => {
       <ContentBlock title='Mission Statement'>
         <MissionBlock content={content.mission}></MissionBlock>
       </ContentBlock>
-      <ContentBlock title="Our Values">
+      <ContentBlock title="Our Values" background_color='white'>
         <ValuesBlock content={content.values}></ValuesBlock>
       </ContentBlock>
       <BannerBlock content={content.banner}></BannerBlock>
