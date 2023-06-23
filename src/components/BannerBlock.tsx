@@ -26,6 +26,7 @@ const ApplicationDiv = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   gap: 10vw;
+  padding: 20px;
   background-color: ${(props) => props.theme.colors.offWhite};
 `;
 

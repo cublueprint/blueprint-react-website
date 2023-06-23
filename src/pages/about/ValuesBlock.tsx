@@ -79,18 +79,18 @@ const ValuesBlockDiv = styled.div`
     }
 
     @media only screen and (max-width: 1100px) {
-        > div > p:first-child {
+        > ${ValueDiv} > ${ValueTitle} {
             margin: 0 auto;
         }
-        > div > div { 
+        > ${ValueDiv} > ${ValueContent} { 
             flex-direction: column;
         }
-        > div > div > p {
+        > ${ValueDiv} > ${ValueContent} > ${Description} {
             order: 2;
             text-align: center !important;
             width: 100%;
         }
-        > div > div > img {
+        > ${ValueDiv} > ${ValueContent} > ${Image} {
             order: 1;
             margin: 30px auto !important;
         }
