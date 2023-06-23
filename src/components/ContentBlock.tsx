@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 interface ContentBlockProps {
   title: string;
-  background_color?: string;
+  backgroundColour?: string;
   children: ReactNode;
 }
 
-const ContentBlock = ({ title, children }: ContentBlockProps) => (
-  <ContentBody>
+const ContentBlock = ({ title, children, backgroundColour }: ContentBlockProps) => (
+  <ContentBody backgroundColour={backgroundColour}>
     <ContentTitle>{title}</ContentTitle>
     {children}
   </ContentBody>
@@ -24,9 +24,14 @@ const ContentTitle = styled.h3`
   background-color: ${(props) => props.theme.colors.skyBlue};
 `;
 
-const ContentBody = styled.div`
-  background-color: ${(props) =>
-    props.theme.colors.cloudBlue};
+interface ContentBodyProps {
+  backgroundColour?: string;
+}
+
+const ContentBody = styled.div<ContentBodyProps>`
+  background-color: ${(props) => 
+    props.backgroundColour ? props.backgroundColour : props.theme.colors.cloudBlue
+  };
   padding-top: 20px;
 `;
 
