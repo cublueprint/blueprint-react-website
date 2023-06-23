@@ -4,8 +4,6 @@ import MissionBlock from './MissionBlock';
 import ValuesBlock from './ValuesBlock';
 import BannerBlock from '../../components/BannerBlock';
 
-import styled from 'styled-components';
-
 import content from '../../static/json/about';
 
 const About = () => {
