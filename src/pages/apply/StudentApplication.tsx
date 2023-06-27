@@ -53,7 +53,7 @@ const CustomPopupButton = styled(PopupButton)`
   font-family: ${(props) => props.theme.fonts.content};
   padding: 0;
   color: ${(props) => props.theme.colors.primaryBlue};
-  font-style: bold;
+  font-weight: 700;
   text-decoration: none;
 `;
 
