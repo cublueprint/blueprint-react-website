@@ -1,7 +1,7 @@
 import { Widget } from '@typeform/embed-react';
 import ApplicationContent from '../../static/json/application';
 
-const TypeformPage = () => {
+const NonProfitApplication = () => {
   const formId: string = ApplicationContent['Non-Profit'].id;
 
   return (
@@ -13,4 +13,4 @@ const TypeformPage = () => {
   );
 };
 
-export default TypeformPage;
+export default NonProfitApplication;

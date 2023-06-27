@@ -10,7 +10,7 @@ interface ApplicationTextProps {
   last?: boolean;
 }
 
-const ApplicationText = ({
+const StudentApplication = ({
   title,
   body,
   linkText,
@@ -57,4 +57,4 @@ const CustomPopupButton = styled(PopupButton)`
   text-decoration: none;
 `;
 
-export default ApplicationText;
+export default StudentApplication;

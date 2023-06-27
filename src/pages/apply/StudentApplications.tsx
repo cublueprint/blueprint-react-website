@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ApplicationText from './ApplicationText';
+import StudentApplication from './StudentApplication';
 import ApplicationContent from '../../static/json/application';
 
 interface Application {
@@ -13,7 +13,7 @@ interface ContentSchema {
   openRoles: Application[];
 }
 
-const ApplicationType = () => {
+const StudentApplications = () => {
   const content: ContentSchema = ApplicationContent['Student'];
 
   return (
@@ -27,7 +27,7 @@ const ApplicationType = () => {
       <ApplicationLists>
         {content?.openRoles?.map((role, index) => {
           return (
-            <ApplicationText
+            <StudentApplication
               key={index}
               title={role.title}
               body={role.body}
@@ -78,4 +78,4 @@ const ApplicationLists = styled.div`
   justify-content: space-between;
 `;
 
-export default ApplicationType;
+export default StudentApplications;

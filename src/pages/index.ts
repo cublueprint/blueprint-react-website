@@ -1,7 +1,7 @@
 import Home from './home/Home';
 import About from './about/About';
 import Projects from './projects/Projects';
-import { ApplicationType, Apply, TypeformPage } from './apply';
+import { StudentApplications, Apply, NonProfitApplication } from './apply';
 import Contact from './contact/Contact';
 import Teams from './teams/Teams';
 
@@ -10,8 +10,8 @@ export {
   About,
   Projects,
   Apply,
-  ApplicationType,
-  TypeformPage,
+  StudentApplications,
+  NonProfitApplication,
   Contact,
   Teams,
 };
