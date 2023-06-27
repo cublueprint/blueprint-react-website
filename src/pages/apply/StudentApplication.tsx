@@ -34,7 +34,6 @@ const Container = styled.div<{ last?: boolean }>`
 const Title = styled.h2`
   color: ${(props) => props.theme.colors.primaryBlue};
   font-family: ${(props) => props.theme.fonts.heading};
-  font-style: bold;
   margin: 0;
 `;
 
@@ -47,13 +46,15 @@ const Link = styled.a`
 `;
 
 const CustomPopupButton = styled(PopupButton)`
-  background-color: transparent;
-  border: none;
+  background-color: ${(props) => props.theme.colors.cloudBlue};
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: ${(props) => props.theme.colors.skyBlue};
   font-size: 20px;
   font-family: ${(props) => props.theme.fonts.content};
-  padding: 0;
+  padding: 10px 20px;
   color: ${(props) => props.theme.colors.primaryBlue};
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 `;
 
