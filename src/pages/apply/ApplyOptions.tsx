@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { PopupButton } from '@typeform/embed-react';
 import { useNavigate } from 'react-router-dom';
 
 interface ApplicationTextProps {
@@ -7,16 +6,9 @@ interface ApplicationTextProps {
   body: string;
   linkText: string;
   url: string;
-  id?: string;
 }
 
-const ApplyOptions = ({
-  title,
-  body,
-  linkText,
-  url,
-  id
-}: ApplicationTextProps) => {
+const ApplyOptions = ({ title, body, linkText, url }: ApplicationTextProps) => {
   const navigate = useNavigate();
   const handleClick = () => navigate(`/${url}`);
 
@@ -24,8 +16,7 @@ const ApplyOptions = ({
     <Container onClick={handleClick}>
       <Title>{title}</Title>
       <Body>{body}</Body>
-      {url && <Link href={url}>{linkText}</Link>}
-      {id && <CustomPopupButton id={id}>{linkText}</CustomPopupButton>}
+      <Link href={url}>{linkText}</Link>
     </Container>
   );
 };
@@ -59,18 +50,6 @@ const Body = styled.p`
 const Link = styled.a`
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: 800;
-  text-decoration: none;
-`;
-
-const CustomPopupButton = styled(PopupButton)`
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  font-size: 18px;
-  font-family: ${(props) => props.theme.fonts.content};
-  padding: 0;
-  color: ${(props) => props.theme.colors.primaryBlue};
-  font-weight: 800px;
   text-decoration: none;
 `;
 

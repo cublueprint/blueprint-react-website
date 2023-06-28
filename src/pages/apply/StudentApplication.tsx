@@ -5,8 +5,7 @@ interface ApplicationTextProps {
   title: string;
   body: string;
   linkText: string;
-  url?: string;
-  id?: string;
+  id: string;
   last?: boolean;
 }
 
@@ -14,15 +13,13 @@ const StudentApplication = ({
   title,
   body,
   linkText,
-  url,
   id,
   last,
 }: ApplicationTextProps) => (
   <Container last={last}>
     <Title>{title}</Title>
     <Body>{body}</Body>
-    {url && <Link href={url}>{linkText}</Link>}
-    {id && <CustomPopupButton id={id}>{linkText}</CustomPopupButton>}
+    <CustomPopupButton id={id}>{linkText}</CustomPopupButton>
   </Container>
 );
 
@@ -38,12 +35,6 @@ const Title = styled.h2`
 `;
 
 const Body = styled.p``;
-
-const Link = styled.a`
-  color: ${(props) => props.theme.colors.primaryBlue};
-  font-style: bold;
-  text-decoration: none;
-`;
 
 const CustomPopupButton = styled(PopupButton)`
   background-color: ${(props) => props.theme.colors.cloudBlue};
