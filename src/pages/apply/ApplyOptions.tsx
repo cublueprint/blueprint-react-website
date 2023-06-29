@@ -16,7 +16,7 @@ const ApplyOptions = ({ title, body, linkText, url }: ApplicationTextProps) => {
     <Container onClick={handleClick}>
       <Title>{title}</Title>
       <Body>{body}</Body>
-      <Link href={url}>{linkText}</Link>
+      <InterestedText>{linkText}</InterestedText>
     </Container>
   );
 };
@@ -33,12 +33,12 @@ const Container = styled.div<{ last?: boolean }>`
     box-shadow: 2px 5px 18px 0px ${(props) => props.theme.colors.primaryBlue}80;
   }
   transition: 0.3s;
+  cursor: pointer;
 `;
 
 const Title = styled.h2`
   color: ${(props) => props.theme.colors.primaryBlue};
   font-family: ${(props) => props.theme.fonts.heading};
-  font-style: bold;
   font-size: 36px;
   margin: 0;
 `;
@@ -47,10 +47,10 @@ const Body = styled.p`
   margin-top: 0;
 `;
 
-const Link = styled.a`
+const InterestedText = styled.p`
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: 800;
-  text-decoration: none;
+  margin: 0;
 `;
 
 export default ApplyOptions;

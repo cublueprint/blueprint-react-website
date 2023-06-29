@@ -33,7 +33,6 @@ const StudentApplications = () => {
               body={role.body}
               id={role.id}
               linkText={role.linkText}
-              last={index + 1 !== content.openRoles.length}
             />
           );
         })}
@@ -60,7 +59,6 @@ const Title = styled.h1`
   margin: 0;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-family: ${(props) => props.theme.fonts.heading};
-  font-style: bold;
   font-size: 50px;
 `;
 
@@ -76,6 +74,10 @@ const ApplicationLists = styled.div`
   flex-wrap: wrap;
   gap: 50px 40px;
   justify-content: space-between;
+  ::after {
+    content: '';
+    width: 400px;
+  }
 `;
 
 export default StudentApplications;

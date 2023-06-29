@@ -78,7 +78,6 @@ const Title = styled.h1`
   margin: 0;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-family: ${(props) => props.theme.fonts.heading};
-  font-style: bold;
   font-size: 13vw;
 
   @media ${(props) => props.theme.viewport.laptop} {

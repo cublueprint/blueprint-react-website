@@ -6,7 +6,6 @@ interface ApplicationTextProps {
   body: string;
   linkText: string;
   id: string;
-  last?: boolean;
 }
 
 const StudentApplication = ({
@@ -14,18 +13,16 @@ const StudentApplication = ({
   body,
   linkText,
   id,
-  last,
 }: ApplicationTextProps) => (
-  <Container last={last}>
+  <Container>
     <Title>{title}</Title>
     <Body>{body}</Body>
     <CustomPopupButton id={id}>{linkText}</CustomPopupButton>
   </Container>
 );
 
-const Container = styled.div<{ last?: boolean }>`
+const Container = styled.div`
   width: 400px;
-  flex-grow: ${(props) => (props.last ? '0' : '1')};
 `;
 
 const Title = styled.h2`
@@ -34,7 +31,9 @@ const Title = styled.h2`
   margin: 0;
 `;
 
-const Body = styled.p``;
+const Body = styled.p`
+  margin-top: 0;
+`;
 
 const CustomPopupButton = styled(PopupButton)`
   background-color: ${(props) => props.theme.colors.cloudBlue};
@@ -47,6 +46,7 @@ const CustomPopupButton = styled(PopupButton)`
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export default StudentApplication;
