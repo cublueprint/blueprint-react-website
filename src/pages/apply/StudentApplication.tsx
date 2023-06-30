@@ -5,56 +5,48 @@ interface ApplicationTextProps {
   title: string;
   body: string;
   linkText: string;
-  url?: string;
-  id?: string;
-  last?: boolean;
+  id: string;
 }
 
-const ApplicationText = ({
+const StudentApplication = ({
   title,
   body,
   linkText,
-  url,
   id,
-  last,
 }: ApplicationTextProps) => (
-  <Container last={last}>
+  <Container>
     <Title>{title}</Title>
     <Body>{body}</Body>
-    {url && <Link href={url}>{linkText}</Link>}
-    {id && <CustomPopupButton id={id}>{linkText}</CustomPopupButton>}
+    <CustomPopupButton id={id}>{linkText}</CustomPopupButton>
   </Container>
 );
 
-const Container = styled.div<{ last?: boolean }>`
+const Container = styled.div`
   width: 400px;
-  flex-grow: ${(props) => (props.last ? '0' : '1')};
 `;
 
 const Title = styled.h2`
   color: ${(props) => props.theme.colors.primaryBlue};
   font-family: ${(props) => props.theme.fonts.heading};
-  font-style: bold;
   margin: 0;
 `;
 
-const Body = styled.p``;
-
-const Link = styled.a`
-  color: ${(props) => props.theme.colors.primaryBlue};
-  font-style: bold;
-  text-decoration: none;
+const Body = styled.p`
+  margin-top: 0;
 `;
 
 const CustomPopupButton = styled(PopupButton)`
-  background-color: transparent;
-  border: none;
+  background-color: ${(props) => props.theme.colors.cloudBlue};
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: ${(props) => props.theme.colors.skyBlue};
   font-size: 20px;
   font-family: ${(props) => props.theme.fonts.content};
-  padding: 0;
+  padding: 10px 20px;
   color: ${(props) => props.theme.colors.primaryBlue};
-  font-style: bold;
+  font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
 `;
 
-export default ApplicationText;
+export default StudentApplication;

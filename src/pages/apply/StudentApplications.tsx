@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ApplicationText from './ApplicationText';
+import StudentApplication from './StudentApplication';
 import ApplicationContent from '../../static/json/application';
 
 interface Application {
@@ -13,7 +13,7 @@ interface ContentSchema {
   openRoles: Application[];
 }
 
-const ApplicationType = () => {
+const StudentApplications = () => {
   const content: ContentSchema = ApplicationContent['Student'];
 
   return (
@@ -27,13 +27,12 @@ const ApplicationType = () => {
       <ApplicationLists>
         {content?.openRoles?.map((role, index) => {
           return (
-            <ApplicationText
+            <StudentApplication
               key={index}
               title={role.title}
               body={role.body}
               id={role.id}
               linkText={role.linkText}
-              last={index + 1 !== content.openRoles.length}
             />
           );
         })}
@@ -60,7 +59,6 @@ const Title = styled.h1`
   margin: 0;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-family: ${(props) => props.theme.fonts.heading};
-  font-style: bold;
   font-size: 50px;
 `;
 
@@ -76,6 +74,10 @@ const ApplicationLists = styled.div`
   flex-wrap: wrap;
   gap: 50px 40px;
   justify-content: space-between;
+  ::after {
+    content: '';
+    width: 400px;
+  }
 `;
 
-export default ApplicationType;
+export default StudentApplications;

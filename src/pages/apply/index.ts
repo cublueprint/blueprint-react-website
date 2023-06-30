@@ -1,5 +1,5 @@
 import Apply from './Apply';
-import ApplicationType from './ApplicationType';
-import TypeformPage from './TypeformPage';
+import StudentApplications from './StudentApplications';
+import NonProfitApplication from './NonProfitApplication';
 
-export { Apply, ApplicationType, TypeformPage };
+export { Apply, StudentApplications, NonProfitApplication };

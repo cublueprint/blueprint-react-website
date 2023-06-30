@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import blueprintIcon from '../../static/images/blueprint.png';
-import ApplicationText from './ApplicationText';
+import ApplicationText from './ApplyOptions';
 
 const Apply = () => {
   return (
@@ -12,7 +12,7 @@ const Apply = () => {
       </TitleContainer>
 
       <BodyContainer>
-        <SectionHeader>I am a:</SectionHeader>
+        <SectionHeader>I am:</SectionHeader>
         <ApplicationTextContainer>
           <ApplicationText
             title={'Non Profit'}
@@ -78,7 +78,6 @@ const Title = styled.h1`
   margin: 0;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-family: ${(props) => props.theme.fonts.heading};
-  font-style: bold;
   font-size: 13vw;
 
   @media ${(props) => props.theme.viewport.laptop} {
