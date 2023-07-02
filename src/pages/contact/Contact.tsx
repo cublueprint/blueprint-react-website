@@ -1,9 +1,23 @@
+import ContactForm from "./ContactForm";
+import BannerBlock from "../../components/BannerBlock";
+
+import styled from 'styled-components';
+
+import content from "../../static/json/contact"
+
 const Contact = () => {
   return (
-    <div>
-      Come here to see an empty page that'll contain cuBlueprint contact info 📞 starting work now
-    </div>
+    <>
+      <Container>
+        <ContactForm info={content.info}></ContactForm>
+      </Container>
+      <BannerBlock content={content.banner}></BannerBlock>
+    </>
   );
 };
+
+const Container = styled.div`
+  margin: 50px;
+`
 
 export default Contact;
