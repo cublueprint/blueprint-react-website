@@ -28,7 +28,7 @@ const contactContent = {
     banner: {
         text: 'Looking to join our team or be our next project?',
         button: {
-            content: 'Apple >',
+            content: 'Apply >',
             link: '/apply'
         }
     }

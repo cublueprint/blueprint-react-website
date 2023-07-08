@@ -16,39 +16,68 @@ interface ContactProps {
 const ContactForm = (props: ContactProps) => (
     <ContentDiv>
         <Title>Contact Us</Title>
-        <InputContainer>
-            <InputField></InputField>
-            <InputField></InputField>
-            <InputField></InputField>
-        </InputContainer>
-        <Button>{"Send >"}</Button>
-        <p>Email</p>
-        <p>{props.info.email}</p>
-        <p>Social</p>
-        <p>Based In</p>
-        <p>Ottawa, Ontario</p>
+        <FlexContainer>
+            <InputContainer>
+                <InputField placeholder='Full Name'></InputField>
+                <InputField placeholder='Email'></InputField>
+                <InputField placeholder='Message'></InputField>
+                <Button>{"Send >"}</Button>
+            </InputContainer>
+            <InfoContainer>
+                <BoldText>Email</BoldText>
+                <p>{props.info.email}</p>
+                <BoldText>Social</BoldText>
+                <BoldText>Based In</BoldText>
+                <p>Ottawa, Ontario</p>
+            </InfoContainer>
+        </FlexContainer>
     </ContentDiv>
 );
 
 const ContentDiv = styled.div`
-    padding: 50px;
+    padding: 25px 50px;
 `;
 
 const Title = styled.h1`
   grid-area: Title;
   font-family: ${(props) => props.theme.fonts.heading};
-  margin: 0;
+  margin-bottom: 20px;
+`;
+
+const FlexContainer = styled.div`
+    display:flex;
 `;
 
 const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 250px;
-`
+    width: 35%;
+    margin: 35px 0px;
+`;
+
+const InfoContainer = styled.div`
+`;
+
+const BoldText = styled.p`
+    font-weight: bold;
+    margin: 0px;
+`;
 
 const InputField = styled.input`
+    width: 300px;
     type: text;
-`
+    border: none;
+    border-bottom: 3px solid black;
+    padding: 5px 0px;
+    margin: 10px 0px;
+    font-size: 18px;
+    transition: 0.2s ease-out;
+    &:focus {
+        outline: none;
+        width: 350px;
+        transition: 0.2s ease-in;
+    }
+`;
 
 const Button = styled.button`
   color: ${(props) => props.theme.colors.primaryBlue};
@@ -59,6 +88,7 @@ const Button = styled.button`
   width: 150px;
   font-family: ${(props) => props.theme.fonts.content};
   cursor: pointer;
+  margin-top: 50px;
 `;
 
 export default ContactForm;
