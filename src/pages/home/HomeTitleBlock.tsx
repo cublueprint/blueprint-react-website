@@ -30,7 +30,7 @@ const HomeTitleBlockDiv = styled.div`
     'Button';
 
   @media ${(props) => `${props.theme.viewport.tablet}`} {
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       'Title Image'
       'Description Image'
@@ -48,6 +48,7 @@ const Title = styled.h1`
 const Description = styled.p`
   grid-area: Description;
   margin: 0;
+  font-size: ${(props) => props.theme.fontSizes.regular};
   `;
 
 const Image = styled.img`
