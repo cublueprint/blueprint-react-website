@@ -10,5 +10,11 @@ export interface HomeBlockProps {
         content: string;
         link: string;
       }[];
+      projects?: {
+        name: string;
+        description: string;
+        link: string;
+        image: any;
+      }[];
     };
   }
