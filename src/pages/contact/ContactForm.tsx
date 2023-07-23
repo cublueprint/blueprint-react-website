@@ -27,6 +27,9 @@ const ContactForm = (props: ContactProps) => (
                 <BoldText>Email</BoldText>
                 <p>{props.info.email}</p>
                 <BoldText>Social</BoldText>
+                {props.info.social.map((social, index) => (
+                    <a href={social.link}><Image src={social.icon.src} alt={social.icon.alt}></Image></a>
+                ))}
                 <BoldText>Based In</BoldText>
                 <p>Ottawa, Ontario</p>
             </InfoContainer>
@@ -63,6 +66,12 @@ const BoldText = styled.p`
     margin: 0px;
 `;
 
+const Image = styled.img`
+    width: 20px;
+    height: auto;
+    margin: 15px 10px 15px 0px;
+`;
+
 const InputField = styled.input`
     width: 300px;
     type: text;
@@ -87,6 +96,7 @@ const Button = styled.button`
   height: 50px;
   width: 150px;
   font-family: ${(props) => props.theme.fonts.content};
+  font-weight: bold;
   cursor: pointer;
   margin-top: 50px;
 `;

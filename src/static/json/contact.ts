@@ -1,27 +1,31 @@
+import linkedinIcon from '../images/linkedin.svg';
+import instagramIcon from '../images/instagram.svg';
+import facebookIcon from '../images/facebook.svg';
+
 const contactContent = {
     info: {
         email: "carletonblueprint@gmail.com",
         social: [
             {
                 icon: {
-                    src: '#',
+                    src: linkedinIcon,
                     alt: 'linkedin'
                 },
-                link: '#'
+                link: 'https://www.linkedin.com/company/cublueprint/mycompany/'
             },
             {
                 icon: {
-                    src: '#',
+                    src: instagramIcon,
                     alt: 'instagram'
                 },
-                link: '#'
+                link: 'https://www.instagram.com/cublueprint/'
             },
             {
                 icon: {
-                    src: '#',
+                    src: facebookIcon,
                     alt: 'facebook'
                 },
-                link: '#'
+                link: 'https://www.facebook.com/cublueprint'
             }
         ]
     },
