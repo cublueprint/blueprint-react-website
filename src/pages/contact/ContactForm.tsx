@@ -49,6 +49,10 @@ const Title = styled.h1`
 
 const FlexContainer = styled.div`
     display:flex;
+    flex-direction: column;
+    @media ${(props) => props.theme.viewport.laptop} {
+        flex-direction: row;
+    }
 `;
 
 const InputContainer = styled.div`
