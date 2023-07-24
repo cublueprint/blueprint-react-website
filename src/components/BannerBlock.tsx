@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "./Button";
 
 interface BannerBlockProps {
     content: {
@@ -16,7 +17,7 @@ const BannerBlock = (props: BannerBlockProps) => (
         <Text>{props.content.text}</Text>
       </FlexContainer>
       <FlexContainer>
-        <a href={props.content.button.link}><Button>{props.content.button.content}</Button></a>
+        <a href={props.content.button.link}><Button text={props.content.button.content}></Button></a>
       </FlexContainer>
     </ApplicationDiv>
 );
@@ -41,15 +42,5 @@ const Text = styled.h3`
   color: ${(props) => props.theme.colors.primaryBlue};
 `;
 
-const Button = styled.button`
-  color: ${(props) => props.theme.colors.primaryBlue};
-  background: ${(props) => props.theme.colors.cloudBlue};
-  border: 3px solid ${(props) => props.theme.colors.primaryBlue};
-  border-radius: 5px;
-  height: 50px;
-  width: 150px;
-  font-family: ${(props) => props.theme.fonts.content};
-  cursor: pointer;
-`;
 
 export default BannerBlock;

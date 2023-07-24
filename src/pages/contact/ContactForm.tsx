@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from '../../components/Button';
 
 interface ContactProps {
     info: {
@@ -21,7 +22,7 @@ const ContactForm = (props: ContactProps) => (
                 <InputField placeholder='Full Name'></InputField>
                 <InputField placeholder='Email'></InputField>
                 <InputField placeholder='Message'></InputField>
-                <Button>{"Send >"}</Button>
+                <StyledButton text='SEND >'></StyledButton>
             </InputContainer>
             <InfoContainer>
                 <BoldText>Email</BoldText>
@@ -92,17 +93,8 @@ const InputField = styled.input`
     }
 `;
 
-const Button = styled.button`
-  color: ${(props) => props.theme.colors.primaryBlue};
-  background: ${(props) => props.theme.colors.cloudBlue};
-  border: 3px solid ${(props) => props.theme.colors.primaryBlue};
-  border-radius: 5px;
-  height: 50px;
-  width: 150px;
-  font-family: ${(props) => props.theme.fonts.content};
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 50px;
+const StyledButton = styled(Button)`
+    margin-top: 50px;
 `;
 
 export default ContactForm;
