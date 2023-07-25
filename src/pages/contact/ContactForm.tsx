@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Button from '../../components/Button';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 interface ContactProps {
     info: {
@@ -14,15 +16,32 @@ interface ContactProps {
     }
 }
 
-const ContactForm = (props: ContactProps) => (
-    <ContentDiv>
+
+const ContactForm = (props: ContactProps) => {
+    const form = useRef<any>(null);
+    const [showSent, setSent] = useState(false)
+
+    const sendEmail = (e: React.FormEvent) => {
+        e.preventDefault();
+        emailjs.sendForm('service_xgab7p1', 'template_hkk20pi', form.current, 'YT9q6oUsSjEmsZASM').then((result) => {
+            console.log(result.text);
+            form.current.reset();
+            setSent(true);
+        }, (error) => {
+            console.log(error.text);
+            //to display error text on page
+        });
+    }
+    
+    return <ContentDiv>
         <Title>Contact Us</Title>
         <FlexContainer>
-            <InputContainer>
-                <InputField placeholder='Full Name'></InputField>
-                <InputField placeholder='Email'></InputField>
-                <InputField placeholder='Message'></InputField>
+            <InputContainer ref={form} onSubmit={sendEmail}>
+                <InputField placeholder='Full Name' name='user_name' id='user_name'></InputField>
+                <InputField placeholder='Email' name='user_email' id='user_email'></InputField>
+                <InputField placeholder='Message' name='user_message' id='user_message'></InputField>
                 <StyledButton text='SEND >'></StyledButton>
+                {showSent ? <SentNotification>Message Sent ✅</SentNotification> : null}
             </InputContainer>
             <InfoContainer>
                 <BoldText>Email</BoldText>
@@ -35,8 +54,9 @@ const ContactForm = (props: ContactProps) => (
                 <p>Ottawa, Ontario</p>
             </InfoContainer>
         </FlexContainer>
-    </ContentDiv>
-);
+    </ContentDiv>;
+
+};
 
 const ContentDiv = styled.div`
     padding: 25px 50px;
@@ -56,7 +76,7 @@ const FlexContainer = styled.div`
     }
 `;
 
-const InputContainer = styled.div`
+const InputContainer = styled.form`
     display: flex;
     flex-direction: column;
     width: 35%;
@@ -95,6 +115,17 @@ const InputField = styled.input`
 
 const StyledButton = styled(Button)`
     margin-top: 50px;
+    type: submit;
 `;
+
+const SentNotification = styled.div`
+    margin-top: 20px;
+    font-size: 24px;
+    color: white;
+    padding: 20px;
+    width: 50%;
+    border-radius: 5px;
+    background-color: ${(props) => props.theme.colors.primaryBlue};
+`
 
 export default ContactForm;
