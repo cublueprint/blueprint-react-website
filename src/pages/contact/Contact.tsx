@@ -17,7 +17,9 @@ const Contact = () => {
 };
 
 const Container = styled.div`
-  margin: 50px;
+  @media ${(props) => props.theme.viewport.laptop} {
+    margin: 50px; 
+  }
 `
 
 export default Contact;

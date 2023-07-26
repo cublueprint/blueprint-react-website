@@ -68,6 +68,7 @@ const Title = styled.h1`
   grid-area: Title;
   font-family: ${(props) => props.theme.fonts.heading};
   margin-bottom: 20px;
+  font-size: ${(props) => props.theme.fontSizes.large}
 `;
 
 const FlexContainer = styled.div`
@@ -88,31 +89,34 @@ const InputContainer = styled.form`
 const InfoContainer = styled.div`
 `;
 
-const BoldText = styled.p`
-    font-weight: bold;
+const BoldText = styled.h3`
     margin: 0px;
 `;
 
 const Image = styled.img`
-    width: 20px;
+    width: 30px;
     height: auto;
     margin: 15px 10px 15px 0px;
 `;
 
 const InputField = styled.input`
-    width: 300px;
+    @media ${(props) => props.theme.viewport.laptop} {
+        width: 300px;
+        transition: 0.2s ease-out;
+        &:focus {
+            outline: none;
+            width: 350px;
+            transition: 0.2s ease-in;
+        }
+        
+    }
     type: text;
     border: none;
     border-bottom: 3px solid black;
     padding: 5px 0px;
     margin: 10px 0px;
     font-size: 18px;
-    transition: 0.2s ease-out;
-    &:focus {
-        outline: none;
-        width: 350px;
-        transition: 0.2s ease-in;
-    }
+    width: 200%
 `;
 
 const StyledButton = styled(Button)`
