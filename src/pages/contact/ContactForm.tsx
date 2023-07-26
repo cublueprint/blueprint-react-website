@@ -23,7 +23,7 @@ const ContactForm = (props: ContactProps) => {
 
     const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
-        emailjs.sendForm('service_xgab7p1', 'template_hkk20pi', form.current, 'YT9q6oUsSjEmsZASM').then((result) => {
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY').then((result) => {
             console.log(result.text);
             form.current.reset();
             setSent(true);
