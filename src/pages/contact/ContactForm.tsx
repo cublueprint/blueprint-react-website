@@ -23,7 +23,7 @@ const ContactForm = (props: ContactProps) => {
 
     const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY').then((result) => {
+        emailjs.sendForm('service_xgab7p1', 'template_hkk20pi', form.current, 'YT9q6oUsSjEmsZASM').then((result) => {
             console.log(result.text);
             form.current.reset();
             setSent(true);
@@ -37,9 +37,9 @@ const ContactForm = (props: ContactProps) => {
         <Title>Contact Us</Title>
         <FlexContainer>
             <InputContainer ref={form} onSubmit={sendEmail}>
-                <InputField placeholder='Full Name' name='user_name' id='user_name'></InputField>
-                <InputField placeholder='Email' name='user_email' id='user_email'></InputField>
-                <InputField placeholder='Message' name='user_message' id='user_message'></InputField>
+                <InputField placeholder='Full Name' name='user_name' id='user_name' required></InputField>
+                <InputField placeholder='Email' name='user_email' id='user_email' required></InputField>
+                <InputField placeholder='Message' name='user_message' id='user_message' required></InputField>
                 <StyledButton text='SEND >'></StyledButton>
                 {showSent ? <SentNotification>Message Sent ✅</SentNotification> : null}
             </InputContainer>
