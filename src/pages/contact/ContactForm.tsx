@@ -18,19 +18,21 @@ interface ContactProps {
 
 
 const ContactForm = (props: ContactProps) => {
-    const form = useRef<any>(null);
+    const form = useRef<HTMLFormElement>(null);
     const [showSent, setSent] = useState(false)
 
     const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
-        emailjs.sendForm('service_xgab7p1', 'template_hkk20pi', form.current, 'YT9q6oUsSjEmsZASM').then((result) => {
-            console.log(result.text);
-            form.current.reset();
-            setSent(true);
-        }, (error) => {
-            console.log(error.text);
-            //to display error text on page
-        });
+        if (form.current) {
+            emailjs.sendForm('service_xgab7p1', 'template_hkk20pi', form.current, 'YT9q6oUsSjEmsZASM').then((result) => {
+                console.log(result.text);
+                form.current?.reset();
+                setSent(true);
+            }, (error) => {
+                console.log(error.text);
+                //to display error text on page
+            });
+        }
     }
     
     return <ContentDiv>
