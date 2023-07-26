@@ -87,6 +87,9 @@ const InputContainer = styled.form`
 `;
 
 const InfoContainer = styled.div`
+    @media ${(props) => props.theme.viewport.laptop} {
+        margin-left: 50px;
+    }
 `;
 
 const BoldText = styled.h3`
