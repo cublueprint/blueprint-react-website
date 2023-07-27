@@ -12,10 +12,15 @@ interface ProjectProps {
 const ProjectCard = ({ props }: ProjectProps) => {
   return (
     <CardDiv className='project'>
+      <div>
         <Picture src={props.image} alt={`${props.name}`} />
       <Name>{props.name}</Name>
-      {/* <Role>{props.description}</Role> */}
+    </div>
+      <BackOfCard>
+        <Description>{props.description}</Description>
+      </BackOfCard>
     </CardDiv>
+
   );
 };
 
@@ -38,8 +43,22 @@ const Name = styled.h2`
   font-weight: 700;
 `;
 
-const Role = styled.h4`
+const Description = styled.h4`
   padding: 10px;
 `;
+const BackOfCard = styled.div`
+  background-color: ${(props) => props.theme.colors.primaryBlue};
+  opacity: 0.8;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  &:hover{
+    visibility: visible;
+  }
+`
 
 export default ProjectCard;

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import HomeTitleBlock from './HomeTitleBlock';
-import HomeAboutBlock from './HomeAboutBlock';
+import TitleBlock from '../../components/TitleBlock';
+import HomeAboutBlock from '../../components/AboutBlock';
 import HomeProjectsBlock from './HomeProjectsBlock';
 
 import content from '../../static/json/home';
 
 const Home = () => (
   <PageBody>
-    <HomeTitleBlock content={content.titleBlock}></HomeTitleBlock>
+    <TitleBlock content={content.titleBlock}></TitleBlock>
     <HomeAboutBlock content={content.aboutBlock}></HomeAboutBlock>
     <HomeProjectsBlock content={content.projectsBlock}></HomeProjectsBlock>
   </PageBody>
