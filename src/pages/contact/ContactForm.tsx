@@ -36,9 +36,9 @@ const ContactForm = (props: ContactProps) => {
     }
     
     return <ContentDiv>
-        <Title>Contact Us</Title>
         <FlexContainer>
             <InputContainer ref={form} onSubmit={sendEmail}>
+                <Title>Contact Us</Title>
                 <InputField placeholder='Full Name' name='user_name' id='user_name' required></InputField>
                 <InputField placeholder='Email' name='user_email' id='user_email' required></InputField>
                 <InputField placeholder='Message' name='user_message' id='user_message' required></InputField>
@@ -67,7 +67,7 @@ const ContentDiv = styled.div`
 const Title = styled.h1`
   grid-area: Title;
   font-family: ${(props) => props.theme.fonts.heading};
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   font-size: ${(props) => props.theme.fontSizes.large}
 `;
 
@@ -76,19 +76,21 @@ const FlexContainer = styled.div`
     flex-direction: column;
     @media ${(props) => props.theme.viewport.laptop} {
         flex-direction: row;
+        margin-left: 15vw;
+        gap: 10vw;
     }
 `;
 
 const InputContainer = styled.form`
     display: flex;
     flex-direction: column;
-    width: 35%;
     margin: 35px 0px;
 `;
 
 const InfoContainer = styled.div`
     @media ${(props) => props.theme.viewport.laptop} {
-        margin-left: 50px;
+        margin-top: 150px;
+        
     }
 `;
 
@@ -119,7 +121,7 @@ const InputField = styled.input`
     padding: 5px 0px;
     margin: 10px 0px;
     font-size: 18px;
-    width: 200%
+    max-width: 350px;
 `;
 
 const StyledButton = styled(Button)`
@@ -132,7 +134,7 @@ const SentNotification = styled.div`
     font-size: 24px;
     color: white;
     padding: 20px;
-    width: 50%;
+    max-width: 207px;
     border-radius: 5px;
     background-color: ${(props) => props.theme.colors.primaryBlue};
 `
