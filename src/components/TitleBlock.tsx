@@ -29,7 +29,7 @@ const TitleBlock = (props: TitleBlockProps) => (
 );
 
 const TitleBlockDiv = styled.div`
-  padding: 50px;
+  padding: 50px 120px;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr;
@@ -51,18 +51,18 @@ const TitleBlockDiv = styled.div`
 const Title = styled.h1`
   grid-area: Title;
   font-family: ${(props) => props.theme.fonts.heading};
-  margin: 0;
+  font-size: ${(props) => props.theme.fontSizes.larger};
 `;
 
 const Description = styled.p`
   grid-area: Description;
-  margin: 0;
+  font-size: ${(props) => props.theme.fontSizes.small};
 `;
 
 const Image = styled.img`
   grid-area: Image;
-  width: 100%;
-  top: 25%;
+  width: 80%;
+  margin-top: 20px;
 `;
 
 const Button = styled.button`

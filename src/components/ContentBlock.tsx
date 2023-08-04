@@ -5,22 +5,23 @@ interface ContentBlockProps {
   title: string;
   backgroundColour?: string;
   children: ReactNode;
+  className?: string;
 }
 
-const ContentBlock = ({ title, children, backgroundColour }: ContentBlockProps) => (
-  <ContentBody backgroundColour={backgroundColour}>
+const ContentBlock = ({ title, children, backgroundColour, className }: ContentBlockProps) => (
+  <ContentBody className={className} backgroundColour={backgroundColour}>
     <ContentTitle>{title}</ContentTitle>
     {children}
   </ContentBody>
 );
 
-const ContentTitle = styled.h3`
-  font-size: ${(props) => props.theme.fontSizes.small};
+const ContentTitle = styled.h2`
   font-family: ${(props) => props.theme.fonts.heading};
   margin: auto;
   padding: 10px;
+  padding-left: 50px;
   border-radius: 15px;
-  width: 80%;
+  width: 90%;
   background-color: ${(props) => props.theme.colors.skyBlue};
 `;
 

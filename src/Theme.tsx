@@ -16,6 +16,7 @@ const theme = {
     small: '1em',
     medium: '2em',
     large: '3em',
+    larger: '4em',
   },
   viewport: {
     mobile: '(min-width: 320px)',

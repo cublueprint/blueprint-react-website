@@ -1,4 +1,5 @@
 import TeamsTitleImage from '../images/teams_title_block.png';
+import Denis from '../images/people/denis.png';
 
 const teamsContent = {
   titleBlock: {
@@ -21,34 +22,87 @@ const teamsContent = {
       name: 'Execs',
       members: [
         {
-          name: 'Name',
-          position: 'club position',
+          name: 'Denis Po',
+          position: 'President',
           linkedin: 'linkedin',
-          picture: 'picture of you',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+          adding text to fill in space`,
+          startDate: 'Fall 2020',
         },
         {
-          name: 'Name',
-          position: 'club position',
+          name: 'Denis Po',
+          position: 'President',
           linkedin: 'linkedin',
-          picture: 'picture of you',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+          adding text to fill in space`,
+          projects: ['Beneficent', 'Urban Minds', 'Allo Canada'],
+          startDate: 'Fall 2020',
         },
         {
-          name: 'Name',
-          position: 'club position',
+          name: 'Denis Po',
+          position: 'President',
           linkedin: 'linkedin',
-          picture: 'picture of you',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+          adding text to fill in space`,
+          projects: ['Beneficent', 'Urban Minds'],
+          startDate: 'Fall 2020',
         },
         {
-          name: 'Name',
-          position: 'club position',
+          name: 'Denis Po',
+          position: 'President',
           linkedin: 'linkedin',
-          picture: 'picture of you',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+          adding text to fill in space`,
+          projects: ['Beneficent', 'Urban Minds'],
+          startDate: 'Fall 2020',
         },
         {
-          name: 'Name',
-          position: 'club position',
+          name: 'Denis Po',
+          position: 'President',
           linkedin: 'linkedin',
-          picture: 'picture of you',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+          adding text to fill in space`,
+          projects: ['Beneficent', 'Urban Minds'],
+          startDate: 'Fall 2020',
+        },
+        {
+          name: 'Denis Po',
+          position: 'President',
+          linkedin: 'linkedin',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+            adding text to fill in space`,
+          projects: ['Beneficent', 'Urban Minds'],
+          startDate: 'Fall 2020',
+        },
+        {
+          name: 'Denis Po',
+          position: 'President',
+          linkedin: 'linkedin',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+        adding text to fill in space`,
+          projects: ['Beneficent', 'Urban Minds'],
+          startDate: 'Fall 2020',
         },
       ],
     },
@@ -56,10 +110,16 @@ const teamsContent = {
       name: 'Urban Minds',
       members: [
         {
-          name: 'Name',
-          position: 'club position',
+          name: 'Denis Po',
+          position: 'President',
           linkedin: 'linkedin',
-          picture: 'picture of you',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+          adding text to fill in space`,
+          projects: ['Beneficent', 'Urban Minds'],
+          startDate: 'Fall 2020',
         },
       ],
     },
@@ -67,10 +127,16 @@ const teamsContent = {
       name: 'Beneficient',
       members: [
         {
-          name: 'Name',
-          position: 'club position',
+          name: 'Denis Po',
+          position: 'President',
           linkedin: 'linkedin',
-          picture: 'picture of you',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+          adding text to fill in space`,
+          projects: ['Beneficent', 'Urban Minds'],
+          startDate: 'Fall 2020',
         },
       ],
     },
@@ -78,10 +144,16 @@ const teamsContent = {
       name: 'Website Team',
       members: [
         {
-          name: 'Name',
-          position: 'club position',
+          name: 'Denis Po',
+          position: 'President',
           linkedin: 'linkedin',
-          picture: 'picture of you',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+          adding text to fill in space`,
+          projects: ['Beneficent', 'Urban Minds'],
+          startDate: 'Fall 2020',
         },
       ],
     },
