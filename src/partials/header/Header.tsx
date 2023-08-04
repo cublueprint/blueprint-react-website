@@ -9,19 +9,21 @@ interface HeaderProps {
 }
 
 const Header = ({ links }: HeaderProps) => (
-  <StyledHeader>
-    <BlueprintIcon link={links[0]} />
-    <StyledHeaderList>
-      {links.map((link) => (
-        <StyledHeaderLink key={`l-${link}`}>
-          <NavLink to={link}>{link}</NavLink>
-        </StyledHeaderLink>
-      ))}
-    </StyledHeaderList>
-    <StyledMobileMenu>
-      <MobileMenu links={links} />
-    </StyledMobileMenu>
-  </StyledHeader>
+  <StyledHeaderBackground>
+    <StyledHeader>
+      <BlueprintIcon link={links[0]} />
+      <StyledHeaderList>
+        {links.map((link) => (
+          <StyledHeaderLink key={`l-${link}`}>
+            <NavLink to={link}>{link}</NavLink>
+          </StyledHeaderLink>
+        ))}
+      </StyledHeaderList>
+      <StyledMobileMenu>
+        <MobileMenu links={links} />
+      </StyledMobileMenu>
+    </StyledHeader>
+  </StyledHeaderBackground>
 );
 
 const BlueprintIcon = (props: { link: string }) => (
@@ -30,49 +32,46 @@ const BlueprintIcon = (props: { link: string }) => (
   </Link>
 );
 
-const StyledHeader = styled.div`
-  
-  @media ${(props) => props.theme.viewport.mobile} {
-    background-color: ${(props) => props.theme.colors.primaryBlue};
-    color: ${(props) => props.theme.colors.offWhite};
-    font-size: ${(props) => props.theme.fontSizes.small};
-    font-family: ${(props) => props.theme.fonts.heading};
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    z-index: 1;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    height: 50px;
-  }
-
-  @media ${(props) => props.theme.viewport.tablet} {
-    justify-content:space-between;
-  }
-
+const StyledHeaderBackground = styled.div`
+  background-color: ${(props) => props.theme.colors.primaryBlue};
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 10vh;
+  display: flex;
+  padding-left: 50px;
   @media ${(props) => props.theme.viewport.laptop} {
-    align-items: center;
-    justify-content: space-evenly;
-    height: 65px;
+    padding: 0px 50px;
   }
 `;
 
+const StyledHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 72em;
+
+  color: ${(props) => props.theme.colors.offWhite};
+  font-size: ${(props) => props.theme.fontSizes.small};
+  font-family: ${(props) => props.theme.fonts.heading};
+  font-weight: bold;
+  text-transform: uppercase;
+`;
+
 const StyledHeaderList = styled.div`
-  @media ${(props) =>
-      `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
-    display: none;
-  }
+  display: none;
 
   @media ${(props) => props.theme.viewport.laptop} {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 1vw;
-    margin-right: 50px;
   }
 `;
 
@@ -91,7 +90,6 @@ const StyledHeaderLink = styled.div`
   a {
     text-decoration: none;
     color: ${(props) => props.theme.colors.offWhite};
-    
   }
   a.active {
     color: #ffffff;
@@ -108,7 +106,6 @@ const StyledHeaderLink = styled.div`
 const StyledBlueprintImage = styled.img`
   margin-top: 10px;
   max-width: 150px;
-  margin-left: 4vw;
 `;
 
 export default Header;

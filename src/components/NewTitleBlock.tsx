@@ -16,29 +16,38 @@ interface TitleBlockProps {
 }
 
 const NewTitleBlock = (props: TitleBlockProps) => (
-  <TitleBlockDiv>
-    <LeftFlex>
+  <Background>
+    <TitleBlockDiv>
+      <LeftFlex>
         <Title>{props.content.title}</Title>
         <Description>{props.content.subtitle}</Description>
         {props.content.buttons.map((button) => (
-        <a key={`t-${button.content}`} href={button.link}>
-            <Button>{button.content}</Button>
-        </a>
+          <Button key={`t-${button.content}`} href={button.link}>
+            {button.content}
+          </Button>
         ))}
-    </LeftFlex>
-    <Image src={props.content.image.picture} alt={props.content.image.alt} />
-  </TitleBlockDiv>
+      </LeftFlex>
+      <Image src={props.content.image.picture} alt={props.content.image.alt} />
+    </TitleBlockDiv>
+  </Background>
 );
+
+const Background = styled.div`
+  background-color: #f8fbff;
+`;
 
 const TitleBlockDiv = styled.div`
   @media ${(props) => props.theme.viewport.laptop} {
-    justify-content: center;
     flex-direction: row;
+    justify-content: space-between;
   }
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  padding: 50px;
+  padding: 50px 50px 100px 50px;
+  max-width: 72em;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const LeftFlex = styled.div`
@@ -50,34 +59,50 @@ const LeftFlex = styled.div`
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    flex-basis: 0;
-    flex-grow: 0.5;
   }
-`
+`;
 
 const Title = styled.h1`
   font-family: ${(props) => props.theme.fonts.heading};
-  margin-bottom: 30px;
+  font-size: ${(props) => props.theme.fontSizes.larger};
+  margin-bottom: 0;
 `;
 
 const Description = styled.p`
+  font-size: 1.1em;
   margin-bottom: 50px;
   width: 70%;
+  line-height: 2em;
 `;
 
 const Image = styled.img`
   @media ${(props) => `${props.theme.viewport.laptop}`} {
-    width: 30%;
+    max-width: 30%;
   }
   width: 70%;
 `;
 
-const Button = styled.button`
-  background: rgba(147, 201, 254, 1);
-  border: 3px solid #0078e8;
+const Button = styled.a`
+  background: ${(props) => props.theme.colors.offWhite};
+  border: 2px solid ${(props) => props.theme.colors.primaryBlue};
   border-radius: 5px;
   padding: 10px 30px;
+  font-size: 1.1em;
   font-family: ${(props) => props.theme.fonts.content};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  height: 30px;
+  color: ${(props) => props.theme.colors.primaryBlue};
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  ::after {
+    content: '>';
+  }
 `;
 
 export default NewTitleBlock;

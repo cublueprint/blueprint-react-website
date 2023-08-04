@@ -16,7 +16,7 @@ const aboutContent = {
         },
         buttons: [
         {
-            content: 'OUR TEAM >',
+            content: 'OUR TEAM',
             link: '/teams',
         },
         ]
