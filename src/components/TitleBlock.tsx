@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from './Button';
 
 interface TitleBlockProps {
   content: {
@@ -22,7 +23,7 @@ const TitleBlock = (props: TitleBlockProps) => (
     <Image src={props.content.image.picture} alt={props.content.image.alt} />
     {props.content.buttons.map((button) => (
       <a key={`t-${button.content}`} href={button.link}>
-        <Button>{button.content}</Button>
+        <Button text={button.content}></Button>
       </a>
     ))}
   </TitleBlockDiv>
@@ -65,13 +66,6 @@ const Image = styled.img`
   top: 25%;
 `;
 
-const Button = styled.button`
-  grid-area: Button;
-  background: rgba(147, 201, 254, 1);
-  border: 3px solid #0078e8;
-  border-radius: 5px;
-  padding: 10px 30px;
-  font-family: ${(props) => props.theme.fonts.content};
-`;
+
 
 export default TitleBlock;
