@@ -35,7 +35,7 @@ const Footer = () => (
       ))}
     </FooterGrid>
 
-    <MadeWithLove>Made with ❤️ by The Blueprint Team</MadeWithLove>
+    <MadeWithLove>new footer Made with ❤️ by The Blueprint Team</MadeWithLove>
   </FooterContainer>
 );
 
