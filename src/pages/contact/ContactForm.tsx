@@ -102,6 +102,7 @@ const Image = styled.img`
     width: 30px;
     height: auto;
     margin: 15px 10px 15px 0px;
+    filter: invert(27%) sepia(91%) saturate(2844%) hue-rotate(195deg) brightness(99%) contrast(103%);
 `;
 
 const InputField = styled.input`
