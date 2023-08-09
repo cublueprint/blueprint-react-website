@@ -1,22 +1,22 @@
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 import Theme from './Theme';
 import { Fonts } from './static';
 
 import { Header, Footer } from './partials';
-import { Home, About, Projects, Apply, Contact, Teams } from './pages';
+import {
+  Home,
+  About,
+  Projects,
+  Apply,
+  StudentApplications,
+  NonProfitApplication,
+  Contact,
+  Teams,
+} from './pages';
 
 const routes = [Home, About, Projects, Apply, Contact, Teams];
-
-const links = [
-  { home: Home },
-  { about: About },
-  { projects: Projects },
-  { apply: Apply },
-  { contact: Contact },
-  { Teams: Teams },
-];
 
 const App = () => {
   return (
@@ -25,13 +25,16 @@ const App = () => {
       <Fonts />
       <Router>
         <Header links={routes.map(({ name }) => name)} />
-        <Switch>
-          {routes.map((route) => (
-            <Route key={`r-${route.name}`} exact path={`/${route.name}`}>
-              {route}
-            </Route>
-          ))}
-        </Switch>
+        <Routes>
+          <Route path='/home' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/apply' element={<Apply />} />
+          <Route path='/apply/student' element={<StudentApplications />} />
+          <Route path='/apply/non-profit' element={<NonProfitApplication />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/teams' element={<Teams />} />
+        </Routes>
       </Router>
       <Footer />
     </Theme>
