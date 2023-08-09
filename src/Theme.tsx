@@ -4,9 +4,11 @@ const theme = {
   colors: {
     offWhite: '#dfefff',
     darkGrey: '#333333',
+    textBlack: '#484848',
     primaryBlue: '#3988ff',
     skyBlue: '#B2DAFF',
     cloudBlue: '#E5F2FF',
+    borderBlue: '#93C9FE'
   },
   fonts: {
     heading: 'Poppins, sans-serif',
@@ -22,6 +24,7 @@ const theme = {
     mobile: '(min-width: 320px)',
     tablet: '(min-width: 768px)',
     laptop: '(min-width: 1024px)',
+    hover: '(hover:hover)'
   },
 };
 

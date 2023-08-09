@@ -65,12 +65,14 @@ const Button = styled.button`
   color: #0078e8;
   margin-right: 20px;
   font-family: ${(props) => props.theme.fonts.content};
-  &:hover{
-    background: #0078e8;
-    color: white;
-    cursor:pointer;
-    transition: all .6s ease;
-    -webkit-transition: all .6s ease;
+  @media ${(props) => `${props.theme.viewport.hover}`} {
+    &:hover{
+      background: #0078e8;
+      color: white;
+      cursor:pointer;
+      transition: all .6s ease;
+      -webkit-transition: all .6s ease;
+    }
   }
 `;
 

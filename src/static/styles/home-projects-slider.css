@@ -5,9 +5,12 @@
     z-index: unset;
 }
 
+.swiper-slide-shadow-right, .swiper-slide-shadow-left {
+    border-radius: 3px !important;
+}
+
 .swiper-slide {
     background-position: center;
     background-size: cover;
     z-index: unset;
-
 }

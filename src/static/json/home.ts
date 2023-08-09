@@ -59,19 +59,19 @@ const homeContent = {
       {
         name: 'Beneficient',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: 'Projects',
+        link: 'Projects/Beneficient',
         image: BlueprintPicture
       },
       {
         name: 'Allo Canada',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: 'Projects',
+        link: 'Projects/AlloCanada',
         image: BlueprintPicture
       },
       {
         name: 'Urban Minds',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: 'Projects',
+        link: 'Projects/UrbanMinds',
         image: BlueprintPicture
       }
     ]
