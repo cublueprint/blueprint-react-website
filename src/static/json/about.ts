@@ -2,7 +2,7 @@ import TeamsTitleImage from '../images/teams_title_block.png';
 
 const aboutContent = {
     titleBlock: {
-        title: 'About The Club',
+        title: {text: 'About The Club'},
         subtitle: 'We\'re a club at Carleton University that develops pro-bono apps for nonprofits and promotes tech for social good.',
         image: {
             picture: TeamsTitleImage,

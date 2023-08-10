@@ -2,7 +2,7 @@ import TeamsTitleImage from '../images/teams_title_block.png';
 
 const teamsContent = {
   titleBlock: {
-    title: 'Meet the Team!',
+    title: {text: 'Meet the Team!'},
     subtitle:
       'Take a glimpse at the individuals who have made the team what it is today.',
     image: {

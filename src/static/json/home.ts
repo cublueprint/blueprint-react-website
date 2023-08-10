@@ -44,15 +44,14 @@ const homeContent = {
         link: 'About',
       }
     ],
-    style: 'right'
+    style: ['right', "cloudBlue"]
   },
   projectsBlock: {
     title: {
       text: 'Projects 🗃️'
     },
     subtitle:
-      "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
-
+    "Check out our projects!",
     image: {
       picture: AboutPicture,
       alt: 'about picture',
@@ -99,7 +98,62 @@ const homeContent = {
       content: 'APPLY >',
       link: 'Apply',
     }],
-    style: 'left'
+    style: ['left', "cloudBlue"]
+  },
+  instagramBlock: {
+    title: {
+      text: 'Check out our Instagram! 📱'
+    },
+    subtitle:
+      "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
+
+    image: {
+      picture: AboutPicture,
+      alt: 'about picture',
+    },
+    buttons: [
+      {
+        content: 'READ MORE >',
+        link: 'About',
+      }
+    ],
+    projects:[
+      {
+        name: 'Beneficient',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
+        link: 'Projects/Beneficient',
+        image: BlueprintPicture
+      },
+      {
+        name: 'Allo Canada',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
+        link: 'Projects/AlloCanada',
+        image: BlueprintPicture
+      },
+      {
+        name: 'Urban Minds',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
+        link: 'Projects/UrbanMinds',
+        image: BlueprintPicture
+      }
+    ]
+  },
+  contactUsBlock: {
+    title: {
+      text: 'Contact Us 📧',
+      style: 'skyBlue'
+    },
+    subtitle:
+      "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
+    image: {
+      picture: AboutPicture,
+      alt: 'contact picture',
+    },
+    buttons: [{
+      content: 'CONTACT US >',
+      link: 'Contact',
+    }],
+    style: ['right', "cloudBlue"]
   },
 };
 

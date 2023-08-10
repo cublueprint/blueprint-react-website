@@ -9,7 +9,7 @@ export interface HomeBlockProps {
         picture: any;
         alt: string;
       };
-      style?: string;
+      style?: string[];
       buttons:{
         content: string;
         link: string;

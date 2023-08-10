@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { HomeBlockProps } from '../interfaces/HomeBlockProps';
 
 const AboutBlock = (props: HomeBlockProps) => {
-  let styling = (props.content.style === "right")? `    
+  let styling = (props.content.style?.[0] === "right")? `    
   text-align: right;
   grid-template-columns: 2fr 3fr;
   grid-template-areas:
@@ -19,7 +19,7 @@ const AboutBlock = (props: HomeBlockProps) => {
     'Buttons Image';
   `
   let AboutBlockDiv = styled.div`
-  background-color:${(themeProps) => themeProps.theme.colors.cloudBlue}};
+  background-color:${(themeProps) => (props.content.style?.[1] === "cloudBlue"? themeProps.theme.colors.cloudBlue: themeProps.theme.colors.white)}};
   padding: 50px;
   display: grid;
   grid-gap: 10px;
