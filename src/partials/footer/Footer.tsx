@@ -54,25 +54,6 @@ const Column = styled.div`
   font-weight: bold;
 `
 
-const LogoDiv = styled.div`
-  grid-area: logoDiv;
-
-  padding: 20px 0;
-  @media ${(props) => `${props.theme.viewport.laptop}`} {
-    padding: 0;
-  }
-`;
-
-const FooterBox = styled.div`
-  margin: 0;
-  font-size: 16px;
-
-  padding: 20px 0;
-  @media ${(props) => `${props.theme.viewport.laptop}`} {
-    padding: 0;
-  }
-`;
-
 const FooterTitle = styled.a`
   height: 35px;
   text-decoration: none;
