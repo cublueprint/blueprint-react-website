@@ -36,7 +36,7 @@ const swiperConfig = {
 }
 const HomeProjectsBlock = (props: HomeBlockProps) => (
   <HomeProjectsBlockDiv>
-    <Title>{props.content.title}</Title>
+    <Title>{props.content.title.text}</Title>
     <Swiper {...swiperConfig}>
           {props.content.projects?.map((project) => (
               <SwiperSlide>

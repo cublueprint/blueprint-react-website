@@ -35,15 +35,20 @@ const CardDiv = styled.div`
 const Picture = styled.img`
   width: 90%;
   margin: auto;
-  padding-top: 15px;
   display: block;
-  background-color: white; 
+  @media ${(props) => `${props.theme.viewport.tablet}`} {
+    padding-top: 15px;
+  }
 `;
 
 const Name = styled.h2`
+display: none;
+@media ${(props) => `${props.theme.viewport.tablet}`} {
+  display: inherit;
   margin: 10px;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: 700;
+}
 `;
 
 const Description = styled.h2`

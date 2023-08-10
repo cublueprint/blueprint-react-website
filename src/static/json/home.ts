@@ -5,7 +5,9 @@ import BlueprintPicture from '../images/blueprint.png';
 
 const homeContent = {
   titleBlock: {
-    title: 'Tech for social good',
+    title: {
+      text: 'Tech for social good'
+    },
     subtitle:
       "We're a team of students at Carleton University that develop pro-bono apps for nonprofits and promote tech for social good.",
 
@@ -25,7 +27,10 @@ const homeContent = {
     ],
   },
   aboutBlock: {
-    title: 'About Us 💡',
+    title: {
+      text: 'About Us 💡',
+      style: 'skyBlue'
+    },
     subtitle:
       "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
 
@@ -39,15 +44,18 @@ const homeContent = {
         link: 'About',
       }
     ],
+    style: 'right'
   },
   projectsBlock: {
-    title: 'Projects 🗃️',
+    title: {
+      text: 'Projects 🗃️'
+    },
     subtitle:
       "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
 
     image: {
       picture: AboutPicture,
-      alt: 'title picture',
+      alt: 'about picture',
     },
     buttons: [
       {
@@ -75,7 +83,24 @@ const homeContent = {
         image: BlueprintPicture
       }
     ]
-  }
+  },
+  getInvolvedBlock: {
+    title: {
+      text: 'Get Involved 🤝',
+      style: 'skyBlue'
+    },
+    subtitle:
+      "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
+    image: {
+      picture: AboutPicture,
+      alt: 'apply picture',
+    },
+    buttons: [{
+      content: 'APPLY >',
+      link: 'Apply',
+    }],
+    style: 'left'
+  },
 };
 
 export default homeContent;

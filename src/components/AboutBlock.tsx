@@ -1,23 +1,25 @@
 import styled from 'styled-components';
 import { HomeBlockProps } from '../interfaces/HomeBlockProps';
 
-const AboutBlock = (props: HomeBlockProps) => (
-  <AboutBlockDiv>
-    <Title>{props.content.title}</Title>
-    <Image src={props.content.image.picture} alt={props.content.image.alt} />
-    <Description>{props.content.subtitle}</Description>
-    <Buttons>
-      {props.content.buttons.map((button) => (
-        <a key={`t-${button.content}`} href={button.link}>
-          <Button>{button.content}</Button>
-        </a>
-      ))}
-    </Buttons>
-  </AboutBlockDiv>
-);
-
-const AboutBlockDiv = styled.div`
-background-color:${(props) => props.theme.colors.cloudBlue}};
+const AboutBlock = (props: HomeBlockProps) => {
+  let styling = (props.content.style === "right")? `    
+  text-align: right;
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas:
+    'Title Title'
+    'Image Description'
+    'Image Buttons';
+  ` :
+  `    
+  text-align: left;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+    'Title Title'
+    'Description Image'
+    'Buttons Image';
+  `
+  let AboutBlockDiv = styled.div`
+  background-color:${(themeProps) => themeProps.theme.colors.cloudBlue}};
   padding: 50px;
   display: grid;
   grid-gap: 10px;
@@ -28,43 +30,49 @@ background-color:${(props) => props.theme.colors.cloudBlue}};
     'Image'
     'Buttons';
 
-  @media ${(props) => `${props.theme.viewport.tablet}`} {
-    grid-template-columns: 2fr 3fr;
-    grid-template-areas:
-      'Title Title'
-      'Image Description'
-      'Image Buttons';
-  }
-`;
+  @media ${(themeProps) => `${themeProps.theme.viewport.tablet}`} {
+    ${styling}
+  }`;
 
-const Title = styled.h1`
-  grid-area: Title;
-  font-size: ${(props) => props.theme.fontSizes.medium};
-  background-color: ${(props) => props.theme.colors.skyBlue};
-  font-family: ${(props) => props.theme.fonts.heading};
-  margin: 0;
-  padding-left: 1em;
-  height: 1.8em;
-  border-radius: 15px;
-`;
+  let Title = styled.h1`
+    grid-area: Title;
+    text-align: left;
+    font-size: ${(themeProps) => themeProps.theme.fontSizes.medium};
+    background-color: ${(themeProps) => (props.content.title.style === "skyBlue"? themeProps.theme.colors.skyBlue : themeProps.theme.colors.cloudBlue)};
+    font-family: ${(themeProps) => themeProps.theme.fonts.heading};
+    margin: 0;
+    padding-left: 1em;
+    height: 1.8em;
+    border-radius: 15px;
+  `;
+
+  const Buttons = styled.div`
+    margin-top: auto;
+    margin-bottom: 2em;
+    @media ${(themeProps) => `${themeProps.theme.viewport.tablet}`} {
+      text-align: ${props.content.style};
+    }
+  `;
+  return <AboutBlockDiv>
+    <Title>{props.content.title.text}</Title>
+    <Image src={props.content.image.picture} alt={props.content.image.alt} />
+    <Description>{props.content.subtitle}</Description>
+    <Buttons>
+      {props.content.buttons.map((button) => (
+        <a key={`t-${button.content}`} href={button.link}>
+          <Button>{button.content}</Button>
+        </a>
+      ))}
+    </Buttons>
+  </AboutBlockDiv>
+};
 
 const Description = styled.div`
   grid-area: Description;
   margin: 0;
   margin-top:auto;
   font-size: ${(props) => props.theme.fontSizes.regular};
-  @media ${(props) => `${props.theme.viewport.tablet}`} {
-    text-align: right;
-  }
 `;
-
-const Buttons = styled.div`
-  margin-top: auto;
-  margin-bottom: 2em;
-  @media ${(props) => `${props.theme.viewport.tablet}`} {
-    text-align: right;
-  }
-`
 
 const Image = styled.img`
   grid-area: Image;

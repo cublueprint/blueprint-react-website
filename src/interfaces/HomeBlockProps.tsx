@@ -1,12 +1,16 @@
 export interface HomeBlockProps {
     content: {
-      title: string;
+      title: {
+        text: string;
+        style?: string;
+      };
       subtitle: string;
       image: {
         picture: any;
         alt: string;
       };
-      buttons: {
+      style?: string;
+      buttons:{
         content: string;
         link: string;
       }[];
