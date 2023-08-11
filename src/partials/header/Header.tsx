@@ -46,10 +46,11 @@ const StyledHeader = styled.div`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 50px;
+  height: 65px;
 
   @media ${(props) => props.theme.viewport.laptop} {
     align-items: center;
+    justify-content: space-evenly;
   }
 `;
 
@@ -63,7 +64,7 @@ const StyledHeaderList = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 3vw;
+    gap: 1vw;
     margin-right: 50px;
   }
 `;
