@@ -31,26 +31,33 @@ const BlueprintIcon = (props: { link: string }) => (
 );
 
 const StyledHeader = styled.div`
-  background-color: ${(props) => props.theme.colors.primaryBlue};
-  color: ${(props) => props.theme.colors.offWhite};
-  font-size: ${(props) => props.theme.fontSizes.small};
-  font-family: ${(props) => props.theme.fonts.heading};
-  font-weight: bold;
-  text-transform: uppercase;
+  
+  @media ${(props) => props.theme.viewport.mobile} {
+    background-color: ${(props) => props.theme.colors.primaryBlue};
+    color: ${(props) => props.theme.colors.offWhite};
+    font-size: ${(props) => props.theme.fontSizes.small};
+    font-family: ${(props) => props.theme.fonts.heading};
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 50px;
+  }
 
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  z-index: 1;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: 65px;
+  @media ${(props) => props.theme.viewport.tablet} {
+    justify-content:space-between;
+  }
 
   @media ${(props) => props.theme.viewport.laptop} {
     align-items: center;
     justify-content: space-evenly;
+    height: 65px;
   }
 `;
 
