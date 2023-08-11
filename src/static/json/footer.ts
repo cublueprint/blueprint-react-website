@@ -34,8 +34,8 @@ const footerJson = {
     {name: "about us", link: "/about"},
     {name: "projects", link: "/projects"},
     {name: "teams", link: "/teams"},
-    {name: "apply as a student", link: "/apply"},
-    {name: "apply as a nonprofit", link: "/apply"},
+    {name: "apply as a student", link: "/apply/student"},
+    {name: "apply as a nonprofit", link: "/apply/non-profit"},
     {name: "contact us", link: "/contact"}
   ],
   // End Contact Section ---------------
