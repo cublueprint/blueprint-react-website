@@ -42,9 +42,11 @@ const FooterContainer = styled.div`
 
 const FlexContainer = styled.div`
   padding-top: 20px;
+  
   @media ${(props) => `${props.theme.viewport.laptop}`} {
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
   }
 `
 
@@ -57,25 +59,30 @@ const Column = styled.div`
 const FooterTitle = styled.a`
   height: 35px;
   text-decoration: none;
-  color: white;
+  color: ${(props) => props.theme.colors.offWhite};
+  :hover {
+    color: white;
+  }
 `;
 
 const BlueprintLogo = styled.img`
   height: 35px;
-  margin-bottom: 80px;
 `;
 
 const SocialIcon = styled.img`
   width: auto;
   height: 20px;
   margin-right: 10px;
-  filter: invert(98%) sepia(6%) saturate(2%) hue-rotate(208deg) brightness(116%) contrast(100%);
+  filter: invert(87%) sepia(70%) saturate(5510%) hue-rotate(177deg) brightness(106%) contrast(104%);
+  :hover {
+    filter: invert(98%) sepia(6%) saturate(2%) hue-rotate(208deg) brightness(116%) contrast(100%);
+  }
 `
 
 const MadeWithLove = styled.div`
   background-color: ${(props) => props.theme.colors.primaryBlue};
   text-align: center;
-  padding: 5px 0;
+  padding: 20px 0;
 `;
 
 export default Footer;
