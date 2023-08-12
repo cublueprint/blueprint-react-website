@@ -15,11 +15,11 @@ const ValuesBlock = (props: ValuesBlockProps) => (
     <ValuesBlockDiv>
         {props.content.map((value, index) => (
           <ValueDiv>
-          <ValueTitle>{value.title}</ValueTitle>
-          <ValueContent>
-            <Description>{value.description}</Description>
+            <ValueContent>
+                <ValueTitle>{value.title}</ValueTitle>
+                <Description>{value.description}</Description>
+            </ValueContent>
             <Image src={value.image.src} alt={value.image.alt}></Image>
-          </ValueContent>
           </ValueDiv>
         ))}
     </ValuesBlockDiv>
@@ -27,12 +27,15 @@ const ValuesBlock = (props: ValuesBlockProps) => (
 
 const ValueDiv = styled.div`
     display: flex;
-    flex-direction: column;
-    margin-bottom:30px;
+    justify-content: center;
 `
 
 const ValueContent = styled.div`
     display: flex;
+    flex-direction:column;
+    justify-content: center;
+    flex-basis: 0;
+    flex-grow: 0.3;
 `
 
 const ValueTitle = styled.p`
@@ -42,57 +45,46 @@ const ValueTitle = styled.p`
 `
 
 const Image = styled.img`
-    min-width: 20%;
-    max-width: 50%;
-    max-height: 30%;
-    margin-left: 50px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    order: 2;
-
+    min-width: auto;
+    max-width: 15%;
+    max-height: 100%;
+    margin-left: 0px;
 `;
 
 const Description = styled.p`
     margin: 0;
-    padding: 0;
-    width: 50%;
-    order: 1;
 `;
 
 const ValuesBlockDiv = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 30px 220px 0px 220px;
+    margin: 50px 0px;
+
     & > ${ValueDiv}:nth-child(even) {
-        > ${ValueTitle} {
+        flex-direction: row-reverse;
+        > ${ValueContent} > ${ValueTitle} {
             margin-left: auto;
         }
         > ${ValueContent} > ${Description} {
-            order: 2;
             text-align: right;
-        }
-        > ${ValueContent} > ${Image} {
-            order: 1;
-            margin-left: auto;
-            margin-right: 50px;
         }
     }
 
     @media only screen and (max-width: 1100px) {
-        > ${ValueDiv} > ${ValueTitle} {
+        > ${ValueDiv} >  ${ValueContent} > ${ValueTitle} {
             margin: 0 auto;
         }
-        > ${ValueDiv} > ${ValueContent} { 
-            flex-direction: column;
+        > ${ValueDiv} { 
+            flex-direction: column-reverse !important;
+            align-items: center;
         }
         > ${ValueDiv} > ${ValueContent} > ${Description} {
-            order: 2;
             text-align: center !important;
-            width: 100%;
+            margin: 0px 30px;
         }
-        > ${ValueDiv} > ${ValueContent} > ${Image} {
-            order: 1;
-            margin: 30px auto !important;
+        > ${ValueDiv} > ${Image} {
+            max-width: 50%;
+            margin: 30px;
         }
     } 
 `
