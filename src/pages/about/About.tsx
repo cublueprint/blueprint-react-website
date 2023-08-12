@@ -1,4 +1,4 @@
-import TitleBlock from '../../components/TitleBlock';
+import NewTitleBlock from '../../components/NewTitleBlock';
 import ContentBlock from '../../components/ContentBlock';
 import MissionBlock from './MissionBlock';
 import ValuesBlock from './ValuesBlock';
@@ -9,7 +9,7 @@ import content from '../../static/json/about';
 const About = () => {
   return (
     <>
-      <TitleBlock content={content.titleBlock}></TitleBlock>
+      <NewTitleBlock content={content.titleBlock}></NewTitleBlock>
       <ContentBlock title='Mission Statement'>
         <MissionBlock content={content.mission}></MissionBlock>
       </ContentBlock>
