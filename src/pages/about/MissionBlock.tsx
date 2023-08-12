@@ -45,7 +45,7 @@ const Image = styled.img`
     margin: 50px 50px 25px 50px;
     @media ${(props) => `${props.theme.viewport.laptop}`} {
         margin: 50px;
-        width: 25%;
+        width: 20%;
     }
 `;
 
