@@ -28,6 +28,8 @@ const ValuesBlock = (props: ValuesBlockProps) => (
 const ValueDiv = styled.div`
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
+    align-items: center;
 `
 
 const ValueContent = styled.div`
@@ -45,10 +47,10 @@ const ValueTitle = styled.p`
 `
 
 const Image = styled.img`
-    min-width: auto;
-    max-width: 15%;
-    max-height: 100%;
-    margin-left: 0px;
+    height: auto;
+    width: 150px;
+    margin-left: 100px;
+    margin-right: 0px;
 `;
 
 const Description = styled.p`
@@ -68,6 +70,10 @@ const ValuesBlockDiv = styled.div`
         > ${ValueContent} > ${Description} {
             text-align: right;
         }
+        > ${Image} {
+            margin-right: 100px;
+            margin-left: 0px;
+        }
     }
 
     @media only screen and (max-width: 1100px) {
@@ -83,12 +89,9 @@ const ValuesBlockDiv = styled.div`
             margin: 0px 30px;
         }
         > ${ValueDiv} > ${Image} {
-            max-width: 50%;
-            margin: 30px;
+            margin: 30px !important;
         }
     } 
 `
-
-//responsiveness for this block still needs a lot of work but is fine for now
 
 export default ValuesBlock;
