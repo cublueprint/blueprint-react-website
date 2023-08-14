@@ -32,7 +32,7 @@ const contactContent = {
     banner: {
         text: 'Looking to join our team or be our next project?',
         button: {
-            content: 'APPLY >',
+            content: 'APPLY',
             link: '/apply'
         }
     }

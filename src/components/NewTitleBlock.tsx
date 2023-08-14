@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from './Button';
 
 interface TitleBlockProps {
   content: {
@@ -22,9 +23,7 @@ const NewTitleBlock = (props: TitleBlockProps) => (
         <Title>{props.content.title}</Title>
         <Description>{props.content.subtitle}</Description>
         {props.content.buttons.map((button) => (
-          <Button key={`t-${button.content}`} href={button.link}>
-            {button.content}
-          </Button>
+          <StyledButton key={`t-${button.content}`} text={button.content} link={button.link}/>
         ))}
       </LeftFlex>
       <Image src={props.content.image.picture} alt={props.content.image.alt} />
@@ -72,6 +71,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
+  font-family: ${(props) => props.theme.fonts.content};
   font-size: ${(props) => props.theme.fontSizes.small};
   margin-bottom: 50px;
   width: 100%;
@@ -88,19 +88,8 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Button = styled.a`
-  background: ${(props) => props.theme.colors.offWhite};
-  border: 2px solid ${(props) => props.theme.colors.primaryBlue};
-  border-radius: 5px;
-  padding: 10px 30px;
-  font-size: 1.1em;
-  font-family: ${(props) => props.theme.fonts.content};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 200px;
-  height: 30px;
+const StyledButton = styled(Button)`
+  height: 60px;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: bold;
   cursor: pointer;
