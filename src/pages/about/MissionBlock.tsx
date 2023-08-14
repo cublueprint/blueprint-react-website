@@ -31,10 +31,10 @@ const MissionBlockDiv = styled.div`
     flex-direction: column;
     flex-grow: 1;
     flex-basis: 0;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     @media ${(props) => `${props.theme.viewport.laptop}`} {
-        flex-grow: 0.8;
+        flex-grow: 1;
         flex-direction: row;
     }
 `
@@ -42,21 +42,23 @@ const MissionBlockDiv = styled.div`
 const Image = styled.img`
     height: auto;
     width: 55%;
-    margin: 50px 50px 25px 50px;
+    margin: 50px;
     @media ${(props) => `${props.theme.viewport.laptop}`} {
-        margin: 50px;
-        width: 20%;
+        margin: 50px 50px 50px 0;
+        width: 30%;
     }
 `;
 
 const Description = styled.p`
-    margin: 25px 50px 50px 50px;
-    width: 55%;
+    margin: 0;
+    
     text-align: center;
+    font-size: ${(props) => props.theme.fontSizes.small};
     @media ${(props) => `${props.theme.viewport.laptop}`} {
         text-align: right;
-        margin: 50px;
-        width: 35%;
+        margin: 50px 0px 50px 0px;
+        width: 55%;
+        font-size: 1.6em;
     }
 `;
 

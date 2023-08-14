@@ -27,9 +27,12 @@ const ValuesBlock = (props: ValuesBlockProps) => (
 
 const ValueDiv = styled.div`
     display: flex;
-    justify-content: center;
+    gap: 50px;
     margin-bottom: 30px;
     align-items: center;
+    @media ${(props) => `${props.theme.viewport.laptop}`} {
+        gap: 150px;
+    }
 `
 
 const ValueContent = styled.div`
@@ -37,23 +40,32 @@ const ValueContent = styled.div`
     flex-direction:column;
     justify-content: center;
     flex-basis: 0;
-    flex-grow: 0.3;
+    flex-grow: 0.9;
 `
 
-const ValueTitle = styled.p`
+const ValueTitle = styled.h2`
   color: #0078E8;
-  font-weight: bold;
   margin-bottom: 0;
+  @media ${(props) => `${props.theme.viewport.mobile}`} {
+    font-size: ${(props) => props.theme.fontSizes.small2};
+  }
 `
 
 const Image = styled.img`
     height: auto;
     width: 150px;
-    margin-left: 100px;
+    margin-left: 0px;
     margin-right: 0px;
+    @media ${(props) => `${props.theme.viewport.laptop}`} {
+        width: 175px;
+    }
 `;
 
 const Description = styled.p`
+    font-size: ${(props) => props.theme.fontSizes.small};
+    @media ${(props) => `${props.theme.viewport.laptop}`} {
+        font-size: ${(props) => props.theme.fontSizes.small2};
+    }
     margin: 0;
 `;
 
@@ -71,12 +83,13 @@ const ValuesBlockDiv = styled.div`
             text-align: right;
         }
         > ${Image} {
-            margin-right: 100px;
+            margin-right: 0px;
             margin-left: 0px;
         }
     }
 
     @media only screen and (max-width: 1100px) {
+        margin: 25px 0px;
         > ${ValueDiv} >  ${ValueContent} > ${ValueTitle} {
             margin: 0 auto;
         }
@@ -86,10 +99,10 @@ const ValuesBlockDiv = styled.div`
         }
         > ${ValueDiv} > ${ValueContent} > ${Description} {
             text-align: center !important;
-            margin: 0px 30px;
+            margin: 10px 0;
         }
         > ${ValueDiv} > ${Image} {
-            margin: 30px !important;
+            margin: 10px 30px !important;
         }
     } 
 `

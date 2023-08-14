@@ -64,22 +64,28 @@ const LeftFlex = styled.div`
 
 const Title = styled.h1`
   font-family: ${(props) => props.theme.fonts.heading};
-  font-size: ${(props) => props.theme.fontSizes.larger};
   margin-bottom: 0;
+  font-size: ${(props) => props.theme.fontSizes.medium2};
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    font-size: ${(props) => props.theme.fontSizes.larger};
+  }
 `;
 
 const Description = styled.p`
-  font-size: 1.1em;
+  font-size: ${(props) => props.theme.fontSizes.small};
   margin-bottom: 50px;
-  width: 70%;
+  width: 100%;
   line-height: 2em;
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    font-size: ${(props) => props.theme.fontSizes.small2};
+  }
 `;
 
 const Image = styled.img`
   @media ${(props) => `${props.theme.viewport.laptop}`} {
     max-width: 30%;
   }
-  width: 70%;
+  width: 100%;
 `;
 
 const Button = styled.a`
