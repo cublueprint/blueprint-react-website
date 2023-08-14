@@ -71,6 +71,8 @@ const Container = styled.div`
   padding: 0 15px;
   height: 100%;
   pointer: cursor;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
 `;
 
 const Name = styled.h2`

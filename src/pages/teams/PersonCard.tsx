@@ -18,16 +18,23 @@ export interface PersonProps {
 const PersonCard = (props: PersonProps) => {
   const [toggle, setToggle] = useState(false);
 
-  const content = {
-    front: <FrontPersonCard {...props} />,
-    back: <BackPersonCard {...props} />,
-  }[toggle ? 'back' : 'front'];
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
+  const content = toggle ? (
+    <BackPersonCard {...props} />
+  ) : (
+    <FrontPersonCard {...props} />
+  );
 
   // mirah was here
 
   return (
     <Container>
-      <CardDiv onClick={() => setToggle(!toggle)}>{content}</CardDiv>
+      <CardFace toggle={toggle} onClick={handleToggle}>
+        {content}
+      </CardFace>
     </Container>
   );
 };
@@ -39,7 +46,11 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const CardDiv = styled.div`
+type CardFaceProps = {
+  toggle: boolean;
+};
+
+const CardFace = styled.div<CardFaceProps>`
   border-radius: 10px;
   padding-top: 15px;
   width: 100%;
@@ -57,6 +68,9 @@ const CardDiv = styled.div`
     -webkit-box-shadow: -1px 4px 14px -2px rgba(57, 136, 255, 0.66);
     -moz-box-shadow: -1px 4px 14px -2px rgba(57, 136, 255, 0.66);
   }
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  transform: ${(props) => (props.toggle ? 'rotateY(180deg)' : 'rotateY(0)')};
 `;
 
 export default PersonCard;
