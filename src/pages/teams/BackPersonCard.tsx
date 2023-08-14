@@ -15,7 +15,7 @@ type ProjectInfo = {
 const projectInfo: { [key: string]: ProjectInfo } = {
   Beneficent: { color: '#ff9800', href: '/beneficent' },
   'Urban Minds': { color: '#2196f3', href: '/urbanminds' },
-  'Allo Canada': { color: '4caf50', href: '/allocanada' },
+  'Allo Canada': { color: '#4caf50', href: '/allocanada' },
   Website: { color: '#f44336', href: '/' },
 };
 
@@ -144,6 +144,10 @@ const Badge = styled.span<BadgeProps>`
   font-size: 0.7rem;
   width: fit-content;
   margin: 0 5px 5px 0;
+  :hover {
+    transition: 0.3s;
+    background-color: ${(props) => projectInfo[props.projectName].color || '#888'};
+  }
 `;
 
 export default BackPersonCard;
