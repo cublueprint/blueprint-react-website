@@ -7,6 +7,8 @@ const theme = {
     primaryBlue: '#3988ff',
     skyBlue: '#B2DAFF',
     cloudBlue: '#E5F2FF',
+    lightBlue: '#F8FBFF'
+
   },
   fonts: {
     heading: 'Poppins, sans-serif',
@@ -16,6 +18,7 @@ const theme = {
     small: '1em',
     medium: '2em',
     large: '3em',
+    larger: '4em',
   },
   viewport: {
     mobile: '(min-width: 320px)',
