@@ -6,10 +6,9 @@ import content from '../../static/json/teams';
 import PersonCard from './PersonCard';
 
 const Teams = () => (
-  <PageBody>
+  <>
     <NewTitleBlock content={content.titleBlock}></NewTitleBlock>
-
-    <TeamsContainer>
+    <>
       {content.teamsList.map((team, index) => (
         <ContentBlock title={team.name}>
           <TeamFlexBox>
@@ -19,13 +18,10 @@ const Teams = () => (
           </TeamFlexBox>
         </ContentBlock>
       ))}
-    </TeamsContainer>
-  </PageBody>
+    </>
+  </>
 );
 
-const PageBody = styled.div``;
-
-const TeamsContainer = styled.div``;
 const TeamFlexBox = styled.div`
   padding: 50px 0px;
   display: flex;

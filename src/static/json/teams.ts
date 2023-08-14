@@ -158,22 +158,22 @@ const teamsContent = {
       ],
     },
     {
-        name: 'Alumni',
-        members: [
-          {
-            name: 'Denis Po',
-            position: 'President',
-            linkedin: 'linkedin',
-            github: 'github',
-            instagram: 'instagram',
-            picture: Denis,
-            description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
+      name: 'Alumni',
+      members: [
+        {
+          name: 'Denis Po',
+          position: 'President',
+          linkedin: 'linkedin',
+          github: 'github',
+          instagram: 'instagram',
+          picture: Denis,
+          description: `Meet our president. Really likes Stuart Little <some other cool bio stuff>
             adding text to fill in space`,
-            projects: ['Beneficent', 'Urban Minds'],
-            startDate: 'Fall 2020',
-          },
-        ],
-      },
+          projects: ['Beneficent', 'Urban Minds'],
+          startDate: 'Fall 2020',
+        },
+      ],
+    },
   ],
 };
 

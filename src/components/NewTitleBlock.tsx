@@ -33,7 +33,7 @@ const NewTitleBlock = (props: TitleBlockProps) => (
 );
 
 const Background = styled.div`
-  background-color: #f8fbff;
+  background-color: ${(props) => props.theme.colors.lightBlue};
 `;
 
 const TitleBlockDiv = styled.div`

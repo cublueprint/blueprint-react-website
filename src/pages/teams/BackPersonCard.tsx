@@ -33,7 +33,6 @@ const SocialIconButton = (href: string, src: string, alt: string) => (
   </a>
 );
 
-
 const BackPersonCard = (props: PersonProps) => (
   <Container>
     <Name>{props.name}</Name>
@@ -44,9 +43,24 @@ const BackPersonCard = (props: PersonProps) => (
       <p>{props.startDate}</p>
     </DateJoinedSection>
     <Socials>
-      {props.linkedin && SocialIconButton(props.linkedin, LinkedinLogo, 'LinkedIn logo, links to LinkedIn profile')}
-      {props.github && SocialIconButton(props.github, GithubLogo, 'Github logo, links to Github profile')}
-      {props.instagram && SocialIconButton(props.instagram, InstagramLogo, 'Instagram logo, links to Instagram profile')}
+      {props.linkedin &&
+        SocialIconButton(
+          props.linkedin,
+          LinkedinLogo,
+          'LinkedIn logo, links to LinkedIn profile'
+        )}
+      {props.github &&
+        SocialIconButton(
+          props.github,
+          GithubLogo,
+          'Github logo, links to Github profile'
+        )}
+      {props.instagram &&
+        SocialIconButton(
+          props.instagram,
+          InstagramLogo,
+          'Instagram logo, links to Instagram profile'
+        )}
     </Socials>
   </Container>
 );
