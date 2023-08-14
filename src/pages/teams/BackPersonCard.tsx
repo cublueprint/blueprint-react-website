@@ -7,15 +7,24 @@ import LinkedinLogo from '../../static/images/linkedin.svg';
 import InstagramLogo from '../../static/images/instagram.svg';
 import GithubLogo from '../../static/images/github.svg';
 
-const projectColors: { [key: string]: string } = {
-  Beneficent: '#ff9800',
-  'Urban Minds': '#2196f3',
-  'Allo Canada': '#4caf50',
-  Website: '#f44336',
+type ProjectInfo = {
+  color: string;
+  href: string;
+};
+
+const projectInfo: { [key: string]: ProjectInfo } = {
+  Beneficent: { color: '#ff9800', href: '/beneficent' },
+  'Urban Minds': { color: '#2196f3', href: '/urbanminds' },
+  'Allo Canada': { color: '4caf50', href: '/allocanada' },
+  Website: { color: '#f44336', href: '/' },
 };
 
 const createColoredBadge = (projectName: string) => {
-  return <Badge projectName={projectName}>{projectName}</Badge>;
+  return (
+    <a href={projectInfo[projectName].href} target='_blank'>
+      <Badge projectName={projectName}>{projectName}</Badge>
+    </a>
+  );
 };
 
 const Projects = (projects: string[]) => (
@@ -68,7 +77,7 @@ const BackPersonCard = (props: PersonProps) => (
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 15px;
+  padding: 10px 25px;
   height: 100%;
   pointer: cursor;
   backface-visibility: hidden;
@@ -77,10 +86,11 @@ const Container = styled.div`
 
 const Name = styled.h2`
   color: ${(props) => props.theme.colors.primaryBlue};
+  margin: 0 0 10px 0;
 `;
 
 const Description = styled.p`
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   font-size: ${(props) => props.theme.fontSizes.small};
 `;
 
@@ -88,6 +98,7 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 10px;
 `;
 
 const DateJoinedSection = styled.div`
@@ -98,13 +109,12 @@ const DateJoinedSection = styled.div`
 
 const SectionTitle = styled.h4`
   color: ${(props) => props.theme.colors.primaryBlue};
-  margin: 10px 0;
+  margin: 0;
 `;
 
 const Socials = styled.div`
   display: flex;
   justify-content: center;
-  padding: 20px 0px 10px 0px;
   gap: 10px;
   width: 100%;
 `;
@@ -128,10 +138,10 @@ const Badge = styled.span<BadgeProps>`
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   border: 2px solid;
-  border-color: ${(props) => projectColors[props.projectName] || '#888'};
+  border-color: ${(props) => projectInfo[props.projectName].color || '#888'};
   color: black;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   width: fit-content;
   margin: 0 5px 5px 0;
 `;
