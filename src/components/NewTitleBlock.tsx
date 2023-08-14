@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from './Button';
 
 interface TitleBlockProps {
   content: {
@@ -22,9 +23,7 @@ const NewTitleBlock = (props: TitleBlockProps) => (
         <Title>{props.content.title}</Title>
         <Description>{props.content.subtitle}</Description>
         {props.content.buttons.map((button) => (
-          <Button key={`t-${button.content}`} href={button.link}>
-            {button.content}
-          </Button>
+          <StyledButton key={`t-${button.content}`} text={button.content} link={button.link}/>
         ))}
       </LeftFlex>
       <Image src={props.content.image.picture} alt={props.content.image.alt} />
@@ -64,37 +63,33 @@ const LeftFlex = styled.div`
 
 const Title = styled.h1`
   font-family: ${(props) => props.theme.fonts.heading};
-  font-size: ${(props) => props.theme.fontSizes.larger};
   margin-bottom: 0;
+  font-size: ${(props) => props.theme.fontSizes.medium2};
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    font-size: ${(props) => props.theme.fontSizes.larger};
+  }
 `;
 
 const Description = styled.p`
-  font-size: 1.1em;
+  font-family: ${(props) => props.theme.fonts.content};
+  font-size: ${(props) => props.theme.fontSizes.small};
   margin-bottom: 50px;
-  width: 70%;
+  width: 100%;
   line-height: 2em;
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    font-size: ${(props) => props.theme.fontSizes.small2};
+  }
 `;
 
 const Image = styled.img`
   @media ${(props) => `${props.theme.viewport.laptop}`} {
     max-width: 30%;
   }
-  width: 70%;
+  width: 100%;
 `;
 
-const Button = styled.a`
-  background: ${(props) => props.theme.colors.offWhite};
-  border: 2px solid ${(props) => props.theme.colors.primaryBlue};
-  border-radius: 5px;
-  padding: 10px 30px;
-  font-size: 1.1em;
-  font-family: ${(props) => props.theme.fonts.content};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 200px;
-  height: 30px;
+const StyledButton = styled(Button)`
+  height: 60px;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: bold;
   cursor: pointer;

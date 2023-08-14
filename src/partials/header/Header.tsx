@@ -38,7 +38,7 @@ const StyledHeaderBackground = styled.div`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 10vh;
+  height: 90px;
   display: flex;
   padding-left: 50px;
   @media ${(props) => props.theme.viewport.laptop} {

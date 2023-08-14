@@ -42,7 +42,7 @@ const ContactForm = (props: ContactProps) => {
                 <InputField placeholder='Full Name' name='user_name' id='user_name' required></InputField>
                 <InputField placeholder='Email' name='user_email' id='user_email' required></InputField>
                 <InputField placeholder='Message' name='user_message' id='user_message' required></InputField>
-                <StyledButton text='SEND >'></StyledButton>
+                <StyledButton text='SEND'></StyledButton>
                 {showSent ? <SentNotification>Message Sent ✅</SentNotification> : null}
             </InputContainer>
             <InfoContainer>

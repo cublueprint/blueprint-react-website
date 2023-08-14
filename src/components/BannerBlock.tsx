@@ -17,7 +17,7 @@ const BannerBlock = (props: BannerBlockProps) => (
         <Text>{props.content.text}</Text>
       </FlexContainer>
       <FlexContainer>
-        <a href={props.content.button.link}><Button text={props.content.button.content}></Button></a>
+        <Button text={props.content.button.content} link={props.content.button.link}></Button>
       </FlexContainer>
     </ApplicationDiv>
 );

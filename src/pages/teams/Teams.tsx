@@ -10,7 +10,7 @@ const Teams = () => (
     <NewTitleBlock content={content.titleBlock}></NewTitleBlock>
     <>
       {content.teamsList.map((team, index) => (
-        <ContentBlock title={team.name}>
+        <ContentBlock title={team.name} changeBackground={!index}>
           <TeamFlexBox>
             {team.members.map((person) => (
               <PersonCard {...person} />

@@ -73,7 +73,7 @@ const aboutContent = {
     banner: {
         text: 'Know more about the people behind the scenes!',
         button: {
-            content: 'Our Team >',
+            content: 'Our Team',
             link: '/teams'
         }
     }
