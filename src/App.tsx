@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import Theme from './Theme';
 import { Fonts } from './static';
@@ -15,15 +15,16 @@ import {
   Contact,
   Teams,
 } from './pages';
+import BannerBlock from './components/BannerBlock';
 
 const routes = [Home, About, Projects, Apply, Contact, Teams];
 
-const App = () => {
-  return (
-    <Theme>
-      <GlobalStyle />
-      <Fonts />
-      <Router>
+const App = () => (
+  <Theme>
+    <GlobalStyle />
+    <Fonts />
+    <Router>
+      <PageWrapper>
         <Header links={routes.map(({ name }) => name)} />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -36,11 +37,14 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/teams' element={<Teams />} />
         </Routes>
-      </Router>
-      <Footer />
-    </Theme>
-  );
-};
+        <div>
+          <BannerBlock />
+          <Footer />
+        </div>
+      </PageWrapper>
+    </Router>
+  </Theme>
+);
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -48,6 +52,13 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: "Poppins", "Source Sans Pro", sans-serif;
   }
+`;
+
+const PageWrapper = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export default App;

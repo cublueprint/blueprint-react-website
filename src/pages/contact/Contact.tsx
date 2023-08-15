@@ -1,5 +1,4 @@
 import ContactForm from "./ContactForm";
-import BannerBlock from "../../components/BannerBlock";
 
 import styled from 'styled-components';
 
@@ -11,7 +10,6 @@ const Contact = () => {
       <Container>
         <ContactForm info={content.info}></ContactForm>
       </Container>
-      <BannerBlock content={content.banner}></BannerBlock>
     </>
   );
 };
