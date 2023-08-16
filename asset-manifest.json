@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.js": "/static/js/main.cbfa7995.chunk.js",
+    "main.js.map": "/static/js/main.cbfa7995.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8501553d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8501553d.js.map",
+    "static/js/2.634e46e7.chunk.js": "/static/js/2.634e46e7.chunk.js",
+    "static/js/2.634e46e7.chunk.js.map": "/static/js/2.634e46e7.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.634e46e7.chunk.js.LICENSE.txt": "/static/js/2.634e46e7.chunk.js.LICENSE.txt",
+    "static/media/blueprint.54e03998.png": "/static/media/blueprint.54e03998.png",
+    "static/media/blueprint_banner_negative.d51f34af.webp": "/static/media/blueprint_banner_negative.d51f34af.webp",
+    "static/media/denis.4b7e00ba.png": "/static/media/denis.4b7e00ba.png",
+    "static/media/facebook.d0e6c35f.svg": "/static/media/facebook.d0e6c35f.svg",
+    "static/media/github.b2294bcc.svg": "/static/media/github.b2294bcc.svg",
+    "static/media/instagram.116ad97e.svg": "/static/media/instagram.116ad97e.svg",
+    "static/media/linkedin.93683c2c.svg": "/static/media/linkedin.93683c2c.svg",
+    "static/media/list.26ccc089.svg": "/static/media/list.26ccc089.svg",
+    "static/media/listClose.46a0e2ff.svg": "/static/media/listClose.46a0e2ff.svg",
+    "static/media/mission.a4adaf00.svg": "/static/media/mission.a4adaf00.svg",
+    "static/media/poppins-v15-latin-regular.085814c3.svg": "/static/media/poppins-v15-latin-regular.085814c3.svg",
+    "static/media/poppins-v15-latin-regular.18418ab6.eot": "/static/media/poppins-v15-latin-regular.18418ab6.eot",
+    "static/media/poppins-v15-latin-regular.5b8f3ba8.woff2": "/static/media/poppins-v15-latin-regular.5b8f3ba8.woff2",
+    "static/media/poppins-v15-latin-regular.b739ab04.ttf": "/static/media/poppins-v15-latin-regular.b739ab04.ttf",
+    "static/media/poppins-v15-latin-regular.c14093ce.woff": "/static/media/poppins-v15-latin-regular.c14093ce.woff",
+    "static/media/teams_title_block.9ab7dee7.png": "/static/media/teams_title_block.9ab7dee7.png",
+    "static/media/values1.26758cdb.svg": "/static/media/values1.26758cdb.svg",
+    "static/media/values2.4338efd6.svg": "/static/media/values2.4338efd6.svg",
+    "static/media/values3.19767f2c.svg": "/static/media/values3.19767f2c.svg",
+    "static/media/values4.28647b4f.svg": "/static/media/values4.28647b4f.svg",
+    "static/media/values5.9d03addb.svg": "/static/media/values5.9d03addb.svg",
+    "static/media/youtube.03bb1fe8.svg": "/static/media/youtube.03bb1fe8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8501553d.js",
+    "static/js/2.634e46e7.chunk.js",
+    "static/js/main.cbfa7995.chunk.js"
+  ]
+}
