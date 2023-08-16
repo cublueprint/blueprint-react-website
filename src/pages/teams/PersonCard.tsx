@@ -44,6 +44,8 @@ const Container = styled.div`
   max-width: 260px;
   display: flex;
   flex-direction: column;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
 `;
 
 type CardFaceProps = {
@@ -68,9 +70,12 @@ const CardFace = styled.div<CardFaceProps>`
     -webkit-box-shadow: -1px 4px 14px -2px rgba(57, 136, 255, 0.66);
     -moz-box-shadow: -1px 4px 14px -2px rgba(57, 136, 255, 0.66);
   }
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transition: transform 0.5s ease;
-  transform: ${(props) => (props.toggle ? 'rotateY(180deg)' : 'rotateY(0)')};
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  transition: transform 300ms ease-out;
+  transform: ${(props) => (props.toggle ? 'rotateY(-180deg)' : 'rotateY(0)')};
 `;
 
 export default PersonCard;
