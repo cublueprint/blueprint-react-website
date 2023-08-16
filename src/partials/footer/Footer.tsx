@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 import content from '../../static/json/footer';
+import { Link } from 'react-router-dom';
 
 const Footer = () => (
   <FooterContainer>
     <FlexContainer>
         <Column>
           {content.links.slice(0, 3).map((link) => (
-            <div><FooterTitle href={link.link}>{link.name}</FooterTitle></div>
+            <div><FooterTitle to={link.link}>{link.name}</FooterTitle></div>
           ))}
         </Column>
         <Column>
           {content.links.slice(3).map((link) => (
-            <div><FooterTitle href={link.link}>{link.name}</FooterTitle></div>
+            <div><FooterTitle to={link.link}>{link.name}</FooterTitle></div>
           ))}
         </Column>
         <Column>
@@ -56,7 +57,7 @@ const Column = styled.div`
   font-weight: bold;
 `
 
-const FooterTitle = styled.a`
+const FooterTitle = styled(Link)`
   height: 35px;
   text-decoration: none;
   color: ${(props) => props.theme.colors.offWhite};
