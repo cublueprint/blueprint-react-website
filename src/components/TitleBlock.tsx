@@ -22,9 +22,7 @@ const TitleBlock = (props: TitleBlockProps) => (
     <Description>{props.content.subtitle}</Description>
     <Image src={props.content.image.picture} alt={props.content.image.alt} />
     {props.content.buttons.map((button) => (
-      <a key={`t-${button.content}`} href={button.link}>
-        <Button text={button.content}></Button>
-      </a>
+        <Button key={`t-${button.content}`} text={button.content} link={button.link}></Button>
     ))}
   </TitleBlockDiv>
 );
