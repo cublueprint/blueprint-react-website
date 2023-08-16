@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.f83e4ea2.chunk.js",
-    "main.js.map": "/static/js/main.f83e4ea2.chunk.js.map",
+    "main.js": "/static/js/main.657fb7b9.chunk.js",
+    "main.js.map": "/static/js/main.657fb7b9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8501553d.js",
     "runtime-main.js.map": "/static/js/runtime-main.8501553d.js.map",
-    "static/js/2.d3535c4a.chunk.js": "/static/js/2.d3535c4a.chunk.js",
-    "static/js/2.d3535c4a.chunk.js.map": "/static/js/2.d3535c4a.chunk.js.map",
+    "static/js/2.a70164c8.chunk.js": "/static/js/2.a70164c8.chunk.js",
+    "static/js/2.a70164c8.chunk.js.map": "/static/js/2.a70164c8.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.d3535c4a.chunk.js.LICENSE.txt": "/static/js/2.d3535c4a.chunk.js.LICENSE.txt",
+    "static/js/2.a70164c8.chunk.js.LICENSE.txt": "/static/js/2.a70164c8.chunk.js.LICENSE.txt",
     "static/media/blueprint.54e03998.png": "/static/media/blueprint.54e03998.png",
     "static/media/blueprint_banner_negative.d51f34af.webp": "/static/media/blueprint_banner_negative.d51f34af.webp",
     "static/media/denis.4b7e00ba.png": "/static/media/denis.4b7e00ba.png",
@@ -33,7 +33,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8501553d.js",
-    "static/js/2.d3535c4a.chunk.js",
-    "static/js/main.f83e4ea2.chunk.js"
+    "static/js/2.a70164c8.chunk.js",
+    "static/js/main.657fb7b9.chunk.js"
   ]
 }
