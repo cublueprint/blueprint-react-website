@@ -15,6 +15,7 @@ const FrontPersonCard = (props: PersonProps) => (
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: rotateY(0);
 `;

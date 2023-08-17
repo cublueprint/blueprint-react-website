@@ -13,7 +13,7 @@ const teamsContent = {
     buttons: [
       {
         content: 'join us',
-        link: 'apply',
+        link: '/apply',
       },
     ],
   },

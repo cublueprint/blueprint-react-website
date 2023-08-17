@@ -1,19 +1,21 @@
-
-import styled from "styled-components";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 interface ButtonProps {
-    text: string;
-    link?: string;
-    className?: string;
+  text: string;
+  link?: string;
+  className?: string;
 }
 
 const Button = (props: ButtonProps) => (
-    <StyledA href={props.link}><BlueprintButton className={props.className}>{props.text}</BlueprintButton></StyledA>
+  <StyledA to={props.link ? props.link : '#'}>
+    <BlueprintButton className={props.className}>{props.text}</BlueprintButton>
+  </StyledA>
 );
 
-const StyledA = styled.a`
+const StyledA = styled(Link)`
   text-decoration: none;
-`
+`;
 
 const BlueprintButton = styled.button`
   background: ${(props) => props.theme.colors.lightBlue};
@@ -43,6 +45,5 @@ const BlueprintButton = styled.button`
     transition: 0.2s ease-in-out;
   }
 `;
-
 
 export default Button;

@@ -80,6 +80,7 @@ const Container = styled.div`
   padding: 10px 25px;
   height: 100%;
   pointer: cursor;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: rotateY(180deg);
 `;

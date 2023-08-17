@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 
 import Theme from './Theme';
@@ -17,7 +17,7 @@ import {
 } from './pages';
 import BannerBlock from './components/BannerBlock';
 
-const routes = [Home, About, Projects, Apply, Contact, Teams];
+const routes = ["home", "about", "projects", "apply", "contact", "teams"];
 
 const App = () => (
   <Theme>
@@ -25,7 +25,7 @@ const App = () => (
     <Fonts />
     <Router>
       <PageWrapper>
-        <Header links={routes.map(({ name }) => name)} />
+        <Header links={routes.map((name) => name)} />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
