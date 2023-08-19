@@ -43,22 +43,31 @@ const BannerBlock = () => {
 };
 const ApplicationDiv = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 10vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   background-color: ${(props) => props.theme.colors.offWhite};
+  @media ${(props) => props.theme.viewport.laptop} {
+    flex-direction: row;
+    gap: 22vw;
+  }
 `;
 
 const FlexContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100px;
 `;
 
 const Text = styled.h3`
   text-align: center;
   color: ${(props) => props.theme.colors.primaryBlue};
+  width:75%;
+  @media ${(props) => props.theme.viewport.laptop} {
+    width: 100%;
+  }
 `;
 
 export default BannerBlock;
