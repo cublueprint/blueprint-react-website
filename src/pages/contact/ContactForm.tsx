@@ -68,7 +68,7 @@ const Title = styled.h1`
   grid-area: Title;
   font-family: ${(props) => props.theme.fonts.heading};
   margin-bottom: 50px;
-  font-size: ${(props) => props.theme.fontSizes.large}
+  font-size: ${(props) => props.theme.fontSizes.larger}
 `;
 
 const FlexContainer = styled.div`
@@ -76,8 +76,8 @@ const FlexContainer = styled.div`
     flex-direction: column;
     @media ${(props) => props.theme.viewport.laptop} {
         flex-direction: row;
-        margin-left: 15vw;
         gap: 10vw;
+        margin-right: 350px;
     }
 `;
 
@@ -89,7 +89,7 @@ const InputContainer = styled.form`
 
 const InfoContainer = styled.div`
     @media ${(props) => props.theme.viewport.laptop} {
-        margin-top: 150px;
+        margin-top: 200px;
         
     }
 `;
@@ -131,7 +131,7 @@ const StyledButton = styled(Button)`
 `;
 
 const SentNotification = styled.div`
-    margin-top: 20px;
+    margin-top: 60px;
     font-size: 24px;
     color: white;
     padding: 20px;

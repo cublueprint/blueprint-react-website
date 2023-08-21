@@ -18,7 +18,9 @@ const Contact = () => {
 
 const Container = styled.div`
   @media ${(props) => props.theme.viewport.laptop} {
-    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
   }
 `
 
