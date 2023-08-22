@@ -1,54 +1,68 @@
 import styled from 'styled-components';
 import { HomeBlockProps } from '../../interfaces/HomeBlockProps';
 
-import ProjectCard  from '../../components/ProjectCard';
+import InstagramCard  from '../../components/InstagramCard';
 
 import { Swiper, SwiperSlide } from 'swiper/swiper-react';
-import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
+
+// Import IG data
+import igdata from '../../static/json/instagram.json'
 
 // Import Swiper styles
 import 'swiper/swiper.scss'; // core Swiper
 import "swiper/swiper-bundle.css";
 import 'swiper/modules/navigation.mjs'; // Navigation module
-import 'swiper/modules/pagination.mjs'; // Pagination module
-import 'swiper/modules/effect-coverflow.min.mjs'
 
-import '../../static/styles/home-projects-slider.css'
+import '../../static/styles/sliders.css'
 
 const swiperConfig = {
-  effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        navigation: true,
-        slidesPerView:3,
-        coverflowEffect:{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-        pagination:{
-          clickable:true
-        },
-        modules:[EffectCoverflow, Navigation, Pagination],
-        className:"mySwiper"
+  grabCursor: true,
+  navigation: {
+    prevEl: '.prev-btn',
+    nextEl: '.next-btn'
+  },
+  rewind: true,
+  slidesPerView:4,
+  spaceBetween: 30,
+  modules:[Navigation],
+  className:"instaSwiper"
 }
-const HomeInstagram = (props: HomeBlockProps) => (
-  <HomeProjectsBlockDiv>
+const HomeInstagram = (props: HomeBlockProps) =>{
+  // fetch("https://www.instagram.com/cublueprint/?__a=1&__d=1")
+  // .then(response => {
+  //   console.log(response)
+  //   return response.json()
+  // })
+  // .then(data => {
+  //   console.log(data);
+  //   data["graphql"]["user"]["edge_owner_to_timeline_media"]["edges"].forEach((edge: any) => {
+  //     console.log(edge.node)
+  //   }
+  //   )
+  // }).catch(err=>{
+  //   console.log(err)
+  // });
+
+  return (
+  <HomeInstagramBlockDiv>
     <Title>{props.content.title.text}</Title>
+    <div className={"prev-btn swiper-button-prev"}></div>
     <Swiper {...swiperConfig}>
-          {props.content.projects?.map((project) => (
+          {igdata.graphql.user.edge_owner_to_timeline_media.edges.map((post) => (
               <SwiperSlide>
-                <ProjectCard props={project}/>
+                <InstagramCard props={post}/>
               </SwiperSlide>
       ))}
-      </Swiper>
+    </Swiper>
+    <div className={"next-btn swiper-button-next"}></div>
 
-  </HomeProjectsBlockDiv>
-);
+  </HomeInstagramBlockDiv>
+  )
+};
 
-const HomeProjectsBlockDiv = styled.div`
+const HomeInstagramBlockDiv = styled.div`
+  position: relative;
   padding: 50px;
 `;
 

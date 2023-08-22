@@ -14,7 +14,7 @@ export interface HomeBlockProps {
         content: string;
         link: string;
       }[];
-      projects?: {
+      slider?: {
         name: string;
         description: string;
         link: string;

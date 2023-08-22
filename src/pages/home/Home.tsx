@@ -18,7 +18,7 @@ const Home = () => (
 );
 
 const PageBody = styled.div`
-  background-color: #F8FBFF;};
+  background-color: #F8FBFF;
 `;
 
 export default Home;

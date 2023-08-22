@@ -62,7 +62,7 @@ const homeContent = {
         link: 'About',
       }
     ],
-    projects:[
+    slider:[
       {
         name: 'Beneficient',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
@@ -117,7 +117,7 @@ const homeContent = {
         link: 'About',
       }
     ],
-    projects:[
+    slider:[
       {
         name: 'Beneficient',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
@@ -128,6 +128,36 @@ const homeContent = {
         name: 'Allo Canada',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
         link: 'Projects/AlloCanada',
+        image: BlueprintPicture
+      },
+      {
+        name: 'Urban Minds',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
+        link: 'Projects/UrbanMinds',
+        image: BlueprintPicture
+      },
+      {
+        name: 'Urban Minds',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
+        link: 'Projects/UrbanMinds',
+        image: BlueprintPicture
+      },
+      {
+        name: 'Urban Minds',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
+        link: 'Projects/UrbanMinds',
+        image: BlueprintPicture
+      },
+      {
+        name: 'Urban Minds',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
+        link: 'Projects/UrbanMinds',
+        image: BlueprintPicture
+      },
+      {
+        name: 'Urban Minds',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
+        link: 'Projects/UrbanMinds',
         image: BlueprintPicture
       },
       {

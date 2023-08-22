@@ -14,6 +14,7 @@ import 'swiper/modules/pagination.mjs'; // Pagination module
 import 'swiper/modules/effect-coverflow.min.mjs'
 
 import '../../static/styles/home-projects-slider.css'
+import '../../static/styles/sliders.css'
 
 const swiperConfig = {
   effect: 'coverflow',
@@ -32,13 +33,13 @@ const swiperConfig = {
           clickable:true
         },
         modules:[EffectCoverflow, Navigation, Pagination],
-        className:"mySwiper"
+        className:"projectsSwiper"
 }
 const HomeProjectsBlock = (props: HomeBlockProps) => (
   <HomeProjectsBlockDiv>
     <Title>{props.content.title.text}</Title>
     <Swiper {...swiperConfig}>
-          {props.content.projects?.map((project) => (
+          {props.content.slider?.map((project) => (
               <SwiperSlide>
                 <ProjectCard props={project}/>
               </SwiperSlide>
