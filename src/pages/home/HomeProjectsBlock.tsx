@@ -38,13 +38,24 @@ const swiperConfig = {
 const HomeProjectsBlock = (props: HomeBlockProps) => (
   <HomeProjectsBlockDiv>
     <Title>{props.content.title.text}</Title>
-    <Swiper {...swiperConfig}>
-          {props.content.slider?.map((project) => (
-              <SwiperSlide>
-                <ProjectCard props={project}/>
-              </SwiperSlide>
-      ))}
+    <Carousel>
+      <Swiper {...swiperConfig}>
+            {props.content.slider?.map((project) => (
+                  <SwiperSlide key={project.name}>
+                    <a href={project.link} style={{textDecoration: "inherit", color: "inherit", cursor: "unset"}}>
+                      <ProjectCard props={project}/>
+                    </a>
+                  </SwiperSlide>
+        ))}
       </Swiper>
+    </Carousel>
+    <MobileProjects>
+      {props.content.slider?.map((project) => (
+          <a href={project.link} style={{textDecoration: "inherit", color: "inherit"}}>
+            <ProjectCard props={project}/>
+          </a>
+        ))}
+    </MobileProjects>
 
   </HomeProjectsBlockDiv>
 );
@@ -52,6 +63,26 @@ const HomeProjectsBlock = (props: HomeBlockProps) => (
 const HomeProjectsBlockDiv = styled.div`
   padding: 50px;
 `;
+
+const Carousel = styled.div`
+  display: none;
+  @media ${(props) => `${props.theme.viewport.tablet}`} {
+    display: inherit;
+  }
+`
+
+const MobileProjects = styled.div`
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+  @media ${(props) => `${props.theme.viewport.tablet}`} {
+    display: none;
+  }
+  @media ${(props) => `${props.theme.viewport.widerMobile}`} {
+    grid-template-columns: 1fr 1fr;
+  }
+`
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontSizes.small};

@@ -74,7 +74,10 @@ const Description = styled.div`
   grid-area: Description;
   margin: 0;
   margin-top:auto;
-  font-size: ${(props) => props.theme.fontSizes.regular};
+  font-size: ${(props) => props.theme.fontSizes.small};
+  @media ${(themeProps) => `${themeProps.theme.viewport.mediumMobile}`} {
+    font-size: ${(themeProps) => themeProps.theme.fontSizes.regular};
+  }
 `;
 
 const Image = styled.img`

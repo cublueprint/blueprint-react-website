@@ -42,13 +42,9 @@ const Picture = styled.img`
 `;
 
 const Name = styled.h2`
-display: none;
-@media ${(props) => `${props.theme.viewport.tablet}`} {
-  display: inherit;
   margin: 10px;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: 700;
-}
 `;
 
 const Description = styled.h2`
@@ -62,16 +58,18 @@ const Description = styled.h2`
   text-align: center;
 `;
 const BackOfCard = styled.div`
-  background-color: ${(props) => props.theme.colors.cloudBlue};
-  opacity: 0;
-  border-radius: 3px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: ease-in 0.3s;
+  display: none;
   @media ${(props) => `${props.theme.viewport.hover}`} {
+    display: unset;
+    background-color: ${(props) => props.theme.colors.cloudBlue};
+    opacity: 0;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: ease-in 0.3s;
     &:hover{
       opacity: 0.9;
     }
@@ -79,16 +77,16 @@ const BackOfCard = styled.div`
 `
 
 const Button = styled.button`
-  transition: ease-in 0.3s;
-  font-weight: bold;
-  bottom: 0;
-  right: 0;
-  border: 3px solid #0078e8;
-  padding: 10px 30px;
-  background: rgba(255, 255, 255, 0);
-  color: #0078e8;
-  font-family: ${(props) => props.theme.fonts.content};
   @media ${(props) => `${props.theme.viewport.hover}`} {
+    transition: ease-in 0.3s;
+    font-weight: bold;
+    bottom: 0;
+    right: 0;
+    border: 3px solid #0078e8;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, 0);
+    color: #0078e8;
+    font-family: ${(props) => props.theme.fonts.content};
     &:hover {
       background: #0078e8;
       color: white;

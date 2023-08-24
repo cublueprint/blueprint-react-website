@@ -23,6 +23,7 @@ const theme = {
   viewport: {
     mobile: '(min-width: 320px)',
     mediumMobile: '(min-width: 390px)',
+    widerMobile: '(min-width: 500px)',
     tablet: '(min-width: 768px)',
     laptop: '(min-width: 1024px)',
     hover: '(hover:hover)'
