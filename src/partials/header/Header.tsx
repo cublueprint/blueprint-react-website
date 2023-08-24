@@ -13,7 +13,7 @@ const Header = ({ links }: HeaderProps) => (
     <StyledHeaderList>
       {links.map((link) => (
         <StyledHeaderLink key={`l-${link}`}>
-          <Link to={link}>{link}</Link>
+          <Link to={`/${link}`}>{link}</Link>
         </StyledHeaderLink>
       ))}
     </StyledHeaderList>
@@ -24,7 +24,7 @@ const Header = ({ links }: HeaderProps) => (
 );
 
 const BlueprintIcon = (props: { link: string }) => (
-  <Link to={props.link}>
+  <Link to={`/${props.link}`}>
     <StyledBlueprintImage alt='Blueprint' src={blueprintIcon} />
   </Link>
 );
