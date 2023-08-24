@@ -54,7 +54,7 @@ const HomeProjectsBlockDiv = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: ${(props) => props.theme.fontSizes.medium};
+  font-size: ${(props) => props.theme.fontSizes.small};
   background-color: ${(props) => props.theme.colors.cloudBlue};
   font-family: ${(props) => props.theme.fonts.heading};
   margin: 0;
@@ -62,6 +62,9 @@ const Title = styled.h1`
   padding-left: 1em;
   height: 1.8em;
   border-radius: 15px;
+  @media ${(themeProps) => `${themeProps.theme.viewport.mediumMobile}`} {
+    font-size: ${(themeProps) => themeProps.theme.fontSizes.medium};
+  }
 `;
 
 export default HomeProjectsBlock;

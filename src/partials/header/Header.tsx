@@ -53,10 +53,7 @@ const StyledHeader = styled.div`
 `;
 
 const StyledHeaderList = styled.div`
-  @media ${(props) =>
-      `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
-    display: none;
-  }
+  display: none;
 
   @media ${(props) => props.theme.viewport.laptop} {
     display: flex;
@@ -68,10 +65,7 @@ const StyledHeaderList = styled.div`
 `;
 
 const StyledMobileMenu = styled.div`
-  @media ${(props) =>
-      `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
-    display: flex;
-  }
+  display: flex;
 
   @media ${(props) => props.theme.viewport.laptop} {
     display: none;

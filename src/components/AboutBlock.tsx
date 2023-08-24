@@ -37,13 +37,16 @@ const AboutBlock = (props: HomeBlockProps) => {
   let Title = styled.h1`
     grid-area: Title;
     text-align: left;
-    font-size: ${(themeProps) => themeProps.theme.fontSizes.medium};
+    font-size: ${(themeProps) => themeProps.theme.fontSizes.small};
     background-color: ${(themeProps) => (props.content.title.style === "skyBlue"? themeProps.theme.colors.skyBlue : themeProps.theme.colors.cloudBlue)};
     font-family: ${(themeProps) => themeProps.theme.fonts.heading};
     margin: 0;
     padding-left: 1em;
     height: 1.8em;
     border-radius: 15px;
+    @media ${(themeProps) => `${themeProps.theme.viewport.mediumMobile}`} {
+      font-size: ${(themeProps) => themeProps.theme.fontSizes.medium};
+    }
   `;
 
   const Buttons = styled.div`
