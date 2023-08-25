@@ -1,5 +1,7 @@
 import HomePicture from '../images/homepic.png';
-import AboutPicture from '../images/aboutpic.png';
+import AboutPicture from '../images/about.svg';
+import ApplyPicture from '../images/apply.svg';
+import ContactPicture from '../images/contact.svg'
 
 import BlueprintPicture from '../images/blueprint.png';
 
@@ -91,7 +93,7 @@ const homeContent = {
     subtitle:
       "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
     image: {
-      picture: AboutPicture,
+      picture: ApplyPicture,
       alt: 'apply picture',
     },
     buttons: [{
@@ -108,7 +110,7 @@ const homeContent = {
     subtitle:
       "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
     image: {
-      picture: AboutPicture,
+      picture: ContactPicture,
       alt: 'contact picture',
     },
     buttons: [{
