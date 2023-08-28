@@ -59,7 +59,7 @@ const ContactForm = (props: ContactProps) => {
     </ContentDiv>;
 
 };
-
+// Styling
 const ContentDiv = styled.div`
     padding: 25px 50px;
 `;
