@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import TitleBlock from '../../components/TitleBlock';
-import HomeBlock from '../../components/HomeBlock';
+import { TitleBlock, HomeBlock } from '../../components';
 import HomeProjectsBlock from './HomeProjectsBlock';
 
 import content from '../../static/json/home';
@@ -16,7 +15,7 @@ const Home = () => (
 );
 
 const PageBody = styled.div`
-  background-color: #F8FBFF;
+  background-color: #f8fbff;
 `;
 
 export default Home;

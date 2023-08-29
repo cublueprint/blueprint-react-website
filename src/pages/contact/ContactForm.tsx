@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from '../../components/Button';
+import { Button } from '../../components';
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
