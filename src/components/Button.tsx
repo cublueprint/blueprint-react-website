@@ -28,7 +28,7 @@ const BlueprintButton = styled.button`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 200px;
+  min-width: 200px;
   height: 60px;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: bold;
