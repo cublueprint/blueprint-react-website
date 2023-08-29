@@ -1,4 +1,3 @@
-// import all components here
 import BannerBlock from './BannerBlock';
 import Button from './Button';
 import ContentBlock from './ContentBlock';
