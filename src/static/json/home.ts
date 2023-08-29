@@ -5,6 +5,11 @@ import ContactPicture from '../images/contact.svg'
 
 import BlueprintPicture from '../images/blueprint.png';
 
+import BeneficientLogo from '../images/beneficient.png';
+import RefugeeCentreLogo from '../images/refugeecentre.png';
+import UrbanMindsLogo from '../images/UMlogo.png';
+import CIWHVLogo from '../images/CIWHV_logo.png';
+
 const homeContent = {
   titleBlock: {
     title: {
@@ -69,19 +74,19 @@ const homeContent = {
         name: 'Beneficient',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
         link: '/Projects/Beneficient',
-        image: BlueprintPicture
+        image: BeneficientLogo
       },
       {
         name: 'Allo Canada',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
         link: '/Projects/AlloCanada',
-        image: BlueprintPicture
+        image: RefugeeCentreLogo
       },
       {
         name: 'Urban Minds',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
         link: '/Projects/UrbanMinds',
-        image: BlueprintPicture
+        image: UrbanMindsLogo
       }
     ]
   },

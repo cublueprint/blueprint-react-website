@@ -86,13 +86,17 @@ const Carousel = styled.div`
 const MobileProjects = styled.div`
   display: grid;
   margin: auto;
+  margin-top: 50px;
   grid-template-columns: 1fr;
-  grid-gap: 15px;
+  grid-gap: 30px;
   @media ${(props) => `${props.theme.viewport.tablet}`} {
     display: none;
   }
   @media ${(props) => `${props.theme.viewport.widerMobile}`} {
     grid-template-columns: 1fr 1fr;
+  }
+  @media ${(props) => `${props.theme.viewport.widerMobile} and  ${props.theme.viewport.hover}`} {
+    grid-template-columns: 1fr;
   }
 `
 

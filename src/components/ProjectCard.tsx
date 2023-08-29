@@ -15,8 +15,8 @@ const ProjectCard = ({ props }: ProjectProps) => {
     <CardDiv className='project'>
       <div>
         <Picture src={props.image} alt={`${props.name}`} />
-      <Name>{props.name}</Name>
-    </div>
+        <Name>{props.name}</Name>
+      </div>
       <BackOfCard>
         <Description>{props.description}</Description>
         <StyledButton key={`t-${props.name}`} link={props.link} text={'Learn More'}></StyledButton>
@@ -30,7 +30,9 @@ const CardDiv = styled.div`
   border: ${(props) => props.theme.colors.borderBlue} solid 5px;
   border-radius: 3px;
   position: relative;
+  height: 100%;
 `;
+
 
 const StyledButton = styled(Button)`
   margin: auto;
@@ -38,17 +40,18 @@ const StyledButton = styled(Button)`
 
 const Picture = styled.img`
   width: 90%;
+  padding-top: 45%;
+  padding-bottom: 45%;
   margin: auto;
   display: block;
-  @media ${(props) => `${props.theme.viewport.tablet}`} {
-    padding-top: 15px;
-  }
 `;
 
 const Name = styled.h2`
   margin: 10px;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: 700;
+  position: absolute;
+  bottom: 0;
 `;
 
 const Description = styled.h2`
