@@ -1,5 +1,4 @@
-import NewTitleBlock from '../../components/NewTitleBlock';
-import ContentBlock from '../../components/ContentBlock';
+import { NewTitleBlock, ContentBlock } from '../../components';
 import MissionBlock from './MissionBlock';
 import ValuesBlock from './ValuesBlock';
 

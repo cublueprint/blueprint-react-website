@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 import { PersonProps } from './PersonCard';
@@ -147,7 +146,8 @@ const Badge = styled.span<BadgeProps>`
   margin: 0 5px 5px 0;
   :hover {
     transition: 0.3s;
-    background-color: ${(props) => projectInfo[props.projectName].color || '#888'};
+    background-color: ${(props) =>
+      projectInfo[props.projectName].color || '#888'};
   }
 `;
 

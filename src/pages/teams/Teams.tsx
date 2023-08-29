@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import NewTitleBlock from '../../components/NewTitleBlock';
-import ContentBlock from '../../components/ContentBlock';
+import { NewTitleBlock, ContentBlock } from '../../components';
 
 import content from '../../static/json/teams';
 import PersonCard from './PersonCard';

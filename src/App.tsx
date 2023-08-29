@@ -15,15 +15,16 @@ import {
   Contact,
   Teams,
 } from './pages';
-import BannerBlock from './components/BannerBlock';
+import { BannerBlock, ScrollToTop } from './components';
 
-const routes = ["home", "about", "projects", "apply", "contact", "teams"];
+const routes = ['home', 'about', 'projects', 'apply', 'contact', 'teams'];
 
 const App = () => (
   <Theme>
     <GlobalStyle />
     <Fonts />
     <Router>
+      <ScrollToTop />
       <PageWrapper>
         <Header links={routes.map((name) => name)} />
         <Routes>

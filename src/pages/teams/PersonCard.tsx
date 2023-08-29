@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { useState } from 'react';
 import FrontPersonCard from './FrontPersonCard';
 import BackPersonCard from './BackPersonCard';

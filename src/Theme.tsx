@@ -9,8 +9,7 @@ const theme = {
     skyBlue: '#B2DAFF',
     cloudBlue: '#E5F2FF',
     borderBlue: '#93C9FE',
-    lightBlue: '#F8FBFF'
-
+    lightBlue: '#F8FBFF',
   },
   fonts: {
     heading: 'Poppins, sans-serif',
