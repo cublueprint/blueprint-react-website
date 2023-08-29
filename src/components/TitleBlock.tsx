@@ -1,34 +1,24 @@
 import styled from 'styled-components';
+import Button from './Button';
 
-interface TitleBlockProps {
-  content: {
-    title: string;
-    subtitle: string;
-    image: {
-      picture: any;
-      alt: string;
-    };
-    buttons: {
-      content: string;
-      link: string;
-    }[];
-  };
-}
+import { HomeBlockProps } from '../interfaces/HomeBlockProps';
 
-const TitleBlock = (props: TitleBlockProps) => (
+
+const TitleBlock = (props: HomeBlockProps) => (
   <TitleBlockDiv>
-    <Title>{props.content.title}</Title>
+    <Title>{props.content.title.text}</Title>
     <Description>{props.content.subtitle}</Description>
     <Image src={props.content.image.picture} alt={props.content.image.alt} />
-    {props.content.buttons.map((button) => (
-      <a key={`t-${button.content}`} href={button.link}>
-        <Button>{button.content}</Button>
-      </a>
-    ))}
+    <Buttons>
+      {props.content.buttons.map((button) => (
+        <Button key={`t-${button.content}`} link={button.link} text={button.content}></Button>
+      ))}
+    </Buttons>
   </TitleBlockDiv>
 );
 
 const TitleBlockDiv = styled.div`
+
   padding: 50px;
   display: grid;
   grid-gap: 10px;
@@ -37,19 +27,36 @@ const TitleBlockDiv = styled.div`
     'Title'
     'Description'
     'Image'
-    'Button';
+    'Buttons';
 
-  @media ${(props) => `${props.theme.viewport.mobile}`} {
-    grid-template-columns: 3fr 2fr;
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
     grid-template-areas:
       'Title Image'
       'Description Image'
-      'Button Image';
+      'Buttons Image';
+  }
+  @media ${(props) => `${props.theme.viewport.monitor}`} {
+    width: 72em;
+  }
+`;
+
+const Buttons = styled.div`
+  margin: auto;
+  margin-bottom: 2em;
+  @media ${(props) => `${props.theme.viewport.widerMobile}`} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin-left: 0;
   }
 `;
 
 const Title = styled.h1`
   grid-area: Title;
+  font-size: ${(props) => props.theme.fontSizes.larger};
   font-family: ${(props) => props.theme.fonts.heading};
   margin: 0;
 `;
@@ -57,21 +64,16 @@ const Title = styled.h1`
 const Description = styled.p`
   grid-area: Description;
   margin: 0;
-`;
+  font-size: ${(props) => props.theme.fontSizes.small};
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    font-size: ${(props) => props.theme.fontSizes.small2};
+  }
+  `;
 
 const Image = styled.img`
   grid-area: Image;
   width: 100%;
   top: 25%;
-`;
-
-const Button = styled.button`
-  grid-area: Button;
-  background: rgba(147, 201, 254, 1);
-  border: 3px solid #0078e8;
-  border-radius: 5px;
-  padding: 10px 30px;
-  font-family: ${(props) => props.theme.fonts.content};
 `;
 
 export default TitleBlock;
