@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { HomeBlockProps } from '../../interfaces/HomeBlockProps';
 
+import { Link } from 'react-router-dom';
+
 import ProjectCard  from '../../components/ProjectCard';
 
 import { Swiper, SwiperSlide } from 'swiper/swiper-react';
@@ -42,26 +44,36 @@ const HomeProjectsBlock = (props: HomeBlockProps) => (
       <Swiper {...swiperConfig}>
             {props.content.slider?.map((project) => (
                   <SwiperSlide key={project.name}>
-                    <a href={project.link} style={{textDecoration: "inherit", color: "inherit", cursor: "unset"}}>
+                    <StyledA to={project.link ? project.link : '#'}>
                       <ProjectCard props={project}/>
-                    </a>
+                    </StyledA>
                   </SwiperSlide>
         ))}
       </Swiper>
     </Carousel>
     <MobileProjects>
       {props.content.slider?.map((project) => (
-          <a href={project.link} style={{textDecoration: "inherit", color: "inherit"}}>
+          <StyledA to={project.link ? project.link : '#'}>
             <ProjectCard props={project}/>
-          </a>
+          </StyledA>
         ))}
     </MobileProjects>
 
   </HomeProjectsBlockDiv>
 );
 
+const StyledA = styled(Link)`
+  text-decoration: inherit;
+  color: inherit;
+  cursor: unset;
+`
+
 const HomeProjectsBlockDiv = styled.div`
   padding: 50px;
+  @media ${(props) => `${props.theme.viewport.monitor}`} {
+    width: 72em;
+    margin: auto;
+  }
 `;
 
 const Carousel = styled.div`
@@ -84,17 +96,25 @@ const MobileProjects = styled.div`
   }
 `
 
-const Title = styled.h1`
-  font-size: ${(props) => props.theme.fontSizes.small};
-  background-color: ${(props) => props.theme.colors.cloudBlue};
-  font-family: ${(props) => props.theme.fonts.heading};
+let Title = styled.h1`
+  grid-area: Title;
+  font-size: ${(themeProps) => themeProps.theme.fontSizes.small};
+  background-color: ${(themeProps) => themeProps.theme.colors.cloudBlue};
+  font-family: ${(themeProps) => themeProps.theme.fonts.heading};
   margin: 0;
-  margin-bottom: 10px;
-  padding-left: 1em;
+  padding: 10px 0px;
   height: 1.8em;
+  width: 100%;
   border-radius: 15px;
+  text-align: center;
   @media ${(themeProps) => `${themeProps.theme.viewport.mediumMobile}`} {
-    font-size: ${(themeProps) => themeProps.theme.fontSizes.medium};
+    font-size: ${(themeProps) => themeProps.theme.fontSizes.regular};
+  }
+  @media ${(themeProps) => `${themeProps.theme.viewport.tablet}`} {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
   }
 `;
 

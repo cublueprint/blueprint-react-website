@@ -19,7 +19,7 @@ const ProjectCard = ({ props }: ProjectProps) => {
     </div>
       <BackOfCard>
         <Description>{props.description}</Description>
-        <Button key={`t-${props.name}`} link={props.link} text={'Learn More'}></Button>
+        <StyledButton key={`t-${props.name}`} link={props.link} text={'Learn More'}></StyledButton>
       </BackOfCard>
     </CardDiv>
 
@@ -29,7 +29,12 @@ const ProjectCard = ({ props }: ProjectProps) => {
 const CardDiv = styled.div`
   border: ${(props) => props.theme.colors.borderBlue} solid 5px;
   border-radius: 3px;
+  position: relative;
 `;
+
+const StyledButton = styled(Button)`
+  margin: auto;
+`
 
 const Picture = styled.img`
   width: 90%;
@@ -55,10 +60,12 @@ const Description = styled.h2`
   justify-content:center;
   margin: auto;
   text-align: center;
+  font-size: ${(props) => props.theme.fontSizes.small};
 `;
 const BackOfCard = styled.div`
   display: none;
   @media ${(props) => `${props.theme.viewport.hover}`} {
+    cursor: pointer;
     display: unset;
     background-color: ${(props) => props.theme.colors.cloudBlue};
     opacity: 0;

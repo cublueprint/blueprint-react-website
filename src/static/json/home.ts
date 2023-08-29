@@ -19,12 +19,12 @@ const homeContent = {
     },
     buttons: [
       {
-        content: 'LEARN MORE >',
-        link: 'About',
+        content: 'LEARN MORE',
+        link: '/About',
       },
       {
-        content: 'APPLY >',
-        link: 'Apply',
+        content: 'APPLY',
+        link: '/Apply',
       }
     ],
   },
@@ -42,8 +42,8 @@ const homeContent = {
     },
     buttons: [
       {
-        content: 'READ MORE >',
-        link: 'About',
+        content: 'READ MORE',
+        link: '/About',
       }
     ],
     style: ['right', "cloudBlue"]
@@ -60,27 +60,27 @@ const homeContent = {
     },
     buttons: [
       {
-        content: 'READ MORE >',
-        link: 'About',
+        content: 'READ MORE',
+        link: '/About',
       }
     ],
     slider:[
       {
         name: 'Beneficient',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: 'Projects/Beneficient',
+        link: '/Projects/Beneficient',
         image: BlueprintPicture
       },
       {
         name: 'Allo Canada',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: 'Projects/AlloCanada',
+        link: '/Projects/AlloCanada',
         image: BlueprintPicture
       },
       {
         name: 'Urban Minds',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: 'Projects/UrbanMinds',
+        link: '/Projects/UrbanMinds',
         image: BlueprintPicture
       }
     ]
@@ -97,15 +97,15 @@ const homeContent = {
       alt: 'apply picture',
     },
     buttons: [{
-      content: 'APPLY >',
-      link: 'Apply',
+      content: 'APPLY',
+      link: '/Apply',
     }],
     style: ['left', "cloudBlue"]
   },
   contactUsBlock: {
     title: {
       text: 'Contact Us 📧',
-      style: 'skyBlue'
+      style: 'cloudBlue'
     },
     subtitle:
       "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
@@ -114,10 +114,10 @@ const homeContent = {
       alt: 'contact picture',
     },
     buttons: [{
-      content: 'CONTACT US >',
-      link: 'Contact',
+      content: 'CONTACT US',
+      link: '/Contact',
     }],
-    style: ['right', "cloudBlue"]
+    style: ['right', "white"]
   },
 };
 

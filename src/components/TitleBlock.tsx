@@ -9,17 +9,16 @@ const TitleBlock = (props: HomeBlockProps) => (
     <Title>{props.content.title.text}</Title>
     <Description>{props.content.subtitle}</Description>
     <Image src={props.content.image.picture} alt={props.content.image.alt} />
-    <div>
+    <Buttons>
       {props.content.buttons.map((button) => (
-        <a key={`t-${button.content}`} href={button.link}>
-          <Button text={button.content}></Button>
-        </a>
+        <Button key={`t-${button.content}`} link={button.link} text={button.content}></Button>
       ))}
-    </div>
+    </Buttons>
   </TitleBlockDiv>
 );
 
 const TitleBlockDiv = styled.div`
+
   padding: 50px;
   display: grid;
   grid-gap: 10px;
@@ -28,20 +27,36 @@ const TitleBlockDiv = styled.div`
     'Title'
     'Description'
     'Image'
-    'Button';
+    'Buttons';
 
-  @media ${(props) => `${props.theme.viewport.tablet}`} {
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    margin: auto;
     grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
     grid-template-areas:
       'Title Image'
       'Description Image'
-      'Button Image';
+      'Buttons Image';
+  }
+  @media ${(props) => `${props.theme.viewport.monitor}`} {
+    width: 72em;
+  }
+`;
+
+const Buttons = styled.div`
+  margin: auto;
+  margin-bottom: 2em;
+  @media ${(props) => `${props.theme.viewport.widerMobile}`} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin-left: 0;
   }
 `;
 
 const Title = styled.h1`
   grid-area: Title;
-  font-size: ${(props) => props.theme.fontSizes.large};
+  font-size: ${(props) => props.theme.fontSizes.larger};
   font-family: ${(props) => props.theme.fonts.heading};
   margin: 0;
 `;
@@ -49,7 +64,10 @@ const Title = styled.h1`
 const Description = styled.p`
   grid-area: Description;
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes.regular};
+  font-size: ${(props) => props.theme.fontSizes.small};
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    font-size: ${(props) => props.theme.fontSizes.small2};
+  }
   `;
 
 const Image = styled.img`
