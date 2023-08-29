@@ -23,7 +23,7 @@ const NewTitleBlock = (props: TitleBlockProps) => (
         <Title>{props.content.title}</Title>
         <Description>{props.content.subtitle}</Description>
         {props.content.buttons.map((button) => (
-          <StyledButton key={`t-${button.content}`} text={button.content} link={button.link}/>
+          <Button key={`t-${button.content}`} text={button.content} link={button.link}/>
         ))}
       </LeftFlex>
       <Image src={props.content.image.picture} alt={props.content.image.alt} />
@@ -86,18 +86,6 @@ const Image = styled.img`
     max-width: 30%;
   }
   width: 100%;
-`;
-
-const StyledButton = styled(Button)`
-  height: 60px;
-  color: ${(props) => props.theme.colors.primaryBlue};
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-  ::after {
-    content: '>';
-  }
 `;
 
 export default NewTitleBlock;

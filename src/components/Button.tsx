@@ -28,7 +28,7 @@ const BlueprintButton = styled.button`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 200px;
+  min-width: 200px;
   height: 60px;
   color: ${(props) => props.theme.colors.primaryBlue};
   font-weight: bold;
@@ -39,10 +39,12 @@ const BlueprintButton = styled.button`
   ::after {
     content: '>';
   }
-  :hover {
-    background: ${(props) => props.theme.colors.primaryBlue};
-    color: ${(props) => props.theme.colors.lightBlue};
-    transition: 0.2s ease-in-out;
+  @media ${(props) => `${props.theme.viewport.hover}`} {
+    :hover {
+      background: ${(props) => props.theme.colors.primaryBlue};
+      color: ${(props) => props.theme.colors.lightBlue};
+      transition: 0.2s ease-in-out;
+    }
   }
 `;
 

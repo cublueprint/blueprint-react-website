@@ -3,7 +3,7 @@ import Denis from '../images/people/denis.png';
 
 const teamsContent = {
   titleBlock: {
-    title: 'Meet the Team!',
+    title:  'Meet the Team!',
     subtitle:
       'Take a glimpse at the individuals who have made the team what it is today.',
     image: {
