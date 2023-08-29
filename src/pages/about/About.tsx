@@ -1,22 +1,20 @@
-import TitleBlock from '../../components/TitleBlock';
+import NewTitleBlock from '../../components/NewTitleBlock';
 import ContentBlock from '../../components/ContentBlock';
 import MissionBlock from './MissionBlock';
 import ValuesBlock from './ValuesBlock';
-import BannerBlock from '../../components/BannerBlock';
 
 import content from '../../static/json/about';
 
 const About = () => {
   return (
     <>
-      <TitleBlock content={content.titleBlock}></TitleBlock>
-      <ContentBlock title='Mission Statement'>
+      <NewTitleBlock content={content.titleBlock}></NewTitleBlock>
+      <ContentBlock title='Mission Statement' changeBackground>
         <MissionBlock content={content.mission}></MissionBlock>
       </ContentBlock>
-      <ContentBlock title="Our Values" backgroundColour='white'>
+      <ContentBlock title="Our Values" >
         <ValuesBlock content={content.values}></ValuesBlock>
       </ContentBlock>
-      <BannerBlock content={content.banner}></BannerBlock>
     </>
   );
 };

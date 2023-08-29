@@ -40,7 +40,7 @@ const MobileMenu = ({ links }: MobileMenuProps) => {
 
 const MenuButton = ({ open, handleToggle }: MenuButtonProps) => {
   return (
-    <StyledMenuListDiv>
+    <StyledMenuListDiv open={open}>
       <button className='headerListButton' onClick={handleToggle}>
         <img src={open ? listCloseIcon : listIcon} />
       </button>
@@ -66,7 +66,10 @@ const MenuList = ({ links, open, closeList }: MenuListProps) => {
   );
 };
 
-const StyledMenuListDiv = styled.div`
+type StyledMenuListDivProps = {
+  open: boolean;
+};
+const StyledMenuListDiv = styled.div<StyledMenuListDivProps>`
   button.headerListButton {
     background: transparent;
     border: none;
@@ -75,6 +78,11 @@ const StyledMenuListDiv = styled.div`
   }
   text-align: end;
   padding-right: 5px;
+  position: absolute;
+  right: 20px;
+  ${(props) => props.open == true && 'right: calc(20vw + 20px);'}
+  top: 20px;
+  z-index: 2;
 `;
 
 const StyledHeaderList = styled.div<StyledListProps>`
@@ -86,6 +94,10 @@ const StyledHeaderList = styled.div<StyledListProps>`
   text-align: end;
   border-bottom-left-radius: 5px;
   box-shadow: -2px 2px 5px 0px lightgrey;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 20vw;
 `;
 
 const StyledHeaderLink = styled.div`

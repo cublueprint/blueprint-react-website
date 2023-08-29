@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from './Button';
 
 interface ProjectProps {
   props: {
@@ -18,9 +19,7 @@ const ProjectCard = ({ props }: ProjectProps) => {
     </div>
       <BackOfCard>
         <Description>{props.description}</Description>
-        <a key={`t-${props.name}`} href={props.link} style={{display: "block", "width": "100%", textAlign: "center"}}>
-          <Button>LEARN MORE {'>'}</Button>
-        </a>
+        <Button key={`t-${props.name}`} link={props.link} text={'Learn More'}></Button>
       </BackOfCard>
     </CardDiv>
 
@@ -75,24 +74,5 @@ const BackOfCard = styled.div`
     }
   }
 `
-
-const Button = styled.button`
-  @media ${(props) => `${props.theme.viewport.hover}`} {
-    transition: ease-in 0.3s;
-    font-weight: bold;
-    bottom: 0;
-    right: 0;
-    border: 3px solid #0078e8;
-    padding: 10px 30px;
-    background: rgba(255, 255, 255, 0);
-    color: #0078e8;
-    font-family: ${(props) => props.theme.fonts.content};
-    &:hover {
-      background: #0078e8;
-      color: white;
-      cursor: pointer;
-    }
-  }
-`;
 
 export default ProjectCard;

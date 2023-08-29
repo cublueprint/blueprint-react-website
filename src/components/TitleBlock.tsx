@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from './Button';
 
 import { HomeBlockProps } from '../interfaces/HomeBlockProps';
 
@@ -11,7 +12,7 @@ const TitleBlock = (props: HomeBlockProps) => (
     <div>
       {props.content.buttons.map((button) => (
         <a key={`t-${button.content}`} href={button.link}>
-          <Button>{button.content}</Button>
+          <Button text={button.content}></Button>
         </a>
       ))}
     </div>
@@ -55,25 +56,6 @@ const Image = styled.img`
   grid-area: Image;
   width: 100%;
   top: 25%;
-`;
-
-const Button = styled.button`
-  grid-area: Button;
-  border: 3px solid #0078e8;
-  padding: 10px 30px;
-  background: rgba(255,255,255,0);
-  color: #0078e8;
-  margin-right: 20px;
-  font-family: ${(props) => props.theme.fonts.content};
-  @media ${(props) => `${props.theme.viewport.hover}`} {
-    &:hover{
-      background: #0078e8;
-      color: white;
-      cursor:pointer;
-      transition: all .6s ease;
-      -webkit-transition: all .6s ease;
-    }
-  }
 `;
 
 export default TitleBlock;

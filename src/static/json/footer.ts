@@ -1,7 +1,7 @@
-import linkedinIcon from '../images/linkedin-icon.webp';
-import igIcon from '../images/ig-icon.webp';
-import fbIcon from '../images/fb-icon.webp';
-import youtubeIcon from '../images/youtube-icon.webp';
+import linkedinIcon from '../images/linkedin.svg';
+import igIcon from '../images/instagram.svg';
+import fbIcon from '../images/facebook.svg';
+import youtubeIcon from '../images/youtube.svg';
 import blueprintIcon from '../images/blueprint_banner_negative.webp';
 
 const footerJson = {
@@ -30,48 +30,13 @@ const footerJson = {
     },
   ],
 
-  columns: [
-    {
-      title: 'ABOUT',
-      lis: [
-        { link: '#', text: 'item' },
-        { link: '#', text: 'item' },
-        { link: '#', text: 'item' },
-      ],
-    },
-    {
-      title: 'PROJECTS',
-      lis: [
-        { link: '#', text: 'Current Projects' },
-        { link: '#', text: 'Past Projects' },
-        { link: '#', text: 'Apply' },
-      ],
-    },
-    {
-      title: 'TEAM',
-      lis: [
-        { link: '#', text: 'Beneficent' },
-        { link: '#', text: 'Urban Minds' },
-        { link: '#', text: 'Blueprint Website' },
-        { link: '#', text: 'Join Us' },
-      ],
-    },
-    {
-      title: 'CONTACT',
-      lis: [
-        { link: '#', text: 'item' },
-        { link: '#', text: 'item' },
-        { link: '#', text: 'item' },
-      ],
-    },
-    {
-      title: 'ABOUT',
-      lis: [
-        { link: '#', text: 'item' },
-        { link: '#', text: 'item' },
-        { link: '#', text: 'item' },
-      ],
-    },
+  links: [
+    {name: "about us", link: "/about"},
+    {name: "projects", link: "/projects"},
+    {name: "teams", link: "/teams"},
+    {name: "apply as a student", link: "/apply/student"},
+    {name: "apply as a nonprofit", link: "/apply/non-profit"},
+    {name: "contact us", link: "/contact"}
   ],
   // End Contact Section ---------------
 };
