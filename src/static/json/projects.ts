@@ -1,8 +1,18 @@
 import TeamsTitleImage from '../images/teams_title_block.png'; // ADD THIS IN LATER
 
-const teamsContent = {
+import BlueprintPicture from '../images/blueprint.png';
+
+import AboutPicture from '../images/about.svg';
+import BeneficientLogo from '../images/beneficient.png';
+import RefugeeCentreLogo from '../images/refugeecentre.png';
+import UrbanMindsLogo from '../images/UMlogo.png';
+import CIWHVLogo from '../images/CIWHV_logo.png';
+
+const projectsPageContent = {
   titleBlock: {
-    title: 'Our Projects',
+    title: {
+      text: 'Our Projects',
+    },
     subtitle:
       'All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.',
     image: {
@@ -18,147 +28,93 @@ const teamsContent = {
   },
   contentBlocks: [
     {
-      title: 'Current Projects',
-      projects: [
+      style: ['left', 'cloudBlue'],
+      title: {
+        text: 'Current Projects 🗃️',
+      },
+      subtitle: 'Check out our projects!',
+      image: {
+        picture: AboutPicture,
+        alt: 'about picture',
+      },
+      buttons: [
         {
-          name: 'Urban Minds',
-          description: 'description',
-          picture: 'project logo',
-          problem:
-            'THIS IS THE PROBLEM TEXT for urban mindz "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
-          solution:
-            'THIS IS THE SOLUTION "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+          content: 'READ MORE',
+          link: '/About',
         },
+      ],
+      slider: [
         {
-          name: 'Urban Minds',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-        {
-          name: 'Urban Minds',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-        {
-          name: 'Urban Minds',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
+          name: 'Beneficient',
+          description: 'Lorem ipsum dolor sit amet.',
+          problem: 'this is the problem',
+          solution: 'this is the solution',
+          deployedLink: '/#',
+          gitlabLink: '/#',
+          link: '/Projects/Beneficient',
+          image: BeneficientLogo,
         },
         {
           name: 'Allo Canada',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
+          description: 'Lorem ipsum dolor sit amet.',
+          problem: 'this is the problem',
+          solution: 'this is the solution',
+          deployedLink: '/#',
+          gitlabLink: '/#',
+          link: '/Projects/AlloCanada',
+          image: RefugeeCentreLogo,
         },
         {
           name: 'Urban Minds',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-        {
-          name: 'Allo Canada',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-        {
-          name: 'Urban Minds',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-        {
-          name: 'Allo Canada',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-        {
-          name: 'Allo Canada',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-        {
-          name: 'Allo Canada',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
+          description: 'Lorem ipsum dolor sit amet.',
+          problem: 'this is the problem',
+          solution: 'this is the solution',
+          deployedLink: '/#',
+          gitlabLink: '/#',
+          link: '/Projects/UrbanMinds',
+          image: UrbanMindsLogo,
         },
       ],
     },
     {
-      title: 'Current Projects',
-      projects: [
+      title: {
+        text: 'Past Projects 🗃️',
+      },
+      subtitle: 'Check out our projects!',
+      image: {
+        picture: AboutPicture,
+        alt: 'about picture',
+      },
+      buttons: [
         {
-          name: 'Urban Minds',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-        {
-          name: 'Allo Canada',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-        {
-          name: 'Allo Canada',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
+          content: 'READ MORE',
+          link: '/About',
         },
       ],
-    },
-    {
-      title: 'Past Projects',
-      projects: [
+      slider: [
         {
-          name: 'Beneficient',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
+          name: 'PastProject1',
+          description: 'Lorem ipsum dolor sit amet.',
+          problem: 'this is the problem',
+          solution: 'this is the solution',
+          deployedLink: '#',
+          gitlabLink: '#',
+          link: '/Projects/PastProject1',
+          image: BeneficientLogo,
         },
         {
-          name: 'Beneficient',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
-        },
-      ],
-    },
-    {
-      title: 'Past Projects',
-      projects: [
-        {
-          name: 'Beneficient',
-          description: 'description',
-          picture: 'project logo',
-          problem: 'THIS IS THE PROBLEM TEXT',
-          solution: 'THIS IS THE SOLUTION',
+          name: 'PastProject2',
+          description: 'Lorem ipsum dolor sit amet.',
+          problem: 'this is the problem',
+          solution: 'this is the solution',
+          deployedLink: '#',
+          gitlabLink: '#',
+          link: '/Projects/PastProject2',
+          image: RefugeeCentreLogo,
         },
       ],
     },
   ],
 };
 
-export default teamsContent;
+export default projectsPageContent;

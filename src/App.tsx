@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { createGlobalStyle } from 'styled-components';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import Theme from './Theme';
 import { Fonts } from './static';
@@ -16,17 +16,20 @@ import {
   Contact,
   Teams,
 } from './pages';
+import { BannerBlock, ScrollToTop } from './components';
 
-const routes = [Home, About, Projects, Apply, Contact, Teams];
+const routes = ['home', 'about', 'projects', 'apply', 'contact', 'teams'];
 
-const App = () => {
-  return (
-    <Theme>
-      <GlobalStyle />
-      <Fonts />
-      <Router>
-        <Header links={routes.map(({ name }) => name)} />
+const App = () => (
+  <Theme>
+    <GlobalStyle />
+    <Fonts />
+    <Router>
+      <ScrollToTop />
+      <PageWrapper>
+        <Header links={routes.map((name) => name)} />
         <Routes>
+          <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/projects' element={<Projects />} />
@@ -37,11 +40,14 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/teams' element={<Teams />} />
         </Routes>
-      </Router>
-      <Footer />
-    </Theme>
-  );
-};
+        <div>
+          <BannerBlock />
+          <Footer />
+        </div>
+      </PageWrapper>
+    </Router>
+  </Theme>
+);
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -49,6 +55,13 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: "Poppins", "Source Sans Pro", sans-serif;
   }
+`;
+
+const PageWrapper = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export default App;

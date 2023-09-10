@@ -20,6 +20,7 @@ interface ProjectList {
     description: string;
     problem: string;
     solution: string;
+    image: any;
   }[];
 }
 

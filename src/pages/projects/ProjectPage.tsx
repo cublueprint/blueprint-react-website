@@ -8,7 +8,9 @@ const ProjectPage = () => {
   const { projectDetails } = location.state;
 
   const titleBlockContent = {
-    title: projectDetails.name,
+    title: {
+      text: projectDetails.name,
+    },
     subtitle: projectDetails.description,
     image: {
       picture: projectDetails.description,
@@ -17,11 +19,11 @@ const ProjectPage = () => {
     buttons: [
       {
         content: `${projectDetails.name} Website`,
-        link: '#',
+        link: projectDetails.deployedLink,
       },
       {
         content: `${projectDetails.name} Gitlab`,
-        link: '#',
+        link: projectDetails.gitlabLink,
       },
     ],
   };

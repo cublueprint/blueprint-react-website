@@ -5,9 +5,8 @@ interface ProjectProps {
   props: {
     name: string;
     description: string;
-    picture: any;
-    problem: string;
-    solution: string;
+    link?: string;
+    image: any;
   };
 }
 

@@ -21,9 +21,8 @@ const ApplyOptions = ({ title, body, linkText, url }: ApplicationTextProps) => {
   );
 };
 
-const Container = styled.div<{ last?: boolean }>`
+const Container = styled.div`
   width: 400px;
-  flex-grow: ${(props) => (props.last ? '0' : '1')};
   border: 1px solid ${(props) => props.theme.colors.primaryBlue};
   border-radius: 10px;
   padding: 20px;

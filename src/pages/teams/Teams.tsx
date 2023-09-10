@@ -1,24 +1,32 @@
 import styled from 'styled-components';
-import TitleBlock from '../../components/TitleBlock';
-import ContentBlock from '../../components/ContentBlock';
-import Team from './Team';
+import { NewTitleBlock, ContentBlock } from '../../components';
 
 import content from '../../static/json/teams';
+import PersonCard from './PersonCard';
 
 const Teams = () => (
-  <PageBody>
-    <TitleBlock content={content.titleBlock}></TitleBlock>
-
-    {content.teamsList.map((team, index) => (
-      <ContentBlock title={team.name}>
-        <Team members={team.members} />
-      </ContentBlock>
-    ))}
-  </PageBody>
+  <>
+    <NewTitleBlock content={content.titleBlock}></NewTitleBlock>
+    <>
+      {content.teamsList.map((team, index) => (
+        <ContentBlock title={team.name} changeBackground={!index}>
+          <TeamFlexBox>
+            {team.members.map((person) => (
+              <PersonCard {...person} />
+            ))}
+          </TeamFlexBox>
+        </ContentBlock>
+      ))}
+    </>
+  </>
 );
 
-const PageBody = styled.div`
-  background-color: ${(props) => props.theme.colors.skyBlue};
+const TeamFlexBox = styled.div`
+  padding: 50px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 `;
 
 export default Teams;

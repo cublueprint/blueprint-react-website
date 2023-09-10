@@ -1,18 +1,15 @@
 import styled from 'styled-components';
 
 import TitleBlock from '../../components/TitleBlock';
-import ContentBlock from '../../components/ContentBlock';
+import SwipableProjectsBlock from '../../components/SwipableProjectsBlock';
 
 import content from '../../static/json/projects';
-import ProjectDisplay from './ProjectDisplay';
 
 const Projects = () => (
   <PageBody>
     <TitleBlock content={content.titleBlock}></TitleBlock>
     {content.contentBlocks.map((block, index) => (
-      <ContentBlock key={index} title={block.title}>
-        <ProjectDisplay projects={block.projects} />
-      </ContentBlock>
+      <SwipableProjectsBlock key={index} content={block} />
     ))}
     <ApplicationDiv>
       <FlexContainer>
@@ -26,7 +23,8 @@ const Projects = () => (
 );
 
 const PageBody = styled.div`
-  background-color: ${(props) => props.theme.colors.skyBlue};
+  background-color: ${(props) => props.theme.colors.cloudBlue};
+  background-color: #f8fbff;
 `;
 
 const ApplicationDiv = styled.div`
