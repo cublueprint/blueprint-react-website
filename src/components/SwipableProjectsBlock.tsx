@@ -3,7 +3,7 @@ import { HomeBlockProps } from '../interfaces/HomeBlockProps';
 
 import { Link } from 'react-router-dom';
 
-import { ProjectCard } from '.';
+import { ProjectImageCard } from '.';
 
 import { Swiper, SwiperSlide } from 'swiper/swiper-react';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
@@ -45,7 +45,7 @@ const SwipableProjectsBlock = (props: HomeBlockProps) => (
         {props.content.slider?.map((project) => (
           <SwiperSlide key={project.name}>
             <StyledA to={project.link ? project.link : '#'}>
-              <ProjectCard props={project} />
+              <ProjectImageCard props={project} />
             </StyledA>
           </SwiperSlide>
         ))}
@@ -54,7 +54,7 @@ const SwipableProjectsBlock = (props: HomeBlockProps) => (
     <MobileProjects>
       {props.content.slider?.map((project) => (
         <StyledA to={project.link ? project.link : '#'}>
-          <ProjectCard props={project} />
+          <ProjectImageCard props={project} />
         </StyledA>
       ))}
     </MobileProjects>

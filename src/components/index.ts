@@ -6,15 +6,16 @@ import NewTitleBlock from './NewTitleBlock';
 import ProjectCard from './ProjectCard';
 import ScrollToTop from './ScrollToTop';
 import TitleBlock from './TitleBlock';
+import ProjectImageCard from './ProjectImageCard';
 
 export {
-    BannerBlock,
-    Button,
-    ContentBlock,
-    HomeBlock,
-    NewTitleBlock,
-    ProjectCard,
-    ScrollToTop,
-    TitleBlock,
-}
-
+  BannerBlock,
+  Button,
+  ContentBlock,
+  HomeBlock,
+  NewTitleBlock,
+  ProjectCard,
+  ProjectImageCard,
+  ScrollToTop,
+  TitleBlock,
+};
