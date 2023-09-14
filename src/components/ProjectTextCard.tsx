@@ -10,11 +10,13 @@ interface ProjectProps {
   };
 }
 
-const ProjectCard = ({ props }: ProjectProps) => {
+const ProjectTextCard = ({ props }: ProjectProps) => {
   const projectName = props.name.replace(/\s/g, '');
   return (
     <CardDiv>
-      <Picture src={props.name} alt={`${props.name} project logo`} />
+      <PictureWrapper>
+        <Picture src={props.image} alt={`${props.name} logo`} />
+      </PictureWrapper>
       <Name>{props.name}</Name>
       <Description>{props.description}</Description>
       <ReadMore to={`${projectName}`} state={{ projectDetails: props }}>
@@ -35,12 +37,21 @@ const CardDiv = styled.div`
   flex-direction: column;
 `;
 
-const Picture = styled.img`
-  height: 200px;
-  width: 200px;
+const PictureWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 180px;
+  width: 210px;
+  margin: auto;
   border-radius: 10px;
   border: ${(props) => props.theme.colors.cloudBlue} 20px solid;
   background-color: white;
+`;
+
+const Picture = styled.img`
+  width: 80%;
+  margin: auto;
+  display: block;
 `;
 
 const Name = styled.h2`
@@ -59,4 +70,4 @@ const ReadMore = styled(Link)`
   font-weight: 700;
 `;
 
-export default ProjectCard;
+export default ProjectTextCard;

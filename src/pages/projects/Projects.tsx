@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import TitleBlock from '../../components/TitleBlock';
 import SwipableProjectsBlock from '../../components/SwipableProjectsBlock';
+import ProjectsMultiCarousel from '../../components/ProjectsMultiCarousel';
+import ProjectsCustomMultiCarousel from '../../components/ProjectsCustomMultiCarousel';
 
 import content from '../../static/json/projects';
 
@@ -9,7 +11,9 @@ const Projects = () => (
   <PageBody>
     <TitleBlock content={content.titleBlock}></TitleBlock>
     {content.contentBlocks.map((block, index) => (
-      <SwipableProjectsBlock key={index} content={block} />
+      // <SwipableProjectsBlock key={index} content={block} />
+      // <ProjectsMultiCarousel key={index} content={block} />
+      <ProjectsCustomMultiCarousel key={index} content={block} />
     ))}
     <ApplicationDiv>
       <FlexContainer>

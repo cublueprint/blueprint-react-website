@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import TitleBlock from '../../components/TitleBlock';
 import ContentBlock from '../../components/ContentBlock';
 
-const ProjectPage = () => {
+const ProjectDetails = () => {
   const location = useLocation();
   const { projectDetails } = location.state;
 
@@ -13,7 +13,7 @@ const ProjectPage = () => {
     },
     subtitle: projectDetails.description,
     image: {
-      picture: projectDetails.description,
+      picture: projectDetails.image,
       alt: `${projectDetails.name} Project Logo`,
     },
     buttons: [
@@ -33,7 +33,7 @@ const ProjectPage = () => {
 
   return (
     <>
-      <TitleBlock content={titleBlockContent}></TitleBlock>
+      <TitleBlock content={titleBlockContent}/>
       <ContentBlock
         title='The Problem'
         children={problemContent}
@@ -52,4 +52,4 @@ const ContentText = styled.p`
   margin: auto;
 `;
 
-export default ProjectPage;
+export default ProjectDetails;

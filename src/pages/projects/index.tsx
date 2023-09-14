@@ -1,4 +1,4 @@
 import Projects from './Projects';
-import ProjectPage from './ProjectPage';
+import ProjectDetails from './ProjectDetails';
 
-export { Projects, ProjectPage };
+export { Projects, ProjectDetails };

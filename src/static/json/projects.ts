@@ -1,4 +1,4 @@
-import TeamsTitleImage from '../images/teams_title_block.png'; // ADD THIS IN LATER
+import TeamsTitleImage from '../images/teams_title_block.png'; 
 
 import BlueprintPicture from '../images/blueprint.png';
 
