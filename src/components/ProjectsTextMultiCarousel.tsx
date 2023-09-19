@@ -12,7 +12,8 @@ import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const ProjectsTextMultiCarousel = ({ content }: HomeBlockProps) => {
 
-  const [renderCarousel, setRenderCarousel] = useState<boolean>(false);
+  const [renderCarousel, setRenderCarousel] = useState<boolean>(false); 
+  // if we don't use this state, the breakpoints don't take effect
   const [arrowRemoval, setArrowRemoval] = useState<number>(1);
   const [options, setOptions] = useState<Options>({
     type : 'slide',
