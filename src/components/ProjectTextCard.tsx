@@ -35,6 +35,12 @@ const CardDiv = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
+
+  transition: ease-in 0.3s;
+  &:hover {
+    transform: translate(-5px, -5px);
+    filter: drop-shadow(5px 5px 2px ${(props) => props.theme.colors.dropShadow});
+  }
 `;
 
 const PictureWrapper = styled.div`

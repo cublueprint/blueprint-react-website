@@ -15,6 +15,7 @@ const ProjectDetails = () => {
     image: {
       picture: projectDetails.image,
       alt: `${projectDetails.name} Project Logo`,
+      border: true
     },
     buttons: [
       {

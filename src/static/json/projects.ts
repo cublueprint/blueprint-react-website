@@ -114,6 +114,34 @@ const projectsPageContent = {
         },
       ],
     },
+    {
+      title: {
+        text: 'Past Projects 2 🗃️',
+      },
+      subtitle: 'Check out our projects!',
+      image: {
+        picture: AboutPicture,
+        alt: 'about picture',
+      },
+      buttons: [
+        {
+          content: 'READ MORE',
+          link: '/About',
+        },
+      ],
+      slider: [
+        {
+          name: 'PastProject3',
+          description: 'Lorem ipsum dolor sit amet.',
+          problem: 'this is the problem',
+          solution: 'this is the solution',
+          deployedLink: '#',
+          gitlabLink: '#',
+          link: '/Projects/PastProject1',
+          image: BeneficientLogo,
+        }
+      ],
+    },
   ],
 };
 

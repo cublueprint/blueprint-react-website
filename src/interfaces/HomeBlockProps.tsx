@@ -8,6 +8,7 @@ export interface HomeBlockProps {
     image: {
       picture: any;
       alt: string;
+      border?: boolean;
     };
     style?: string[];
     buttons: {
