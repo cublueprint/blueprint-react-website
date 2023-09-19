@@ -12,7 +12,7 @@ import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const ProjectsTextMultiCarousel = ({ content }: HomeBlockProps) => {
 
-  const [rerender, setRerender] = useState<boolean>(true);
+  const [renderCarousel, setRenderCarousel] = useState<boolean>(false);
   const [arrowRemoval, setArrowRemoval] = useState<number>(1);
   const [options, setOptions] = useState<Options>({
     type : 'slide',
@@ -51,41 +51,42 @@ const ProjectsTextMultiCarousel = ({ content }: HomeBlockProps) => {
     const newOptions = setBreakpoints(tempOptions);
     setOptions(newOptions);
 
-    setRerender(false);
+    setRenderCarousel(true);
   });
 
 
   return (
     <HomeProjectsBlockDiv>
       <Title>{content.title.text}</Title>
-      {rerender ? 
+    
         <MobileProjects>
           {content.slider!.map((project) => (
               <ProjectCard props={project} />
           ))}
         </MobileProjects>
-        :
-        <CustomSplide hasTrack={ false } tag={"section"} options={options}>
-          <CustomSplideTrack>
-            {content.slider!.map((project) => (
-              <SplideSlide>
-                <ProjectCard props={project} />
-              </SplideSlide>
-            ))}
-          </CustomSplideTrack>
 
-          <div className="splide__arrows">
-            <SplideArrow 
-                className={`splide__arrow splide__arrow--prev removal-${arrowRemoval}`}
-                icon={icon({ name: 'chevron-left'})} 
-                color="#3988ff" />
-            <SplideArrow 
-                className={`splide__arrow splide__arrow--next removal-${arrowRemoval}`}
-                icon={icon({ name: 'chevron-right'})} 
-                color="#3988ff" />
-          </div>
-        </CustomSplide>
-      }
+        {renderCarousel &&
+          <CustomSplide hasTrack={ false } tag={"section"} options={options}>
+            <CustomSplideTrack>
+              {content.slider!.map((project) => (
+                <SplideSlide>
+                  <ProjectCard props={project} />
+                </SplideSlide>
+              ))}
+            </CustomSplideTrack>
+
+            <div className="splide__arrows">
+              <SplideArrow 
+                  className={`splide__arrow splide__arrow--prev removal-${arrowRemoval}`}
+                  icon={icon({ name: 'chevron-left'})} 
+                  color="#3988ff" />
+              <SplideArrow 
+                  className={`splide__arrow splide__arrow--next removal-${arrowRemoval}`}
+                  icon={icon({ name: 'chevron-right'})} 
+                  color="#3988ff" />
+            </div>
+          </CustomSplide>
+        }
     </HomeProjectsBlockDiv>
   );
 };
