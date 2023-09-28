@@ -84,11 +84,14 @@ const Buttons = styled.div`
   align-items: center;
   margin-top: 2vw;
   gap: 10px;
+  /* justify-content: center; */
   @media ${(props) => `${props.theme.viewport.widerMobile}`} {
-    display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+  }
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    justify-content: start;
   }
 `;
 

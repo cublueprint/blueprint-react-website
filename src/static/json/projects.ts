@@ -1,28 +1,24 @@
 import TeamsTitleImage from '../images/teams_title_block.png'; 
 
-import BlueprintPicture from '../images/blueprint.png';
-
 import AboutPicture from '../images/about.svg';
 import BeneficientLogo from '../images/beneficient.png';
 import RefugeeCentreLogo from '../images/refugeecentre.png';
 import UrbanMindsLogo from '../images/UMlogo.png';
-import CIWHVLogo from '../images/CIWHV_logo.png';
 
 const projectsPageContent = {
   titleBlock: {
     title: {
       text: 'Our Projects',
     },
-    subtitle:
-      'All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.',
+    subtitle: 'All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.',
     image: {
-      picture: TeamsTitleImage, // ADD THIS IN LATER
+      picture: TeamsTitleImage, 
       alt: 'title picture',
     },
     buttons: [
       {
         content: 'Visit our GitLab',
-        link: '#', // ADD THIS IN LATER
+        link: '#', 
       },
     ],
   },
@@ -143,6 +139,14 @@ const projectsPageContent = {
       ],
     },
   ],
+
+  banner: {
+    text: 'Fill out our application form to be our next project',
+    button: {
+        content: 'Apply >',
+        link: '/apply/non-profit'
+    }
+  }
 };
 
 export default projectsPageContent;
