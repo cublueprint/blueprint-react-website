@@ -30,7 +30,7 @@ const CardDiv = styled.div`
   background-color: ${(props) => props.theme.colors.skyBlue};
   border-radius: 10px;
   padding: 30px;
-  width: 250px;
+  width: 80%;
   height: 400px;
   margin: auto;
   display: flex;
@@ -41,13 +41,17 @@ const CardDiv = styled.div`
     transform: translate(-5px, -5px);
     filter: drop-shadow(5px 5px 2px ${(props) => props.theme.colors.dropShadow});
   }
+
+  @media ${(props) => `${props.theme.viewport.mediumMobile}`} {
+    width: 250px;
+  }
 `;
 
 const PictureWrapper = styled.div`
   display: flex;
   justify-content: center;
   height: 180px;
-  width: 210px;
+  width: 80%;
   margin: auto;
   border-radius: 10px;
   border: ${(props) => props.theme.colors.cloudBlue} 20px solid;

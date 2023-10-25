@@ -53,7 +53,7 @@ const ProjectsTextMultiCarousel = ({ content }: HomeBlockProps) => {
     setOptions(newOptions);
 
     setRenderCarousel(true);
-  });
+  }, [content, options]);
 
 
   return (
@@ -153,7 +153,7 @@ const MobileProjects = styled.div`
   flex-direction: column;
   gap: 30px;
   margin-top: 50px;
-  @media ${(props) => `${props.theme.viewport.tablet}`} {
+  @media (min-width: 769px) {  // Needs to be a manual number, if not nothing renders at 768px
     display: none;
   }
 `;

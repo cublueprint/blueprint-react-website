@@ -1,3 +1,5 @@
+import {IProject} from "../static/json/projectDetails";
+
 export interface HomeBlockProps {
   content: {
     title: {
@@ -15,11 +17,6 @@ export interface HomeBlockProps {
       content: string;
       link: string;
     }[];
-    slider?: {
-      name: string;
-      description: string;
-      link: string;
-      image: any;
-    }[];
+    slider?: IProject[];
   };
 }

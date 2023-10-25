@@ -1,9 +1,13 @@
 import TeamsTitleImage from '../images/teams_title_block.png'; 
-
 import AboutPicture from '../images/about.svg';
+
+import {projectDetails, IProject} from "./projectDetails";
+
 import BeneficientLogo from '../images/beneficient.png';
 import RefugeeCentreLogo from '../images/refugeecentre.png';
-import UrbanMindsLogo from '../images/UMlogo.png';
+
+const currentProjects: IProject[] = Object.values(projectDetails.currentProjects);
+const pastProjects: IProject[] = Object.values(projectDetails.pastProjects);
 
 const projectsPageContent = {
   titleBlock: {
@@ -39,38 +43,7 @@ const projectsPageContent = {
           link: '/About',
         },
       ],
-      slider: [
-        {
-          name: 'Beneficient',
-          description: 'Lorem ipsum dolor sit amet.',
-          problem: 'this is the problem',
-          solution: 'this is the solution',
-          deployedLink: '/#',
-          gitlabLink: '/#',
-          link: '/Projects/Beneficient',
-          image: BeneficientLogo,
-        },
-        {
-          name: 'Allo Canada',
-          description: 'Lorem ipsum dolor sit amet.',
-          problem: 'this is the problem',
-          solution: 'this is the solution',
-          deployedLink: '/#',
-          gitlabLink: '/#',
-          link: '/Projects/AlloCanada',
-          image: RefugeeCentreLogo,
-        },
-        {
-          name: 'Urban Minds',
-          description: 'Lorem ipsum dolor sit amet.',
-          problem: 'this is the problem',
-          solution: 'this is the solution',
-          deployedLink: '/#',
-          gitlabLink: '/#',
-          link: '/Projects/UrbanMinds',
-          image: UrbanMindsLogo,
-        },
-      ],
+      slider: currentProjects,
     },
     {
       title: {
@@ -87,28 +60,7 @@ const projectsPageContent = {
           link: '/About',
         },
       ],
-      slider: [
-        {
-          name: 'PastProject1',
-          description: 'Lorem ipsum dolor sit amet.',
-          problem: 'this is the problem',
-          solution: 'this is the solution',
-          deployedLink: '#',
-          gitlabLink: '#',
-          link: '/Projects/PastProject1',
-          image: BeneficientLogo,
-        },
-        {
-          name: 'PastProject2',
-          description: 'Lorem ipsum dolor sit amet.',
-          problem: 'this is the problem',
-          solution: 'this is the solution',
-          deployedLink: '#',
-          gitlabLink: '#',
-          link: '/Projects/PastProject2',
-          image: RefugeeCentreLogo,
-        },
-      ],
+      slider: pastProjects
     },
     {
       title: {

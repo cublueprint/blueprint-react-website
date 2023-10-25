@@ -1,36 +1,46 @@
+import {useState, useEffect} from "react";
 import styled from 'styled-components';
-import { useLocation } from 'react-router-dom';
+import {useParams} from "react-router-dom";
 import TitleBlock from '../../components/TitleBlock';
 import ContentBlock from '../../components/ContentBlock';
+import {projectDetails, IProject} from "../../static/json/projectDetails";
 
 const ProjectDetails = () => {
-  const location = useLocation();
-  const { projectDetails } = location.state;
+  const {name} = useParams();
+  const [project, setProject] = useState<IProject>(projectDetails.currentProjects.Beneficient);
+
+  const projects: {[key: string]: IProject} = Object.assign({}, projectDetails.currentProjects, projectDetails.pastProjects);
+  
+  useEffect(() => {
+    if (name !== undefined){
+      setProject(projects[name]);
+    }
+  }, [name]);
 
   const titleBlockContent = {
     title: {
-      text: projectDetails.name,
+      text: project.name,
     },
-    subtitle: projectDetails.description,
+    subtitle: project.description,
     image: {
-      picture: projectDetails.image,
-      alt: `${projectDetails.name} Project Logo`,
+      picture: project.image,
+      alt: `${project.name} Project Logo`,
       border: true
     },
     buttons: [
       {
-        content: `${projectDetails.name} Website`,
-        link: projectDetails.deployedLink,
+        content: `Project Website`,
+        link: project.deployedLink,
       },
       {
-        content: `${projectDetails.name} Gitlab`,
-        link: projectDetails.gitlabLink,
+        content: `Project Gitlab`,
+        link: project.gitlabLink,
       },
     ],
   };
 
-  const problemContent = <ContentText>{projectDetails.problem}</ContentText>;
-  const solutionContent = <ContentText>{projectDetails.solution}</ContentText>;
+  const problemContent = <ContentText>{project.problem}</ContentText>;
+  const solutionContent = <ContentText>{project.solution}</ContentText>;
 
   return (
     <>

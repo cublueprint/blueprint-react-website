@@ -27,11 +27,14 @@ const TitleBlock = (props: HomeBlockProps) => (
 );
 
 const TitleBlockDiv = styled.div`
-  padding: 50px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   text-align: center;
+  padding: 10%;
+  @media ${(props) => `${props.theme.viewport.widerMobile}`} {
+    padding: 50px;
+  }
   @media ${(props) => `${props.theme.viewport.laptop}`} {
     margin: auto;
     display: grid;
@@ -43,6 +46,7 @@ const TitleBlockDiv = styled.div`
       'Description Image'
       'Buttons Image';
   }
+  max-width: 50em;
   @media ${(props) => `${props.theme.viewport.monitor}`} {
     width: 72em;
   }
@@ -50,7 +54,7 @@ const TitleBlockDiv = styled.div`
 
 const PictureWrapper = styled.div`
   grid-area: Image;
-  width: 90%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -66,7 +70,7 @@ const PictureWrapper = styled.div`
 `;
 
 const Picture = styled.img`
-  width: 80%;
+  width: 70%;
   margin: auto;
   display: block;
 `;
@@ -97,9 +101,12 @@ const Buttons = styled.div`
 
 const Title = styled.h1`
   grid-area: Title;
-  font-size: ${(props) => props.theme.fontSizes.larger};
   font-family: ${(props) => props.theme.fonts.heading};
   margin: 0;
+  font-size: ${(props) => props.theme.fontSizes.medium2};
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    font-size: ${(props) => props.theme.fontSizes.larger};
+  }
 `;
 
 const Description = styled.p`

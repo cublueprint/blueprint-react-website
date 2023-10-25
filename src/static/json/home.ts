@@ -2,13 +2,13 @@ import HomePicture from '../images/homepic.png';
 import AboutPicture from '../images/about.svg';
 import ApplyPicture from '../images/apply.svg';
 import ContactPicture from '../images/contact.svg';
+import {projectDetails, IProject} from "./projectDetails";
 
 import BlueprintPicture from '../images/blueprint.png';
 
-import BeneficientLogo from '../images/beneficient.png';
-import RefugeeCentreLogo from '../images/refugeecentre.png';
-import UrbanMindsLogo from '../images/UMlogo.png';
-import CIWHVLogo from '../images/CIWHV_logo.png';
+const currentProjects: IProject[] = Object.values(projectDetails.currentProjects);
+const pastProjects: IProject[] = Object.values(projectDetails.pastProjects);
+const projects: IProject[] = currentProjects.concat(pastProjects); 
 
 const homeContent = {
   titleBlock: {
@@ -68,29 +68,7 @@ const homeContent = {
         link: '/About',
       },
     ],
-    slider: [
-      {
-        name: 'Beneficient',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: '/Projects/Beneficient',
-        image: BeneficientLogo,
-      },
-      {
-        name: 'Allo Canada',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: '/Projects/AlloCanada',
-        image: RefugeeCentreLogo,
-      },
-      {
-        name: 'Urban Minds',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: '/Projects/UrbanMinds',
-        image: UrbanMindsLogo,
-      },
-    ],
+    slider: projects
   },
   getInvolvedBlock: {
     title: {
