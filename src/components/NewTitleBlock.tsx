@@ -83,7 +83,7 @@ const Description = styled.p`
 
 const Image = styled.img`
   @media ${(props) => `${props.theme.viewport.laptop}`} {
-    max-width: 30%;
+    max-width: 50%;
   }
   width: 100%;
 `;

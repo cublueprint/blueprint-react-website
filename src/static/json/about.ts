@@ -1,4 +1,4 @@
-import TeamsTitleImage from '../images/teams_title_block.png';
+import AboutTitleImage from '../images/about-page/titleImage.svg';
 import ValuesImage1 from '../images/about-page/values/values1.svg';
 import ValuesImage2 from '../images/about-page/values/values2.svg';
 import ValuesImage3 from '../images/about-page/values/values3.svg';
@@ -11,7 +11,7 @@ const aboutContent = {
         title: 'About The Club',
         subtitle: 'We\'re a club at Carleton University that develops pro-bono apps for nonprofits and promotes tech for social good.',
         image: {
-            picture: TeamsTitleImage,
+            picture: AboutTitleImage,
             alt: 'about title block picture',
         },
         buttons: [
