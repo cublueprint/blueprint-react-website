@@ -11,9 +11,7 @@ const pastProjects: IProject[] = Object.values(projectDetails.pastProjects);
 
 const projectsPageContent = {
   titleBlock: {
-    title: {
-      text: 'Our Projects',
-    },
+    title: 'Our Projects',
     subtitle: 'All of Blueprint’s work is open source because we believe in building technology that makes us more open and connected.',
     image: {
       picture: TeamsTitleImage, 

@@ -22,9 +22,11 @@ const NewTitleBlock = (props: TitleBlockProps) => (
       <LeftFlex>
         <Title>{props.content.title}</Title>
         <Description>{props.content.subtitle}</Description>
-        {props.content.buttons.map((button) => (
-          <Button key={`t-${button.content}`} text={button.content} link={button.link}/>
-        ))}
+        <ButtonFlex>
+          {props.content.buttons.map((button) => (
+            <Button key={`t-${button.content}`} text={button.content} link={button.link}/>
+          ))}
+        </ButtonFlex>
       </LeftFlex>
       <Image src={props.content.image.picture} alt={props.content.image.alt} />
     </TitleBlockDiv>
@@ -86,6 +88,15 @@ const Image = styled.img`
     max-width: 30%;
   }
   width: 100%;
+`;
+
+const ButtonFlex = styled.div`
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    display:flex;
+    justify-content: space-between;
+    width: 54%;
+  }
+  
 `;
 
 export default NewTitleBlock;
