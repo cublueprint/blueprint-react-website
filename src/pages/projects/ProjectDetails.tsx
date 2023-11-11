@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import styled from 'styled-components';
 import {useParams} from "react-router-dom";
-import TitleBlock from '../../components/TitleBlock';
+import NewTitleBlock from '../../components/NewTitleBlock';
 import ContentBlock from '../../components/ContentBlock';
 import {projectDetails, IProject} from "../../static/json/projectDetails";
 
@@ -18,9 +18,7 @@ const ProjectDetails = () => {
   }, [name]);
 
   const titleBlockContent = {
-    title: {
-      text: project.name,
-    },
+    title: project.name,
     subtitle: project.description,
     image: {
       picture: project.image,
@@ -44,7 +42,7 @@ const ProjectDetails = () => {
 
   return (
     <>
-      <TitleBlock content={titleBlockContent}/>
+      <NewTitleBlock content={titleBlockContent}/>
       <ContentBlock
         title='The Problem'
         children={problemContent}
@@ -59,7 +57,6 @@ const ProjectDetails = () => {
 
 const ContentText = styled.p`
   padding: 20px 0;
-  width: 70%;
   margin: auto;
 `;
 
