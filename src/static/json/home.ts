@@ -1,23 +1,19 @@
 import HomePicture from '../images/homepic.png';
 import AboutPicture from '../images/about.svg';
 import ApplyPicture from '../images/apply.svg';
-import ContactPicture from '../images/contact.svg'
+import ContactPicture from '../images/contact.svg';
+import {projectDetails, IProject} from "./projectDetails";
 
 import BlueprintPicture from '../images/blueprint.png';
 
-import BeneficientLogo from '../images/beneficient.png';
-import RefugeeCentreLogo from '../images/refugeecentre.png';
-import UrbanMindsLogo from '../images/UMlogo.png';
-import CIWHVLogo from '../images/CIWHV_logo.png';
+const currentProjects: IProject[] = Object.values(projectDetails.currentProjects);
+const pastProjects: IProject[] = Object.values(projectDetails.pastProjects);
+const projects: IProject[] = currentProjects.concat(pastProjects); 
 
 const homeContent = {
   titleBlock: {
-    title: {
-      text: 'Tech for social good'
-    },
-    subtitle:
-      "We're a team of students at Carleton University that develop pro-bono apps for nonprofits and promote tech for social good.",
-
+    title: 'Tech for social good',
+    subtitle: "We're a team of students at Carleton University that develop pro-bono apps for nonprofits and promote tech for social good.",
     image: {
       picture: HomePicture,
       alt: 'title picture',
@@ -30,16 +26,16 @@ const homeContent = {
       {
         content: 'APPLY',
         link: '/Apply',
-      }
+      },
     ],
   },
   aboutBlock: {
     title: {
       text: 'About Us 💡',
-      style: 'skyBlue'
+      style: 'skyBlue',
     },
     subtitle:
-      "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
+      'Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.',
 
     image: {
       picture: AboutPicture,
@@ -49,16 +45,15 @@ const homeContent = {
       {
         content: 'READ MORE',
         link: '/About',
-      }
+      },
     ],
-    style: ['right', "cloudBlue"]
+    style: ['right', 'cloudBlue'],
   },
   projectsBlock: {
     title: {
-      text: 'Projects 🗃️'
+      text: 'Projects 🗃️',
     },
-    subtitle:
-    "Check out our projects!",
+    subtitle: 'Check out our projects!',
     image: {
       picture: AboutPicture,
       alt: 'about picture',
@@ -67,62 +62,47 @@ const homeContent = {
       {
         content: 'READ MORE',
         link: '/About',
-      }
+      },
     ],
-    slider:[
-      {
-        name: 'Beneficient',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: '/Projects/Beneficient',
-        image: BeneficientLogo
-      },
-      {
-        name: 'Allo Canada',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: '/Projects/AlloCanada',
-        image: RefugeeCentreLogo
-      },
-      {
-        name: 'Urban Minds',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam ultrices. Sed vitae eros quis nisl aliquam ultrices.',
-        link: '/Projects/UrbanMinds',
-        image: UrbanMindsLogo
-      }
-    ]
+    slider: projects
   },
   getInvolvedBlock: {
     title: {
       text: 'Get Involved 🤝',
-      style: 'skyBlue'
+      style: 'skyBlue',
     },
     subtitle:
-      "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
+      'Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.',
     image: {
       picture: ApplyPicture,
       alt: 'apply picture',
     },
-    buttons: [{
-      content: 'APPLY',
-      link: '/Apply',
-    }],
-    style: ['left', "cloudBlue"]
+    buttons: [
+      {
+        content: 'APPLY',
+        link: '/Apply',
+      },
+    ],
+    style: ['left', 'cloudBlue'],
   },
   contactUsBlock: {
     title: {
       text: 'Contact Us 📧',
-      style: 'cloudBlue'
+      style: 'cloudBlue',
     },
     subtitle:
-      "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
+      'Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.',
     image: {
       picture: ContactPicture,
       alt: 'contact picture',
     },
-    buttons: [{
-      content: 'CONTACT US',
-      link: '/Contact',
-    }],
-    style: ['right', "white"]
+    buttons: [
+      {
+        content: 'CONTACT US',
+        link: '/Contact',
+      },
+    ],
+    style: ['right', 'white'],
   },
 };
 

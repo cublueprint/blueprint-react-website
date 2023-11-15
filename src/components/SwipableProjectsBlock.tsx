@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { HomeBlockProps } from '../../interfaces/HomeBlockProps';
+import { HomeBlockProps } from '../interfaces/HomeBlockProps';
 
 import { Link } from 'react-router-dom';
 
-import { ProjectCard } from '../../components';
+import { ProjectImageCard } from '.';
 
 import { Swiper, SwiperSlide } from 'swiper/swiper-react';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
@@ -15,8 +15,8 @@ import 'swiper/modules/navigation.mjs'; // Navigation module
 import 'swiper/modules/pagination.mjs'; // Pagination module
 import 'swiper/modules/effect-coverflow.min.mjs';
 
-import '../../static/styles/home-projects-slider.css';
-import '../../static/styles/sliders.css';
+import '../static/styles/home-projects-slider.css';
+import '../static/styles/sliders.css';
 
 const swiperConfig = {
   effect: 'coverflow',
@@ -37,7 +37,7 @@ const swiperConfig = {
   modules: [EffectCoverflow, Navigation, Pagination],
   className: 'projectsSwiper',
 };
-const HomeProjectsBlock = (props: HomeBlockProps) => (
+const SwipableProjectsBlock = (props: HomeBlockProps) => (
   <HomeProjectsBlockDiv>
     <Title>{props.content.title.text}</Title>
     <Carousel>
@@ -45,7 +45,7 @@ const HomeProjectsBlock = (props: HomeBlockProps) => (
         {props.content.slider?.map((project) => (
           <SwiperSlide key={project.name}>
             <StyledA to={project.link ? project.link : '#'}>
-              <ProjectCard props={project} />
+              <ProjectImageCard props={project} />
             </StyledA>
           </SwiperSlide>
         ))}
@@ -54,7 +54,7 @@ const HomeProjectsBlock = (props: HomeBlockProps) => (
     <MobileProjects>
       {props.content.slider?.map((project) => (
         <StyledA to={project.link ? project.link : '#'}>
-          <ProjectCard props={project} />
+          <ProjectImageCard props={project} />
         </StyledA>
       ))}
     </MobileProjects>
@@ -122,4 +122,4 @@ let Title = styled.h1`
   }
 `;
 
-export default HomeProjectsBlock;
+export default SwipableProjectsBlock;

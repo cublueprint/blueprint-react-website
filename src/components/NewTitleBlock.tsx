@@ -8,6 +8,7 @@ interface TitleBlockProps {
     image: {
       picture: any;
       alt: string;
+      border?: boolean;
     };
     buttons: {
       content: string;
@@ -22,11 +23,19 @@ const NewTitleBlock = (props: TitleBlockProps) => (
       <LeftFlex>
         <Title>{props.content.title}</Title>
         <Description>{props.content.subtitle}</Description>
-        {props.content.buttons.map((button) => (
-          <Button key={`t-${button.content}`} text={button.content} link={button.link}/>
-        ))}
+        <ButtonFlex>
+          {props.content.buttons.map((button) => (
+            <Button key={`t-${button.content}`} text={button.content} link={button.link}/>
+          ))}
+        </ButtonFlex>
       </LeftFlex>
-      <Image src={props.content.image.picture} alt={props.content.image.alt} />
+      {props.content.image.border ?
+        <PictureWrapper>
+          <Picture src={props.content.image.picture} alt={props.content.image.alt} />
+        </PictureWrapper>
+        :
+        <Image src={props.content.image.picture} alt={props.content.image.alt} />
+      }
     </TitleBlockDiv>
   </Background>
 );
@@ -81,11 +90,53 @@ const Description = styled.p`
   }
 `;
 
+const PictureWrapper = styled.div`
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: ${(props) => props.theme.colors.cloudBlue} 20px solid;
+  background-color: white;
+  margin: auto;
+  padding: 3vw;
+
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    padding: 0;
+    margin: 0 10%;
+    height: 300px; 
+  }
+`;
+
+const Picture = styled.img`
+  width: 70%;
+  margin: auto;
+  display: block;
+`;
+
 const Image = styled.img`
   @media ${(props) => `${props.theme.viewport.laptop}`} {
     max-width: 30%;
   }
   width: 100%;
+`;
+
+const ButtonFlex = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vw;
+  gap: 10px;
+  @media ${(props) => `${props.theme.viewport.widerMobile}`} {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    justify-content: start;
+  }
 `;
 
 export default NewTitleBlock;

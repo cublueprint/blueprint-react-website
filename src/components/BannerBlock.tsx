@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Button from './Button';
 import contactContent from '../static/json/contact';
 import aboutContent from '../static/json/about';
+import projectContent from '../static/json/projects';
 import { useLocation } from 'react-router-dom';
 
 type Content = {
@@ -15,6 +16,7 @@ type Content = {
 const contentMap: { [key: string]: Content } = {
   contact: contactContent.banner,
   about: aboutContent.banner,
+  projects: projectContent.banner
 };
 
 const BannerBlock = () => {
