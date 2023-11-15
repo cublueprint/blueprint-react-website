@@ -7,7 +7,7 @@ import {projectDetails, IProject} from "../../static/json/projectDetails";
 
 const ProjectDetails = () => {
   const {name} = useParams();
-  const [project, setProject] = useState<IProject>(projectDetails.currentProjects.Beneficient);
+  const [project, setProject] = useState<IProject>(projectDetails.pastProjects.Beneficient);
 
   const projects: {[key: string]: IProject} = Object.assign({}, projectDetails.currentProjects, projectDetails.pastProjects);
   
@@ -38,7 +38,9 @@ const ProjectDetails = () => {
   };
 
   const problemContent = <ContentText>{project.problem}</ContentText>;
-  const solutionContent = <ContentText>{project.solution}</ContentText>;
+  const solutionContent = project.solutionImage ? 
+    <ContentFlex> <ContentText>{project.solution}</ContentText>  <SolutionImage src={project.solutionImage} alt={"Mockup of the completed solution"}/></ContentFlex> :
+    <ContentText>{project.solution}</ContentText> ;
 
   return (
     <>
@@ -54,6 +56,22 @@ const ProjectDetails = () => {
     </>
   );
 };
+
+const ContentFlex = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  margin-top: 20px;
+  align-items: center;
+`;
+
+const SolutionImage = styled.img`
+width: 100%;
+@media ${(props) => props.theme.viewport.tablet} {
+  width: 70%;
+}
+  border: solid 1px black;
+`;
 
 const ContentText = styled.p`
   padding: 20px 0;
