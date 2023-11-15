@@ -22,9 +22,11 @@ const NewTitleBlock = (props: TitleBlockProps) => (
       <LeftFlex>
         <Title>{props.content.title}</Title>
         <Description>{props.content.subtitle}</Description>
-        {props.content.buttons.map((button) => (
-          <Button key={`t-${button.content}`} text={button.content} link={button.link}/>
-        ))}
+        <Buttons>
+          {props.content.buttons.map((button) => (
+            <Button key={`t-${button.content}`} link={button.link} text={button.content}></Button>
+          ))}
+        </Buttons>
       </LeftFlex>
       <Image src={props.content.image.picture} alt={props.content.image.alt} />
     </TitleBlockDiv>
@@ -33,6 +35,16 @@ const NewTitleBlock = (props: TitleBlockProps) => (
 
 const Background = styled.div`
   background-color: ${(props) => props.theme.colors.lightBlue};
+`;
+
+const Buttons = styled.div`
+  margin: auto;
+  @media ${(props) => `${props.theme.viewport.widerMobile}`} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin-left: 0;
+  }
 `;
 
 const TitleBlockDiv = styled.div`

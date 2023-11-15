@@ -12,11 +12,8 @@ import CIWHVLogo from '../images/CIWHV_logo.png';
 
 const homeContent = {
   titleBlock: {
-    title: {
-      text: 'Tech for social good'
-    },
-    subtitle:
-      "We're a team of students at Carleton University that develop pro-bono apps for nonprofits and promote tech for social good.",
+    title: 'Tech for social good',
+    subtitle: "We're a team of students at Carleton University that develop pro-bono apps for nonprofits and promote tech for social good.",
 
     image: {
       picture: HomePicture,
@@ -34,10 +31,7 @@ const homeContent = {
     ],
   },
   aboutBlock: {
-    title: {
-      text: 'About Us 💡',
-      style: 'skyBlue'
-    },
+    title: 'About Us 💡',
     subtitle:
       "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
 
@@ -51,12 +45,10 @@ const homeContent = {
         link: '/About',
       }
     ],
-    style: ['right', "cloudBlue"]
+    style: 'right'
   },
   projectsBlock: {
-    title: {
-      text: 'Projects 🗃️'
-    },
+    title: 'Projects 🗃️',
     subtitle:
     "Check out our projects!",
     image: {
@@ -91,10 +83,7 @@ const homeContent = {
     ]
   },
   getInvolvedBlock: {
-    title: {
-      text: 'Get Involved 🤝',
-      style: 'skyBlue'
-    },
+    title: 'Get Involved 🤝',
     subtitle:
       "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
     image: {
@@ -105,13 +94,10 @@ const homeContent = {
       content: 'APPLY',
       link: '/Apply',
     }],
-    style: ['left', "cloudBlue"]
+    style: 'left'
   },
   contactUsBlock: {
-    title: {
-      text: 'Contact Us 📧',
-      style: 'cloudBlue'
-    },
+    title: 'Contact Us 📧',
     subtitle:
       "Blueprint strives to make technology accessible and useful for those who create communities and promote public welfare.",
     image: {
@@ -122,7 +108,7 @@ const homeContent = {
       content: 'CONTACT US',
       link: '/Contact',
     }],
-    style: ['right', "white"]
+    style: 'right'
   },
 };
 
