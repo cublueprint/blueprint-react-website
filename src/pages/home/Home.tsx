@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { ContentBlock, NewTitleBlock, HomeBlock } from '../../components';
-import HomeProjectsBlock from './HomeProjectsBlock';
+import { ContentBlock, NewTitleBlock, HomeBlock, HomeProjectsBlock } from '../../components';
 
 import content from '../../static/json/home';
 

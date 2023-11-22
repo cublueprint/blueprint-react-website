@@ -10,7 +10,7 @@ interface ProjectProps {
   };
 }
 
-const ProjectCard = ({ props }: ProjectProps) => {
+const ProjectImageCard = ({ props }: ProjectProps) => {
   return (
     <CardDiv className='project'>
       <div>
@@ -19,10 +19,13 @@ const ProjectCard = ({ props }: ProjectProps) => {
       </div>
       <BackOfCard>
         <Description>{props.description}</Description>
-        <StyledButton key={`t-${props.name}`} link={props.link} text={'Learn More'}></StyledButton>
+        <StyledButton
+          key={`t-${props.name}`}
+          link={props.link}
+          text={'Learn More'}
+        ></StyledButton>
       </BackOfCard>
     </CardDiv>
-
   );
 };
 
@@ -33,10 +36,9 @@ const CardDiv = styled.div`
   height: 100%;
 `;
 
-
 const StyledButton = styled(Button)`
   margin: auto;
-`
+`;
 
 const Picture = styled.img`
   width: 90%;
@@ -58,9 +60,9 @@ const Description = styled.h2`
   color: ${(props) => props.theme.colors.textBlack};
   width: 80%;
   height: 80%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   text-align: center;
   font-size: ${(props) => props.theme.fontSizes.small};
@@ -79,10 +81,10 @@ const BackOfCard = styled.div`
     width: 100%;
     height: 100%;
     transition: ease-in 0.3s;
-    &:hover{
+    &:hover {
       opacity: 0.9;
     }
   }
-`
+`;
 
-export default ProjectCard;
+export default ProjectImageCard;

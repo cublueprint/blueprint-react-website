@@ -5,6 +5,7 @@ const theme = {
     offWhite: '#dfefff',
     darkGrey: '#333333',
     textBlack: '#484848',
+    dropShadow: '#48484866',
     primaryBlue: '#3988ff',
     skyBlue: '#B2DAFF',
     cloudBlue: '#E5F2FF',

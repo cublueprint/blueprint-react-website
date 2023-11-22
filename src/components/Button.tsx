@@ -22,7 +22,7 @@ const BlueprintButton = styled.button`
   border: 4px solid ${(props) => props.theme.colors.primaryBlue};
   border-radius: 5px;
   padding: 10px 30px;
-  font-size: 1.1em;
+  font-size: ${(props) => props.theme.fontSizes.small};
   font-family: ${(props) => props.theme.fonts.heading};
   display: flex;
   justify-content: center;

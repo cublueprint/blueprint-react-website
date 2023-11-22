@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { HomeBlockProps } from '../../interfaces/HomeBlockProps';
+import { HomeBlockProps } from '../interfaces/HomeBlockProps';
 
 import { Link } from 'react-router-dom';
 
-import { ProjectCard } from '../../components';
+import { ProjectImageCard } from '.';
 
 import { Swiper, SwiperSlide } from 'swiper/swiper-react';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
@@ -15,8 +15,8 @@ import 'swiper/modules/navigation.mjs'; // Navigation module
 import 'swiper/modules/pagination.mjs'; // Pagination module
 import 'swiper/modules/effect-coverflow.min.mjs';
 
-import '../../static/styles/home-projects-slider.css';
-import '../../static/styles/sliders.css';
+import '../static/styles/home-projects-slider.css';
+import '../static/styles/sliders.css';
 
 const swiperConfig = {
   effect: 'coverflow',
@@ -44,7 +44,7 @@ const HomeProjectsBlock = (props: HomeBlockProps) => (
         {props.content.slider?.map((project) => (
           <SwiperSlide key={project.name}>
             <StyledA to={project.link ? project.link : '#'}>
-              <ProjectCard props={project} />
+              <ProjectImageCard props={project} />
             </StyledA>
           </SwiperSlide>
         ))}
@@ -53,7 +53,7 @@ const HomeProjectsBlock = (props: HomeBlockProps) => (
     <MobileProjects>
       {props.content.slider?.map((project) => (
         <StyledA to={project.link ? project.link : '#'}>
-          <ProjectCard props={project} />
+          <ProjectImageCard props={project} />
         </StyledA>
       ))}
     </MobileProjects>
@@ -93,8 +93,7 @@ const MobileProjects = styled.div`
   @media ${(props) => `${props.theme.viewport.widerMobile}`} {
     grid-template-columns: 1fr 1fr;
   }
-  @media ${(props) =>
-      `${props.theme.viewport.widerMobile} and  ${props.theme.viewport.hover}`} {
+  @media ${(props) => `${props.theme.viewport.widerMobile} and  ${props.theme.viewport.hover}`} {
     grid-template-columns: 1fr;
   }
 `;
