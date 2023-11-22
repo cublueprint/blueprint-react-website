@@ -57,38 +57,36 @@ const ProjectsTextMultiCarousel = ({ content }: HomeBlockProps) => {
 
 
   return (
-    <HomeProjectsBlockDiv>
-      <Title>{content.title.text}</Title>
-    
-        <MobileProjects>
-          {content.slider!.map((project) => (
-              <ProjectCard props={project} />
-          ))}
-        </MobileProjects>
+    <>
+      <MobileProjects>
+        {content.slider!.map((project) => (
+            <ProjectCard props={project} />
+        ))}
+      </MobileProjects>
 
-        {renderCarousel &&
-          <CustomSplide hasTrack={ false } tag={"section"} options={options}>
-            <CustomSplideTrack>
-              {content.slider!.map((project) => (
-                <SplideSlide>
-                  <ProjectCard props={project} />
-                </SplideSlide>
-              ))}
-            </CustomSplideTrack>
+      {renderCarousel &&
+        <CustomSplide hasTrack={ false } tag={"section"} options={options}>
+          <CustomSplideTrack>
+            {content.slider!.map((project) => (
+              <SplideSlide>
+                <ProjectCard props={project} />
+              </SplideSlide>
+            ))}
+          </CustomSplideTrack>
 
-            <div className="splide__arrows">
-              <SplideArrow 
-                  className={`splide__arrow splide__arrow--prev removal-${arrowRemoval}`}
-                  icon={icon({ name: 'chevron-left'})} 
-                  color="#3988ff" />
-              <SplideArrow 
-                  className={`splide__arrow splide__arrow--next removal-${arrowRemoval}`}
-                  icon={icon({ name: 'chevron-right'})} 
-                  color="#3988ff" />
-            </div>
-          </CustomSplide>
-        }
-    </HomeProjectsBlockDiv>
+          <div className="splide__arrows">
+            <SplideArrow 
+                className={`splide__arrow splide__arrow--prev removal-${arrowRemoval}`}
+                icon={icon({ name: 'chevron-left'})} 
+                color="#3988ff" />
+            <SplideArrow 
+                className={`splide__arrow splide__arrow--next removal-${arrowRemoval}`}
+                icon={icon({ name: 'chevron-right'})} 
+                color="#3988ff" />
+          </div>
+        </CustomSplide>
+      }
+    </>
   );
 };
 
@@ -155,36 +153,6 @@ const MobileProjects = styled.div`
   margin-top: 50px;
   @media (min-width: 769px) {  // Needs to be a manual number, if not nothing renders at 768px
     display: none;
-  }
-`;
-
-const HomeProjectsBlockDiv = styled.div`
-  padding: 50px;
-  @media ${(props) => `${props.theme.viewport.monitor}`} {
-    width: 72em;
-    margin: auto;
-  }
-`;
-
-let Title = styled.h1`
-  grid-area: Title;
-  font-size: ${(themeProps) => themeProps.theme.fontSizes.small};
-  background-color: ${(themeProps) => themeProps.theme.colors.cloudBlue};
-  font-family: ${(themeProps) => themeProps.theme.fonts.heading};
-  margin: 0;
-  padding: 10px 0px;
-  height: 1.8em;
-  width: 100%;
-  border-radius: 15px;
-  text-align: center;
-  @media ${(themeProps) => `${themeProps.theme.viewport.mediumMobile}`} {
-    font-size: ${(themeProps) => themeProps.theme.fontSizes.regular};
-  }
-  @media ${(themeProps) => `${themeProps.theme.viewport.tablet}`} {
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
   }
 `;
 
