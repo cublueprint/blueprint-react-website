@@ -42,8 +42,6 @@ const StyledButton = styled(Button)`
 
 const Picture = styled.img`
   width: 90%;
-  padding-top: 45%;
-  padding-bottom: 45%;
   margin: auto;
   display: block;
 `;
