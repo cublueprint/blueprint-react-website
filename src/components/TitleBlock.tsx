@@ -5,7 +5,7 @@ import { HomeBlockProps } from '../interfaces/HomeBlockProps';
 
 const TitleBlock = (props: HomeBlockProps) => (
   <TitleBlockDiv>
-    <Title>{props.content.title.text}</Title>
+    <Title>{props.content.title}</Title>
     <Description>{props.content.subtitle}</Description>
     {props.content.image.border ?
       <PictureWrapper>

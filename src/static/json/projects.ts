@@ -26,10 +26,7 @@ const projectsPageContent = {
   },
   contentBlocks: [
     {
-      style: ['left', 'cloudBlue'],
-      title: {
-        text: 'Current Projects 🗃️',
-      },
+      title: 'Current Projects 🗃️',
       subtitle: 'Check out our projects!',
       image: {
         picture: AboutPicture,
@@ -44,9 +41,7 @@ const projectsPageContent = {
       slider: currentProjects,
     },
     {
-      title: {
-        text: 'Past Projects 🗃️',
-      },
+      title: 'Past Projects 🗃️',
       subtitle: 'Check out our projects!',
       image: {
         picture: AboutPicture,

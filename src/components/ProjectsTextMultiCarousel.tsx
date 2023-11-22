@@ -58,7 +58,7 @@ const ProjectsTextMultiCarousel = ({ content }: HomeBlockProps) => {
 
   return (
     <HomeProjectsBlockDiv>
-      <Title>{content.title.text}</Title>
+      <Title>{content.title}</Title>
     
         <MobileProjects>
           {content.slider!.map((project) => (
