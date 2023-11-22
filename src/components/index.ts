@@ -7,6 +7,7 @@ import ProjectCard from './ProjectTextCard';
 import ScrollToTop from './ScrollToTop';
 import TitleBlock from './TitleBlock';
 import ProjectImageCard from './ProjectImageCard';
+import HomeProjectsBlock from './HomeProjectsBlock';
 
 export {
   BannerBlock,
@@ -18,4 +19,5 @@ export {
   ProjectImageCard,
   ScrollToTop,
   TitleBlock,
+  HomeProjectsBlock
 };

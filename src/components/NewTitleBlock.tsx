@@ -23,11 +23,11 @@ const NewTitleBlock = (props: TitleBlockProps) => (
       <LeftFlex>
         <Title>{props.content.title}</Title>
         <Description>{props.content.subtitle}</Description>
-        <ButtonFlex>
+        <Buttons>
           {props.content.buttons.map((button) => (
-            <Button key={`t-${button.content}`} text={button.content} link={button.link}/>
+            <Button key={`t-${button.content}`} link={button.link} text={button.content}></Button>
           ))}
-        </ButtonFlex>
+        </Buttons>
       </LeftFlex>
       {props.content.image.border ?
         <PictureWrapper>
@@ -44,6 +44,16 @@ const Background = styled.div`
   background-color: ${(props) => props.theme.colors.lightBlue};
 `;
 
+const Buttons = styled.div`
+  margin: auto;
+  @media ${(props) => `${props.theme.viewport.widerMobile}`} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin-left: 0;
+  }
+`;
+
 const TitleBlockDiv = styled.div`
   @media ${(props) => props.theme.viewport.laptop} {
     flex-direction: row;
@@ -56,6 +66,7 @@ const TitleBlockDiv = styled.div`
   max-width: 72em;
   margin-left: auto;
   margin-right: auto;
+  gap: 10px;
 `;
 
 const LeftFlex = styled.div`
@@ -117,7 +128,7 @@ const Picture = styled.img`
 
 const Image = styled.img`
   @media ${(props) => `${props.theme.viewport.laptop}`} {
-    max-width: 30%;
+    max-width: 42%;
   }
   width: 100%;
 `;

@@ -3,9 +3,6 @@ import AboutPicture from '../images/about.svg';
 
 import {projectDetails, IProject} from "./projectDetails";
 
-import BeneficientLogo from '../images/beneficient.png';
-import RefugeeCentreLogo from '../images/refugeecentre.png';
-
 const currentProjects: IProject[] = Object.values(projectDetails.currentProjects);
 const pastProjects: IProject[] = Object.values(projectDetails.pastProjects);
 
@@ -26,6 +23,8 @@ const projectsPageContent = {
   },
   currentProjects: 
     {
+      title: "Current Projects",
+      subtitle: "Subtitle",
       image: {
         picture: AboutPicture,
         alt: 'about picture',
@@ -40,6 +39,8 @@ const projectsPageContent = {
     },
   pastProjects: 
     {
+      title: "Current Projects",
+      subtitle: "Subtitle",
       image: {
         picture: AboutPicture,
         alt: 'about picture',

@@ -37,9 +37,8 @@ const swiperConfig = {
   modules: [EffectCoverflow, Navigation, Pagination],
   className: 'projectsSwiper',
 };
-const SwipableProjectsBlock = (props: HomeBlockProps) => (
+const HomeProjectsBlock = (props: HomeBlockProps) => (
   <HomeProjectsBlockDiv>
-    <Title>{props.content.title.text}</Title>
     <Carousel>
       <Swiper {...swiperConfig}>
         {props.content.slider?.map((project) => (
@@ -94,32 +93,9 @@ const MobileProjects = styled.div`
   @media ${(props) => `${props.theme.viewport.widerMobile}`} {
     grid-template-columns: 1fr 1fr;
   }
-  @media ${(props) =>
-      `${props.theme.viewport.widerMobile} and  ${props.theme.viewport.hover}`} {
+  @media ${(props) => `${props.theme.viewport.widerMobile} and  ${props.theme.viewport.hover}`} {
     grid-template-columns: 1fr;
   }
 `;
 
-let Title = styled.h1`
-  grid-area: Title;
-  font-size: ${(themeProps) => themeProps.theme.fontSizes.small};
-  background-color: ${(themeProps) => themeProps.theme.colors.cloudBlue};
-  font-family: ${(themeProps) => themeProps.theme.fonts.heading};
-  margin: 0;
-  padding: 10px 0px;
-  height: 1.8em;
-  width: 100%;
-  border-radius: 15px;
-  text-align: center;
-  @media ${(themeProps) => `${themeProps.theme.viewport.mediumMobile}`} {
-    font-size: ${(themeProps) => themeProps.theme.fontSizes.regular};
-  }
-  @media ${(themeProps) => `${themeProps.theme.viewport.tablet}`} {
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
-  }
-`;
-
-export default SwipableProjectsBlock;
+export default HomeProjectsBlock;
