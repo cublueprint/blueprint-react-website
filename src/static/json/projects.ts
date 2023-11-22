@@ -21,10 +21,10 @@ const projectsPageContent = {
       },
     ],
   },
-  contentBlocks: [
+  currentProjects: 
     {
-      title: 'Current Projects 🗃️',
-      subtitle: 'Check out our projects!',
+      title: "Current Projects",
+      subtitle: "Subtitle",
       image: {
         picture: AboutPicture,
         alt: 'about picture',
@@ -37,9 +37,10 @@ const projectsPageContent = {
       ],
       slider: currentProjects,
     },
+  pastProjects: 
     {
-      title: 'Past Projects 🗃️',
-      subtitle: 'Check out our projects!',
+      title: "Current Projects",
+      subtitle: "Subtitle",
       image: {
         picture: AboutPicture,
         alt: 'about picture',
@@ -52,8 +53,6 @@ const projectsPageContent = {
       ],
       slider: pastProjects
     },
-  ],
-
   banner: {
     text: 'Fill out our application form to be our next project',
     button: {

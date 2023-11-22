@@ -71,9 +71,12 @@ const Name = styled.h2`
 
 const Description = styled.h4`
   height: 100px;
-  overflow: scroll;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin: 0;
-  margin-left: 5px;
 `;
 
 const ReadMore = styled(Link)`
