@@ -15,7 +15,7 @@ const Apply = () => {
         <SectionHeader>I am:</SectionHeader>
         <ApplicationTextContainer>
           <ApplicationText
-            title={'Non Profit'}
+            title={'Non Profit 123'}
             body={
               'Looking for a group of volunteer student developers to help with my software needs'
             }
@@ -23,7 +23,7 @@ const Apply = () => {
             linkText={'Learn more!'}
           />
           <ApplicationText
-            title={'Student'}
+            title={'Student 123'}
             body={
               'Looking to develop my skills and contribute to my community with like-minded peers'
             }
